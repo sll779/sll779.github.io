@@ -1,0 +1,1213 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+
+  <link rel="apple-touch-icon" sizes="76x76" href="https://avatars.githubusercontent.com/u/193379203?s=400&amp;u=0b52982067f8b5c236021fc6ebd137770c8942d9&amp;v=4">
+  <link rel="icon" href="https://avatars.githubusercontent.com/u/193379203?s=400&amp;u=0b52982067f8b5c236021fc6ebd137770c8942d9&amp;v=4">
+  
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="John Doe">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="AIGC安全调研一、 AIGC全生命周期风险1. 初始阶段初始阶段安全风险。初始阶段是指将想法转化为有形系统的过程，主要包括任务分析、需求定义、风险管理等过程。这个阶段的安全风险主要表现为对人工智能应用目标的设定有悖国家法律法规和社会伦理规范 风险一：****应用目标有悖国家法律法规和社会伦理规范 2. 设计研发阶段设计研发阶段安全风险。设计研发阶段是指完成可部署人工智能系统创建的过程，主要句括确">
+<meta property="og:type" content="article">
+<meta property="og:title" content="AIGC安全调研">
+<meta property="og:url" content="http://example.com/2025/01/06/AIGC%E5%AE%89%E5%85%A8%E8%B0%83%E7%A0%94/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="AIGC安全调研一、 AIGC全生命周期风险1. 初始阶段初始阶段安全风险。初始阶段是指将想法转化为有形系统的过程，主要包括任务分析、需求定义、风险管理等过程。这个阶段的安全风险主要表现为对人工智能应用目标的设定有悖国家法律法规和社会伦理规范 风险一：****应用目标有悖国家法律法规和社会伦理规范 2. 设计研发阶段设计研发阶段安全风险。设计研发阶段是指完成可部署人工智能系统创建的过程，主要句括确">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://hsmyzj-1322074094.cos.ap-beijing.myqcloud.com/202501061641686.png">
+<meta property="og:image" content="https://hsmyzj-1322074094.cos.ap-beijing.myqcloud.com/202501061641732.png">
+<meta property="og:image" content="https://hsmyzj-1322074094.cos.ap-beijing.myqcloud.com/202501061641832.png">
+<meta property="og:image" content="https://hsmyzj-1322074094.cos.ap-beijing.myqcloud.com/202501061641708.png">
+<meta property="og:image" content="https://hsmyzj-1322074094.cos.ap-beijing.myqcloud.com/202501061641791.png">
+<meta property="og:image" content="https://hsmyzj-1322074094.cos.ap-beijing.myqcloud.com/202501061641727.png">
+<meta property="og:image" content="https://hsmyzj-1322074094.cos.ap-beijing.myqcloud.com/202501061641197.png">
+<meta property="og:image" content="https://hsmyzj-1322074094.cos.ap-beijing.myqcloud.com/202501061641480.png">
+<meta property="og:image" content="https://hsmyzj-1322074094.cos.ap-beijing.myqcloud.com/202501061641506.png">
+<meta property="og:image" content="https://hsmyzj-1322074094.cos.ap-beijing.myqcloud.com/202501061641521.png">
+<meta property="og:image" content="https://hsmyzj-1322074094.cos.ap-beijing.myqcloud.com/202501061641686.png">
+<meta property="og:image" content="https://hsmyzj-1322074094.cos.ap-beijing.myqcloud.com/202501061641857.png">
+<meta property="og:image" content="https://hsmyzj-1322074094.cos.ap-beijing.myqcloud.com/202501061641919.png">
+<meta property="og:image" content="https://hsmyzj-1322074094.cos.ap-beijing.myqcloud.com/202501061641981.png">
+<meta property="og:image" content="https://hsmyzj-1322074094.cos.ap-beijing.myqcloud.com/202501061641030.png">
+<meta property="og:image" content="https://hsmyzj-1322074094.cos.ap-beijing.myqcloud.com/202501061641176.png">
+<meta property="og:image" content="https://hsmyzj-1322074094.cos.ap-beijing.myqcloud.com/202501061641544.png">
+<meta property="og:image" content="https://hsmyzj-1322074094.cos.ap-beijing.myqcloud.com/202501061641565.png">
+<meta property="og:image" content="https://hsmyzj-1322074094.cos.ap-beijing.myqcloud.com/202501061641022.png">
+<meta property="og:image" content="https://hsmyzj-1322074094.cos.ap-beijing.myqcloud.com/202501061641067.png">
+<meta property="og:image" content="https://hsmyzj-1322074094.cos.ap-beijing.myqcloud.com/202501061641099.png">
+<meta property="og:image" content="https://hsmyzj-1322074094.cos.ap-beijing.myqcloud.com/202501061641143.png">
+<meta property="og:image" content="https://hsmyzj-1322074094.cos.ap-beijing.myqcloud.com/202501061641310.png">
+<meta property="og:image" content="https://hsmyzj-1322074094.cos.ap-beijing.myqcloud.com/202501061641586.png">
+<meta property="og:image" content="https://hsmyzj-1322074094.cos.ap-beijing.myqcloud.com/202501061641758.png">
+<meta property="og:image" content="https://hsmyzj-1322074094.cos.ap-beijing.myqcloud.com/202501061641775.png">
+<meta property="og:image" content="https://hsmyzj-1322074094.cos.ap-beijing.myqcloud.com/202501061641920.png">
+<meta property="og:image" content="https://hsmyzj-1322074094.cos.ap-beijing.myqcloud.com/202501061641178.png">
+<meta property="og:image" content="https://hsmyzj-1322074094.cos.ap-beijing.myqcloud.com/202501061641530.png">
+<meta property="og:image" content="https://hsmyzj-1322074094.cos.ap-beijing.myqcloud.com/202501061641608.png">
+<meta property="og:image" content="https://hsmyzj-1322074094.cos.ap-beijing.myqcloud.com/202501061641631.png">
+<meta property="og:image" content="https://hsmyzj-1322074094.cos.ap-beijing.myqcloud.com/202501061641667.png">
+<meta property="og:image" content="https://hsmyzj-1322074094.cos.ap-beijing.myqcloud.com/202501061641797.png">
+<meta property="og:image" content="https://hsmyzj-1322074094.cos.ap-beijing.myqcloud.com/202501061641998.png">
+<meta property="og:image" content="https://hsmyzj-1322074094.cos.ap-beijing.myqcloud.com/202501061641056.png">
+<meta property="og:image" content="https://hsmyzj-1322074094.cos.ap-beijing.myqcloud.com/202501061641115.png">
+<meta property="og:image" content="https://hsmyzj-1322074094.cos.ap-beijing.myqcloud.com/202501061641206.png">
+<meta property="og:image" content="https://hsmyzj-1322074094.cos.ap-beijing.myqcloud.com/202501061641241.png">
+<meta property="og:image" content="https://hsmyzj-1322074094.cos.ap-beijing.myqcloud.com/202501061641256.png">
+<meta property="article:published_time" content="2025-01-06T08:41:31.000Z">
+<meta property="article:modified_time" content="2025-01-06T08:41:52.065Z">
+<meta property="article:author" content="John Doe">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://hsmyzj-1322074094.cos.ap-beijing.myqcloud.com/202501061641686.png">
+  
+  
+  
+  <title>AIGC安全调研 - Hexo</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1749284_5i9bdhy70f8.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1736178_k526ubmyhba.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+  
+
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"example.com","root":"/","version":"1.9.8","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false},"umami":{"src":null,"website_id":null,"domains":null,"start_time":"2024-01-01T00:00:00.000Z","token":null,"api_server":null}},"search_path":"/local-search.xml","include_content_in_search":true};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+
+  
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 70vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>SLL779</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/" target="_self">
+                <i class="iconfont icon-home-fill"></i>
+                <span>首页</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/" target="_self">
+                <i class="iconfont icon-archive-fill"></i>
+                <span>归档</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/" target="_self">
+                <i class="iconfont icon-category-fill"></i>
+                <span>分类</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/" target="_self">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>标签</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/" target="_self">
+                <i class="iconfont icon-user-fill"></i>
+                <span>关于</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
+              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('/img/default.png') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle" data-typed-text="AIGC安全调研"></span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2025-01-06 16:41" pubdate>
+          2025年1月6日 下午
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          11k 字
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          92 分钟
+        
+      </span>
+    
+
+    
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <h1 id="seo-header">AIGC安全调研</h1>
+            
+            
+              <div class="markdown-body">
+                
+                <h1 id="AIGC安全调研"><a href="#AIGC安全调研" class="headerlink" title="AIGC安全调研"></a><strong>AIGC安全调研</strong></h1><h2 id="一、-AIGC全生命周期风险"><a href="#一、-AIGC全生命周期风险" class="headerlink" title="一、 AIGC全生命周期风险"></a>一、 <strong>AIGC全生命周期风险</strong></h2><h3 id="1-初始阶段"><a href="#1-初始阶段" class="headerlink" title="1. 初始阶段"></a>1. <strong>初始阶段</strong></h3><p>初始阶段安全风险。初始阶段是指将想法转化为有形系统的过程，主要包括任务分析、需求定义、风险管理等过程。这个阶段的安全风险主要表现为对人工智能应用目标的设定有悖国家法律法规和社会伦理规范</p>
+<p><strong>风险<strong><strong>一</strong></strong>：****应用目标有悖国家法律法规和社会伦理规范</strong></p>
+<h3 id="2-设计研发阶段"><a href="#2-设计研发阶段" class="headerlink" title="2. 设计研发阶段"></a>2. <strong>设计研发阶段</strong></h3><p>设计研发阶段安全风险。设计研发阶段是指完成可部署人工智能系统创建的过程，主要句括确定设计方法、定义系统框架、软件代码实现、风险管理等过程。这个阶段的安全风险主要表现为人工智能基础设施不完善、技术脆弱性以及设计研发有误等引发的安全风险。</p>
+<p><strong>风险一：AI基础设施不完善</strong></p>
+<p>风险表现：</p>
+<ol>
+<li>算法后门嵌入</li>
+<li>代码安全漏洞，训练数据不均衡</li>
+<li>训练数据投毒，训练数据泄漏</li>
+</ol>
+<p><strong>风险二：AI技术脆弱性</strong></p>
+<p>风险表现：</p>
+<ol>
+<li>算法弱鲁棒性</li>
+<li>算法不可解释</li>
+<li>算法偏见歧视</li>
+</ol>
+<p><strong>风险三：AI设计研发有误</strong></p>
+<p>风险表现：系统不可控行为</p>
+<h3 id="3-校验验证阶段"><a href="#3-校验验证阶段" class="headerlink" title="3. 校验验证阶段"></a>3. <strong>校验验证阶段</strong></h3><p>检验验证阶段安全风险。检验验证阶段是指检查人工智能系统是否按照预期需求工作以及是否完全满足预定目标。这个阶段的安全风险主要表现为测试验证不充分，未及时发现和修复前序阶段的安全风险</p>
+<p><strong>风险一：测试验证不充分</strong></p>
+<p>风险表现：未及时发现和修复前序阶段安全风险</p>
+<h3 id="4-部署阶段"><a href="#4-部署阶段" class="headerlink" title="4. 部署阶段"></a>4. <strong>部署阶段</strong></h3><p>部署阶段安全风险。部署阶段是指在目标环境中安装和配置人工智能系统的过程。这个阶段的安全风险主要表现为人工智能系统部署的软硬件环境不可信，系统可能遭受非授权访问和非授权使用。</p>
+<p><strong>风险一：部署环境不可信</strong></p>
+<p>风险表现：非授权访问、非授权使用</p>
+<h3 id="5-运行监控阶段"><a href="#5-运行监控阶段" class="headerlink" title="5. 运行监控阶段"></a>5. <strong>运行监控阶段</strong></h3><p>运行监控阶段安全风险。运行监控阶段，人工智能系统处于运行和可使用状态，主要包括运行监控、维护升级等过程。这个阶段的安全风险主要表现为恶意攻击者对人工智能系统发起的对抗样本、算法后门、模型窃取、模型反馈误导、数据逆向还原、成员推理、属性推断、代码漏洞利用等安全攻击，以及人工智能系统遭受滥用或恶意应用。</p>
+<p><strong>风险一：新型安全攻击</strong></p>
+<p>风险表现：</p>
+<ol>
+<li>对抗样本攻击、算法后门攻击</li>
+<li>模型窃取攻击、模型反馈误导</li>
+<li>数据逆向还原、成员推理攻击</li>
+<li>属性推断攻击、代码漏洞利用</li>
+</ol>
+<p><strong>风险二：不安全的使用</strong></p>
+<p>风险表现：滥用&#x2F;恶意应用</p>
+<h3 id="6-持续验证阶段"><a href="#6-持续验证阶段" class="headerlink" title="6. 持续验证阶段"></a>6. <strong>持续验证阶段</strong></h3><p>持续验证阶段安全风险。在持续验证阶段，对于开展持续学习的人工智能系统进行持续检验和验证。这个阶段的安全风险主要表现为测试验证数据更新不及时，未及时发现和修复因持续学习引入的模型反馈误导等安全风险</p>
+<p><strong>风险一：测试验证数据更新不及时</strong></p>
+<p>风险表现：未及时发现和修复因持续学习引入的模型反馈误导等安全风险</p>
+<h3 id="7-重新评估阶段"><a href="#7-重新评估阶段" class="headerlink" title="7. 重新评估阶段"></a>7. <strong>重新评估阶段</strong></h3><p>重新评估阶段安全风险。当初始目标无法达到或者需要修改时，进入重新评估阶段。该阶段主要句括设计定义、需求定义、风险管理等过程。这个阶段主要涉及需求调整和重新定义，因而其安全风险与初始阶段的安全风险类似，即人工智能应用目标的设定有悖国家法律法规和社会伦理规范。</p>
+<p><strong>风险一：应用目标有悖国家法律法规和社会伦理规范</strong></p>
+<h3 id="8-废弃阶段"><a href="#8-废弃阶段" class="headerlink" title="8. 废弃阶段"></a>8. <strong>废弃阶段</strong></h3><p>废弃阶段安全风险。在废弃阶段，废弃销毁使用目的不复存在或者有更好解决方法替换的人工智能系统，主要包括数据、算法模型以及系统整体的废弃销毁过程。这个阶段的安全风险主要表现为销毁不彻底，泄露个人隐私。</p>
+<p><strong>风险一：销毁不彻底</strong></p>
+<p>表现形式：泄露个人隐私</p>
+<h2 id="二、AIGC面临的风险与防御方式汇总"><a href="#二、AIGC面临的风险与防御方式汇总" class="headerlink" title="二、AIGC面临的风险与防御方式汇总"></a><strong>二、AIGC面临的风险与防御方式汇总</strong></h2><h3 id="1-对抗样本攻击风险"><a href="#1-对抗样本攻击风险" class="headerlink" title="1. 对抗样本攻击风险"></a>1. <strong>对抗样本攻击风险</strong></h3><h4 id="1-1-对抗样本的基本原理"><a href="#1-1-对抗样本的基本原理" class="headerlink" title="1.1 对抗样本的基本原理"></a><strong>1.1 对抗样本的基本原理</strong></h4><p>对抗样本攻击主要通过在干净样本中<strong>添加人们难以察觉的细微扰动</strong>，来时正常训练的深度学习模型<strong>输出置信度很高的错误判断</strong>。对抗样本攻击的核心在于如何构造细微扰动。</p>
+<p><img src="https://hsmyzj-1322074094.cos.ap-beijing.myqcloud.com/202501061641686.png" srcset="/img/loading.gif" lazyload alt="img"></p>
+<h4 id="1-2-对抗样本攻击类别"><a href="#1-2-对抗样本攻击类别" class="headerlink" title="1.2 对抗样本攻击类别"></a><strong>1.2 对抗样本攻击类别</strong></h4><p>目前的对抗样本从是否需要指定攻击的类目可以分为:</p>
+<p><strong>非定向攻击</strong>(non-targeted attack)和<strong>定向****攻击</strong>(targeted attack)</p>
+<ol>
+<li>定向攻击旨在讲深度学习模型误导至攻击者指定的输出，如在分类人物中指定将熊猫识别为牛，如下图</li>
+</ol>
+<p><img src="https://hsmyzj-1322074094.cos.ap-beijing.myqcloud.com/202501061641732.png" srcset="/img/loading.gif" lazyload alt="img"></p>
+<p>定向攻击机要降低深度学习模型对输入样本真实标签的置信度，又要尽可能的提升攻击者指定标签的置信度，因此攻击难度较大。</p>
+<ol start="2">
+<li>非定向攻击旨在将深度学习木星误导至错误的类别，而不指定具体的类别，如在分类人物中将熊猫识别为非熊猫的任一类别，如下图：</li>
+</ol>
+<p><img src="https://hsmyzj-1322074094.cos.ap-beijing.myqcloud.com/202501061641832.png" srcset="/img/loading.gif" lazyload alt="img"></p>
+<p>对抗样本攻击按照攻击环境可以分为：</p>
+<p><strong>白盒攻击</strong>(white-box attack)和<strong>黑盒攻击</strong>(black-box attack)</p>
+<p>白盒攻击是指攻击者在<strong>已知目标模型所有知识的情况</strong>下生成对抗样本的一种手段。白盒攻击需要获取完整的模型结构，了解模型的结构及每层的具体参数，可以完全控制模型的输人，对输人数据甚至可以进行比特级别的修改。这种攻击方案实施起来较为容易，但在多数场景下攻击者难以获得深度学习模型的内部知识，因此应用场景非常有限。</p>
+<p>黑盒攻击是指攻击者在<strong>不知道目标模型任何内部信息</strong>的情况下实施的攻击方案。黑盒攻击完全把目标模型看成一个黑盒，对模型的结构没有了解，不能得到模型的梯度信息和输出的预测概率，只能控制输人得到有限的输出。由于不需要掌握目标模型的相关信息，因此黑盒攻击更容易在低控制权场景下部署和实施。<strong>攻击者根据模型的反馈不断更新对抗样本，直到得到扰动量较小并且攻击成功的对抗样本，从而骗过人脸识别黑盒模型</strong> ，这给人们的财产安全及个人隐私安全带来了极大的威胁。</p>
+<h4 id="1-3-黑白盒攻击常用算法"><a href="#1-3-黑白盒攻击常用算法" class="headerlink" title="1.3 黑白盒攻击常用算法"></a><strong>1.3 黑白盒攻击常用算法</strong></h4><h5 id="1-3-1-黑盒攻击算法"><a href="#1-3-1-黑盒攻击算法" class="headerlink" title="1.3.1 黑盒攻击算法"></a><strong>1.3.1 黑盒攻击算法</strong></h5><ol>
+<li>FGSM</li>
+<li>CW</li>
+</ol>
+<h5 id="1-3-2-白盒攻击算法"><a href="#1-3-2-白盒攻击算法" class="headerlink" title="1.3.2 白盒攻击算法"></a><strong>1.3.2 白盒攻击算法</strong></h5><ol>
+<li>PBAAML</li>
+<li>ZOO</li>
+</ol>
+<h4 id="1-4-对抗样本应用场景"><a href="#1-4-对抗样本应用场景" class="headerlink" title="1.4 对抗样本应用场景"></a><strong>1.4 对抗样本应用场景</strong></h4><p>对抗样本技术提出后引发了学术界和工业界对于深度学习模型在安全方面的广泛关注，成为目前深度学习领域最热的研究课题之一,新的对抗攻击方法不断涌现，应用场景从图像分类扩展到目标检测等.同时，研究人员也开展了针对对抗攻击的防御研究，提出了若干种提升模型安全性能的方法，但迄今为止仍然无法完全防御来自对抗样本的攻击，下面为列举的几种结合实际业务，介绍对抗样本的几个常用场景。</p>
+<h5 id="1-4-1-人脸识别"><a href="#1-4-1-人脸识别" class="headerlink" title="1.4.1 人脸识别"></a><strong>1.4.1 人脸识别</strong></h5><p>对人脸识别算法进行攻击，**通过在原始图像中加人人眼不可区分的微量干扰后,**<strong>使得人脸无法被检测算法所定位</strong>.图 (a)为原始图像,检测算法可以准确定位，图 (b)为对抗样本，已经成功绕开了人脸检测算法</p>
+<p><img src="https://hsmyzj-1322074094.cos.ap-beijing.myqcloud.com/202501061641708.png" srcset="/img/loading.gif" lazyload alt="img"></p>
+<p><img src="https://hsmyzj-1322074094.cos.ap-beijing.myqcloud.com/202501061641791.png" srcset="/img/loading.gif" lazyload alt="img"></p>
+<p>可以看到对抗样本揭露了人工智能模型在安全性能上的局限性,该技术一旦被人恶意使用，将可能造成巨大的经济损失.因此，在人工智能应用场景中我们有必要研究防御算法以应对挑战。</p>
+<h5 id="1-4-2-文本攻击"><a href="#1-4-2-文本攻击" class="headerlink" title="1.4.2 文本攻击"></a><strong>1.4.2 文本攻击</strong></h5><p>文本对抗的工作越来越多,并且文本对抗的成本更低，只需要增删改几个词,就有可能导致模型的识别结果出错，.Gao 等人对文本分类模型进行了黑盒攻击，提出了 DeepWordBug 算法通过 DeepWordBug 对文本进行扰动,可以使得：</p>
+<ol>
+<li>基于 Word-LSTM 的模型识别率降低 68%</li>
+<li>基于 Char-CNN 的模型识别率降低 48%</li>
+</ol>
+<p>DeepWordBug 算法会先选择最可能改变模型分类的英文单词,然后将该英文单词进行扰动.从而使得文本分类模型识别错误.例如下图中通过将 Place 改成 Plcae,heart 改成 herat 后,识别模型将就正面的评价识别成了负面</p>
+<p><img src="https://hsmyzj-1322074094.cos.ap-beijing.myqcloud.com/202501061641727.png" srcset="/img/loading.gif" lazyload alt="img"></p>
+<h5 id="1-4-3-图对抗攻击"><a href="#1-4-3-图对抗攻击" class="headerlink" title="1.4.3 图对抗攻击"></a><strong>1.4.3 图对抗攻击</strong></h5><p>图模型的使用场景也非常广泛，比如电商场景的买家卖家网络、支付场景的交易网络以及互联文档等.基于图数据的一个常见任务是节点分类:给出一个大的(属性)图和一部分节点的标签来预测剩余节点的标签.当前大量的系统均采用图卷积网络的方法进行节点分类, 但实验表明,基于图卷积网络的节点分类也很容易被欺骗&#x2F;攻击,如下图所示：</p>
+<p><img src="https://hsmyzj-1322074094.cos.ap-beijing.myqcloud.com/202501061641197.png" srcset="/img/loading.gif" lazyload alt="img"></p>
+<p>Zigner 等人提出了针对图深度学习模型的对抗攻击方法，是首个在属性图上的对抗攻击</p>
+<p>他们的研究结果表明:</p>
+<ol>
+<li>通过操纵图结构和节点特征，可以显著降低节点分类的准确率。</li>
+<li>通过保持重要的数据特征，例如度分布、特征共现，可以确保扰动不被察觉。</li>
+<li>攻击方法是可迁移的。</li>
+</ol>
+<p>当前，基于图深度学习的对抗扰动问题并未得到妥善的解决。对使用图深度学习模型的领域，对抗又非常容易，比如垃圾邮件制造者向社交网络添加错误的信息，犯罪分子频繁操控在线评论和产品网站等，操作成本都非常低，</p>
+<h4 id="1-5-应用场景：对抗应答式验证码"><a href="#1-5-应用场景：对抗应答式验证码" class="headerlink" title="1.5 应用场景：对抗应答式验证码"></a><strong>1.5 应用场景：对抗应答式验证码</strong></h4><p>受到利益驱使，市场上出现了一批，专门破解各种类型验证码的产品，俗称打码平台.最初形式是通过人工方式进行识别,但随着深度学习技术的使用门槛越来越低,黑灰产会已经开始使用AI 技术来自动识别验证码，简而言之,就是利用模型识别图片验证码，然后利用模型的结果突破人机识别。</p>
+<p><img src="https://hsmyzj-1322074094.cos.ap-beijing.myqcloud.com/202501061641480.png" srcset="/img/loading.gif" lazyload alt="img"></p>
+<p>作为对 AI模型的攻击手段，对抗样本技术也可以用于攻击黑灰产团伙的模型.如果我们将<strong>原始的验证码</strong>替换成<strong>增加扰动后的对抗验证码</strong>，那么<strong>黑灰产</strong>的打码平台的模<strong>型识别率将大幅降低</strong></p>
+<p>为了使得生成的对抗样本更加难以识别，且不影响正常用户的体验.我们的对抗生成技术在图像区域和生成方式上进行了组合扩展</p>
+<ol>
+<li>不同的距离度量方式</li>
+<li>图像的不同区城采用不同的生成策略</li>
+<li>FGSM,IFGSM,M-FGSM 随机生成</li>
+</ol>
+<p>采用该组合拓展生成的对抗码如下图：</p>
+<p><img src="https://hsmyzj-1322074094.cos.ap-beijing.myqcloud.com/202501061641506.png" srcset="/img/loading.gif" lazyload alt="img"></p>
+<p>通过对抗样本生成技术，<strong>可以将****破解成功率从 80%+降低到了 20%以内</strong>，而且正常用户的体验基本不受影响。</p>
+<p>更进一步,我们推出了知识问答型验证码,对人机验证环节提供了双重保障,进一步提升了验证码系统的安全性能.主要包括以下 2 层环节</p>
+<ol>
+<li>通过自然语言处理技术自动挖掘生活常识类信息，并组织成问答型知识库.该类题库对于普通用户基本没有难度，但通过机器回答会有较高的学习门槛</li>
+<li>对抗验证码.答案选项会以图片的形式展示给用户，使用对抗样本技术后会有效降低图片被 AI算法识别的成功率.</li>
+</ol>
+<p><img src="https://hsmyzj-1322074094.cos.ap-beijing.myqcloud.com/202501061641521.png" srcset="/img/loading.gif" lazyload alt="img"></p>
+<p>AI验证码，进一步提升了验证码系统的安全性能，使得黑灰产难以使用算法来自动破解验证码，保障了互联网的安全环境</p>
+<h4 id="1-6-对抗样本防护"><a href="#1-6-对抗样本防护" class="headerlink" title="1.6 对抗样本防护"></a><strong>1.6 对抗样本防护</strong></h4><h5 id="1-6-1-网络蒸馏-Network-Distillation"><a href="#1-6-1-网络蒸馏-Network-Distillation" class="headerlink" title="1.6.1 网络蒸馏(Network Distillation )"></a><strong>1.6.1 网络蒸馏(Network Distillation )</strong></h5><p>网络蒸技术的基本原理是在模型训练阶段，对多个DNN进行串联，其中前个DNN生成的分类结果被用于训练后一个DNN。有学者发现转移知识可以一定程度上降低模型对微小扰动的敏感度，提高A模型的鲁棒性，于是提出将网络蒸馏技术用于防御闪避攻击，并在MNIST和CIFAR-10数据集上测试，发现该技术可将使特定攻击(如JSMA)的成功率降低。</p>
+<h5 id="1-6-2-对抗训练-Adversarial-Training"><a href="#1-6-2-对抗训练-Adversarial-Training" class="headerlink" title="1.6.2 对抗训练(Adversarial Training)"></a><strong>1.6.2 对抗训练(Adversarial Training)</strong></h5><p>该技术的基本原理是在模型训练阶段，使用已知的各种攻击方法生成对抗样本，再将对抗样本加入模型的训练集中，对模型进行单次或多次重训练，生成可以抵抗攻击扰动的新模型。同时，由于综合多个类型的对抗样本使得训练集数据的增多，该技术不但可以增强新生成模型的鲁棒性，还可以增强模型的准确率和规范性。</p>
+<h5 id="1-6-3-对抗样本检测-Adversarial-Sample-Detection"><a href="#1-6-3-对抗样本检测-Adversarial-Sample-Detection" class="headerlink" title="1.6.3 对抗样本检测(Adversarial Sample Detection)"></a><strong>1.6.3 对抗样本检测(Adversarial Sample Detection)</strong></h5><p>该技术的原理为在模型的使用阶段，通过增加外部检测模型或原模型的检测组件来检测待判断样本是否为对抗样本。在输入样本到达原模型前，检测模型会判断其是否为对抗样本。检测模型也可以在原模型每一层提取相关信息，综合各种信息来进行检测。各类检测模型可能依据不同标准来判断输入是否为对抗样本。例如，输入样本和正常数据间确定性的差异可以用来当作检测标准，对抗样本的分布特征，输入样本的历史都可以成为判别对抗样本的依据。</p>
+<h5 id="1-6-4-输入重构-Input-Reconstruction"><a href="#1-6-4-输入重构-Input-Reconstruction" class="headerlink" title="1.6.4 输入重构(Input Reconstruction )"></a><strong>1.6.4 输入重构(Input Reconstruction )</strong></h5><p>该技术的原理是在模型的使用阶段，通过将输入样本进行变形转化来对抗闪避攻击，变形转化后的输入不会影响模型的正常分类功能。重构方法包括对输入样本加噪、去噪、和使用自动编码器(autoencoder)[9]改变输入样本等方法。</p>
+<h5 id="1-6-5-DNN模型验证-DNN-Verification"><a href="#1-6-5-DNN模型验证-DNN-Verification" class="headerlink" title="1.6.5 DNN模型验证(DNN Verification)"></a><strong>1.6.5 DNN模型验证(DNN Verification)</strong></h5><p>举似软件验证分析技术，DNN模型验证技术使用求解器 ( solver)来验DNN模型的各种属性，如验证在特定扰动范围内没有对抗样本。但是通常验证DNN模型是NP完全问题，求解器的效率较低。通过取舍和优化，如对模型节点验证的优先度选择、分享验证信息、按区域验证等，可以进一步提高DNN模型验证运行效率。</p>
+<h3 id="2-数据投毒攻击风险"><a href="#2-数据投毒攻击风险" class="headerlink" title="2. 数据投毒攻击风险"></a>2. <strong>数据投毒攻击风险</strong></h3><h4 id="2-1-数据投毒基本原理"><a href="#2-1-数据投毒基本原理" class="headerlink" title="2.1 数据投毒基本原理"></a><strong>2.1 数据投毒基本原理</strong></h4><p>数据投毒攻击的原理主要在于通过污染训练数据影响模型训练，从而使模型有某种特定的表现，如控制垃圾邮件检测模型预测结果和人机对话系统内容输出等。数据投毒攻击的核心为如何构建可以实现特定目标攻击的数据投毒样本。</p>
+<h4 id="2-2-数据投毒的范围"><a href="#2-2-数据投毒的范围" class="headerlink" title="2.2 数据投毒的范围"></a><strong>2.2 数据投毒的范围</strong></h4><p>可能的数据投毒入口：</p>
+<ol>
+<li>产品开放入口：多产品通过收集用户与平台产品的交互数据进一步训练、优化其部署模型。基于此，攻击者可以模拟正常用户进行操作，其行为会自动被平台收集并参与后续模型的训练过程。</li>
+<li>网络公开数据：互联网存在海量标注与无标注数据，包括图像、文本信息等。得益于预训练模型的广泛应用，越来越多的系统会依赖从网上爬取的一些内容进行预学习。在这种情况下，只要攻击者有意在网上发布一些“特殊投毒数据“系统在不加识别的情况下使用这些数据就很容易收到攻击者的影响。</li>
+<li>内部人员：海量的数据处理需要大量工作人员，他们通过收集与处理大量数据为不同模型训练任务提供数据基础。例如，训练人脸识别系统依赖大量人工标注数据。在这种背景下，很多内部人员可以很轻易地注人部分标注错误或修改后的训练样本且不被发现。</li>
+</ol>
+<h4 id="2-3-数据投毒攻击技术分类"><a href="#2-3-数据投毒攻击技术分类" class="headerlink" title="2.3 数据投毒攻击技术分类"></a><strong>2.3 数据投毒攻击技术分类</strong></h4><p>从投毒攻击目标来看，我们可以将已有工作分为 <strong>Non-target 投毒攻击</strong>和 <strong>Target 投毒攻击</strong>两类。</p>
+<ol>
+<li><strong>Non-target 投毒攻击表示无****特殊目标的投毒攻击</strong>，<strong>不要求目标模型被攻击后有某种具体的表现，只需要其看起来“不正常”或被完全破坏</strong>。</li>
+<li><strong>Target 投毒攻击更****有针对性</strong>，<strong>需要设定具体的攻击目标</strong>，<strong>如控制模型对某种类型输人反馈特定的预测结果，或者返回特定的输出</strong>。</li>
+</ol>
+<p><img src="https://hsmyzj-1322074094.cos.ap-beijing.myqcloud.com/202501061641686.png" srcset="/img/loading.gif" lazyload alt="img"></p>
+<h4 id="2-4-传统数据投毒攻击介绍"><a href="#2-4-传统数据投毒攻击介绍" class="headerlink" title="2.4 传统数据投毒攻击介绍"></a><strong>2.4 传统数据投毒攻击介绍</strong></h4><p>传统意义上的数据投毒攻击并不需要额外的算法支持，一般情况下这类“脏”数据可以通过专家经验直接构造。例如：市面上的问答式机器人&#x2F;智能交互AI，如微软小冰、QQ小冰等，它们通过庞大的语料库来学习，还会将用户和它的对话数据收纳进自己的语料库里，因此我们也可以在和它们对话时进行“调教”，从而实现让其说脏话甚至发表敏感言论的目的。</p>
+<p><img src="https://hsmyzj-1322074094.cos.ap-beijing.myqcloud.com/202501061641857.png" srcset="/img/loading.gif" lazyload alt="img"></p>
+<h4 id="2-5-数据投毒防护"><a href="#2-5-数据投毒防护" class="headerlink" title="2.5 数据投毒防护"></a><strong>2.5 数据投毒防护</strong></h4><h5 id="2-5-1-训练数据过滤-Training-Data-Filtering"><a href="#2-5-1-训练数据过滤-Training-Data-Filtering" class="headerlink" title="2.5.1 训练数据过滤 (Training Data Filtering)"></a><strong>2.5.1 训练数据过滤 (Training Data Filtering)</strong></h5><p>该技术侧重对训练数据集的控制，利用检测和净化的方法防止数据投毒攻击影响模型。具体方向包括: 根据数据的标签特性找到可能的数据投毒攻击数据点，在重训练时过滤这些攻击点，采用模型对比过滤方法，减少可以被数据投毒攻击利用的采样数据，并过滤数据对抗数据投毒攻击。</p>
+<h5 id="2-5-2-回归分析-Regression-Analysis"><a href="#2-5-2-回归分析-Regression-Analysis" class="headerlink" title="2.5.2 回归分析( Regression Analysis )"></a><strong>2.5.2 回归分析( Regression Analysis )</strong></h5><p>该技术基于统计学方法，检测数据集中的噪声和异常值。具体方法包括对模型定义不同的损失函数 ( loss function ) 来检查异常值，以及使用数据的分布特性来进行检测等。</p>
+<h5 id="2-5-3-集成分析-Ensemble-Analysis"><a href="#2-5-3-集成分析-Ensemble-Analysis" class="headerlink" title="2.5.3 集成分析(Ensemble Analysis )"></a><strong>2.5.3 集成分析(Ensemble Analysis )</strong></h5><p>该技术强调采用多个子模型的综合结果提升机器学习系统抗药饵攻击的能力。多个独立模型共同构成AI系统，由于多个模型采用不同的训练数据集，整个系统被数据投毒攻击影响的可能性进一步降低。</p>
+<h3 id="3-模拟后门攻击风险"><a href="#3-模拟后门攻击风险" class="headerlink" title="3. 模拟后门攻击风险"></a>3. <strong>模拟后门攻击风险</strong></h3><h4 id="3-1-模拟后门攻击概念"><a href="#3-1-模拟后门攻击概念" class="headerlink" title="3.1 模拟后门攻击概念"></a><strong>3.1 模拟后门攻击概念</strong></h4><p>后门在信息安全领域比较常见，是指绕过安全控制而获取对程序或系统的访问权的方法，当这一概念泛化到神经网络上时则略有不同。针对 AI 模型的后门攻击，通常是指攻击者将隐藏后门嵌入到DNN中，使得攻击模型在良性样本上仍保持正常，而点那个输入带有攻击者定义的触发器时，模型会激活隐藏的后门并输入对应标签。</p>
+<h4 id="3-2-后门的攻击种类与原理"><a href="#3-2-后门的攻击种类与原理" class="headerlink" title="3.2 后门的攻击种类与原理"></a><strong>3.2 后门的攻击种类与原理</strong></h4><h5 id="3-2-1-投毒式后门攻击"><a href="#3-2-1-投毒式后门攻击" class="headerlink" title="3.2.1 投毒式后门攻击"></a><strong>3.2.1 投毒式后门攻击</strong></h5><p>投毒式后门攻击通常会修改一部分训练数据，在这些数据上设置用于触发后门的特殊模式(触发器 )，并将标签设置为攻击目标所对应的标签。网络在训练过程中，将会学到所有与目标标签有关联的特征，当然也包括攻击者所设置的触发器。这类强特征在反复出现的过程中会不断强化目标标签与触发器之间的关联,以至于网络收敛后在正常的任务上表现与平常无异，同时对触发器高度敏感，可以实现高精度的后门攻击。对于空间足够大的网络，甚至可以同时植入多种模式的后门。</p>
+<h5 id="3-2-2-非投毒式后门攻击"><a href="#3-2-2-非投毒式后门攻击" class="headerlink" title="3.2.2 非投毒式后门攻击"></a><strong>3.2.2 非投毒式后门攻击</strong></h5><ol>
+<li>权重攻击：一些应用会将模型<strong>存储在终端</strong>，<strong>攻击者有机会接触模型文件</strong>，攻击链路更短因此<strong>通过修改模型权重等方式进行攻击</strong>是一种现实威胁更大的攻击手法。</li>
+<li>模型结构攻击：模型结构攻击是新提出的攻击手法，攻击者通常会借助一些黑客手法，如<strong>通过逆向工程解读模型文件结构</strong>，并<strong>植<strong><strong>入</strong></strong>自己训练的后门网络重新编译打包</strong>，实现给网络植入后门的目的，离产生真实威胁更近一步。</li>
+</ol>
+<h4 id="3-3-后门攻击防护"><a href="#3-3-后门攻击防护" class="headerlink" title="3.3 后门攻击防护"></a><strong>3.3 后门攻击防护</strong></h4><h5 id="3-3-1-输入预处理-Input-Preprocessing"><a href="#3-3-1-输入预处理-Input-Preprocessing" class="headerlink" title="3.3.1 输入预处理(Input Preprocessing)"></a><strong>3.3.1 输入预处理(Input Preprocessing)</strong></h5><p>该方法的目的是过滤能触发后门的输入，降低输入触发后门、改变模型判断的风险。</p>
+<h5 id="3-3-2-模型剪枝-Model-Pruning"><a href="#3-3-2-模型剪枝-Model-Pruning" class="headerlink" title="3.3.2 模型剪枝( Model Pruning)"></a><strong>3.3.2 模型剪枝( Model Pruning)</strong></h5><p>该技术原理为适当剪除原模型的神经元，在保证正常功能一致的情况下，减少后门神经元起作用的可能性。利用细粒度的剪枝方法，可以去除组成后门的神经元，防御后门攻击。</p>
+<h3 id="4-预训练模型安全风险"><a href="#4-预训练模型安全风险" class="headerlink" title="4. 预训练模型安全风险"></a>4. <strong>预训练模型安全风险</strong></h3><h4 id="4-1-预训练风险分析"><a href="#4-1-预训练风险分析" class="headerlink" title="4.1 预训练风险分析"></a><strong>4.1 预训练风险分析</strong></h4><h5 id="4-1-1-数据风险"><a href="#4-1-1-数据风险" class="headerlink" title="4.1.1 数据风险"></a><strong>4.1.1 数据风险</strong></h5><p>深度学习是一种数据驱动的技术，实现了从数据到标签的映射。<strong>当模型的参数量急剧增加时，模型会不可避免地记住数据中隐含的模式，甚至是数据本身。当遇到合适的上下文时，这些记忆的案例就会被模型重新“吐”出来</strong>，从而造成数据泄露</p>
+<h5 id="4-1-2-敏感内容生成风险"><a href="#4-1-2-敏感内容生成风险" class="headerlink" title="4.1.2 敏感内容生成风险"></a><strong>4.1.2 敏感内容生成风险</strong></h5><p>先进的语言模型(如GPT2和 GPT3)大多使用来自网络的大型文本语料库进行预训练。语言模型学习预测序列中的下一个标记或句子中的单词。<strong>如果训练数据中包含暴力、色情、歧视等敏感内容</strong>，则<strong>语言模型会在训练阶段学习预测并记住这些单词</strong>，并在随后的推理过程中<strong>生成包含它们的输出</strong>。</p>
+<p>例子：以GPT3在Reddit评论数据集上显示出明显的冒犯性言论 如下图：</p>
+<p><img src="https://hsmyzj-1322074094.cos.ap-beijing.myqcloud.com/202501061641919.png" srcset="/img/loading.gif" lazyload alt="img"></p>
+<p>此外，在用户内容生成领域，AI生成的假新闻旺旺会带来严峻的挑战，AI可以轻松生成天马行空的新闻。</p>
+<h5 id="4-1-3-供应链风险"><a href="#4-1-3-供应链风险" class="headerlink" title="4.1.3 供应链风险"></a><strong>4.1.3 供应链风险</strong></h5><p>因为预训练模型的训练代价很高，所以<strong>我们通常不会从头开始训练</strong>，而会<strong>直接复用已有的模型</strong>，这就导致我们可能直接使用了受污染或带后门的基础模型，从而造成安全隐患。</p>
+<p>模型污染问题同前面介绍的数据泄露和敏感内容生成一样，是模型本身固有的，如果没有刻意地修正，那么这些缺陷将一直存在。<strong>当处于供应链下游的模型开始提供服务时，用户有意或无意地输入就会触发这些潜在风险</strong>。</p>
+<p><img src="https://hsmyzj-1322074094.cos.ap-beijing.myqcloud.com/202501061641981.png" srcset="/img/loading.gif" lazyload alt="img"></p>
+<p>目前市面上提供的预训练模型达到<strong>数千个基于这些模型衍生出来的子模型</strong>更多。由于 AI的黑盒特性和大模型的复杂性，我们比较难检测出其中的后门,一旦使用,就会触发严重的合规和业务风险。</p>
+<h5 id="4-1-4-幻觉"><a href="#4-1-4-幻觉" class="headerlink" title="4.1.4 幻觉"></a><strong>4.1.4 幻觉</strong></h5><p>大模型的幻觉是指模型会输出与事实相悖的内容。在模型不具备回答某种问题的能力的时候，模型不会拒绝回答，而是会输出错误的答案。</p>
+<h5 id="4-1-5-不良信息"><a href="#4-1-5-不良信息" class="headerlink" title="4.1.5 不良信息"></a><strong>4.1.5 不良信息</strong></h5><p>大模型的输出内容可能包含恐怖主义、极端主义、色情、暴力等有害信息。由于大模型的训练语料库通常由互联网上的爬取数据组成，网络上的数据难以避免地包含某些有害信息，而模型在这些数据上训练后则会记忆这些有害信息，导致模型在使用的过程中输出有害信息。</p>
+<h5 id="4-1-6-隐私泄露"><a href="#4-1-6-隐私泄露" class="headerlink" title="4.1.6 隐私泄露"></a><strong>4.1.6 隐私泄露</strong></h5><p>由于大模型通常能够在互联网上可搜集到的数据上进行训练，因此不可避免地包含用户隐私信息。如果这些隐私信息被泄露给不法分子，可能会对用户的安全造成严重影响。</p>
+<h5 id="4-1-7-偏见"><a href="#4-1-7-偏见" class="headerlink" title="4.1.7 偏见"></a><strong>4.1.7 偏见</strong></h5><p>模型偏见是人工智能长期以来的重要安全性问题之一，是指模型在训练后会对具有不同宗教、种族、性别等特征的人群产生不一致的结果。模型存在偏见的根源是数据中存在的偏见，由于人类社会的发展过程中存在对少数群体或者弱势群体的偏见，这些偏见会蕴含在人类多年以来所累积的数据中，进而被模型学习到。</p>
+<h5 id="4-1-8-鲁棒性"><a href="#4-1-8-鲁棒性" class="headerlink" title="4.1.8 鲁棒性"></a><strong>4.1.8 鲁棒性</strong></h5><p>与深度学习系统类似，大模型也会存在鲁棒性问题，即在攻击者的恶意攻击下产生错误的预测。对于大语言模型而言，鲁棒性问题的通常表现形式是在输入文本上做微小的扰动（如更改字母、单词），会导致模型的输出结果完全错误，影响用户体验。</p>
+<h5 id="4-1-社会面影响"><a href="#4-1-社会面影响" class="headerlink" title="4.1. 社会面影响"></a><strong>4.1. 社会面影响</strong></h5><p>预训练大模型给人们的生产生活方式带来了重大的变革，因此不可避免地产生一系列社会性问题。例如，GPT-4 在模拟律师考试中取得了前 10% 的成绩，意味着击败了 90% 的人类，这对传统的教育教学方式产生了重大的影响。</p>
+<h4 id="4-2-防御策略"><a href="#4-2-防御策略" class="headerlink" title="4.2 防御策略"></a><strong>4.2 防御策略</strong></h4><h5 id="4-2-1-领域自适应训练（DAPT）"><a href="#4-2-1-领域自适应训练（DAPT）" class="headerlink" title="4.2.1 领域自适应训练（DAPT）"></a><strong>4.2.1 领域自适应训练（DAPT）</strong></h5><p>原理:使用无毒的数据集继续训练，即使用经过筛选后的干净数据继续微调模型，使得模型从原始领域迁移到目标领域，减小原始模型的干扰。</p>
+<p>优点:降低毒性的最有效的策略之一，可针对性地降低隐私数据泄露、敏感内容生成、供应链风险的发生概率，大大缓解模型隐含的毒性。</p>
+<p>缺点: 计算成本高，需要额外的大量训练数据，收集这些数据的成本可能很高。属性调节（ATCON）</p>
+<h5 id="4-2-2-属性调节"><a href="#4-2-2-属性调节" class="headerlink" title="4.2.2 属性调节"></a><strong>4.2.2 属性调节</strong></h5><p>原理:使用添加了“有害”或“无害”属性的训练样本进行进一步的语言模型预训练，即训练时在语句的前面添加 Toxic、Nontoxic、Privacy 等属性，提示GPT 等生成模型该语句的情感色彩。</p>
+<p>优点：在推理（文本生成）期间，可以将属性“有害”添加到提供给模型的提示中，约束生成的文本符合该属性。</p>
+<p>缺点：是计算成本高，效果也非常有限。</p>
+<h5 id="4-2-3-黑名单替换"><a href="#4-2-3-黑名单替换" class="headerlink" title="4.2.3 黑名单替换"></a><strong>4.2.3 黑名单替换</strong></h5><p>原理:诅咒、亵渎、侮辱、手机号、详细地址等“有害”的词，在语言模型中被分配为零概率，用相应的“无害”词替换，以防止它们被生成。</p>
+<p>优点：易于实现、成本低。</p>
+<p>缺点：也很明显，依赖于词库，易出现遗漏等情况，前后语义可能不一致。</p>
+<h5 id="4-2-4-即插即用语言模型（PPLM）"><a href="#4-2-4-即插即用语言模型（PPLM）" class="headerlink" title="4.2.4 即插即用语言模型（PPLM）"></a><strong>4.2.4 即插即用语言模型（PPLM）</strong></h5><p>原理:将一个简单的模型(词袋或单层分类器)用作鉴别器(或属性模型),通过改变其隐藏表示来指导模型的语言生成</p>
+<p>优点:  降低毒性的最有效策略之一，控制生成内容的属性。</p>
+<p>缺点:  实现起来相对复杂，计算成本较高。</p>
+<h5 id="4-2-5-生成鉴别器（GeDi）"><a href="#4-2-5-生成鉴别器（GeDi）" class="headerlink" title="4.2.5 生成鉴别器（GeDi）"></a><strong>4.2.5 生成鉴别器（GeDi）</strong></h5><p>原理:将属性条件(或类条件)模型用作鉴别器，使用贝叶斯规则计算主模型可以生成的所有潜在下一个标记的类似然属性(如有害或无害 )。</p>
+<p>优点:在计算上比 PPLM 更有效，在排除危害方面优于 PPLM。</p>
+<p>缺点:策略更加复杂，计算成本非常高。</p>
+<h5 id="4-2-6-自诊断和自去偏"><a href="#4-2-6-自诊断和自去偏" class="headerlink" title="4.2.6 自诊断和自去偏"></a><strong>4.2.6 自诊断和自去偏</strong></h5><p>原理: 通过在提供给预训练模型的输人提示中添加简短的属性描述(如“以下文本包含有害内容”)，使用自诊断和自去偏算法来降低生成有毒词的概率</p>
+<p>优点：与 ATCON 策略相比，不需要额外的训练。</p>
+<p>缺点：是可能会过滤掉无害的词，存在误杀的情况。解毒能力仅限于模型对相关偏差和有害的“意识”</p>
+<h3 id="5-AI数据隐私窃取"><a href="#5-AI数据隐私窃取" class="headerlink" title="5. AI数据隐私窃取"></a>5. <strong>AI数据隐私窃取</strong></h3><h4 id="5-1-AI数据隐私窃取基本原理"><a href="#5-1-AI数据隐私窃取基本原理" class="headerlink" title="5.1 AI数据隐私窃取基本原理"></a><strong>5.1 AI数据隐私窃取基本原理</strong></h4><p>数据是 AI模型中的关键要素，也是重要的数字资产。然而，研究发现，攻击者可以使用 AI 模型训练过程中产生的中间信息 (如梯度信息等 )，或者 AI 模型使用过程中的输出信息，来进行数据窃取，获取数据隐私信息。特别是在一些应用场景中，用于训练 AI模型的数据可能包含一些个人的隐私信息，如将 AI模型应用到医疗场景中，用于训练模型的医疗数据往往含有患者病情状况等隐私信息这些隐私信息一旦被泄露，将会带来巨大的安全风险和法律风险</p>
+<p><img src="https://hsmyzj-1322074094.cos.ap-beijing.myqcloud.com/202501061641030.png" srcset="/img/loading.gif" lazyload alt="img"></p>
+<p>数据隐私窃取攻击一般会利用两类信息:一类是在模型训练阶段利用模型训练中产生的信息，如梯度信息等，来进行数据隐私窃取;另一类是在模型部署使用阶段利用模型查询输出的信息，来进行数据隐私窃取。</p>
+<h4 id="5-2-数据隐私窃取种类与攻击思路"><a href="#5-2-数据隐私窃取种类与攻击思路" class="headerlink" title="5.2 数据隐私窃取种类与攻击思路"></a><strong>5.2 数据隐私窃取种类与攻击思路</strong></h4><h5 id="5-2-1-数据窃取攻击"><a href="#5-2-1-数据窃取攻击" class="headerlink" title="5.2.1 数据窃取攻击"></a><strong>5.2.1 数据窃取攻击</strong></h5><p>数据窃取攻击是指利用模型训练中产生的中间信息或模型使用中产生的预测结果信息来逆向恢复模型训练集中的数据，比较经典的就是DLG算法了。</p>
+<p><img src="https://hsmyzj-1322074094.cos.ap-beijing.myqcloud.com/202501061641176.png" srcset="/img/loading.gif" lazyload alt="img"></p>
+<p><img src="https://hsmyzj-1322074094.cos.ap-beijing.myqcloud.com/202501061641544.png" srcset="/img/loading.gif" lazyload alt="img"></p>
+<h5 id="5-2-2-成员推理攻击"><a href="#5-2-2-成员推理攻击" class="headerlink" title="5.2.2 成员推理攻击"></a><strong>5.2.2 成员推理攻击</strong></h5><p>成员推理攻击是一种简单的攻击方式，不需要对训练集中的数据进行恢复而只判断当前输人的数据是否为训练集中的数据。在一些医疗AI的应用场景中如果攻击者使用这种攻击方式判断出某患者信息是否在这个医疗模型中，将威胁患者的个人隐私安全。</p>
+<h5 id="5-2-3-属性推理攻击"><a href="#5-2-3-属性推理攻击" class="headerlink" title="5.2.3 属性推理攻击"></a><strong>5.2.3 属性推理攻击</strong></h5><p>属性推理攻击是指对训练数据集中的各类属性信息进行推理，如性别、年龄在分布式训练场景中，Melis 等人“利用训练过程中其他参与方更新的模型参数作为输入特征，训练攻击模型，来推理其他参与方数据的相关属性，如下图：</p>
+<p><img src="https://hsmyzj-1322074094.cos.ap-beijing.myqcloud.com/202501061641565.png" srcset="/img/loading.gif" lazyload alt="img"></p>
+<h4 id="5-3-数据隐私窃取防护"><a href="#5-3-数据隐私窃取防护" class="headerlink" title="5.3 数据隐私窃取防护"></a><strong>5.3 数据隐私窃取防护</strong></h4><h5 id="5-3-1-隐私聚合教师模型-PATE"><a href="#5-3-1-隐私聚合教师模型-PATE" class="headerlink" title="5.3.1 隐私聚合教师模型( PATE)"></a><strong>5.3.1 隐私聚合教师模型( PATE)</strong></h5><p>该技术的基本原理是在模型训练阶段，将训练数据分成多个集合，每个集合用于训练一个独立DNN模型，再使用这些独立DNN模型进行投票的方法共同训练出一个学生模型。这种技术保证了学生模型的判断不会泄露某一个特定训练数据的信息，从而确保了训练数据的隐私性。</p>
+<h5 id="5-3-2-差分隐私-Differential-Privacy"><a href="#5-3-2-差分隐私-Differential-Privacy" class="headerlink" title="5.3.2 差分隐私( Differential Privacy)"></a><strong>5.3.2 差分隐私( Differential Privacy)</strong></h5><p>该技术是在模型训练阶段，用符合差分隐私的方法对数据或模型训练步骤进行加噪。例如有学者提出使用差分隐私生成梯度的方法，保护模型数据的隐私。</p>
+<h5 id="5-3-3-模型水印-Model-Watermarking"><a href="#5-3-3-模型水印-Model-Watermarking" class="headerlink" title="5.3.3 模型水印(Model Watermarking)"></a><strong>5.3.3 模型水印(Model Watermarking)</strong></h5><p>该技术是在模型训练阶段，在原模型中嵌入特殊的识别神经元。如果发现有相似模型，可以用特殊的输入样本识别出相似模型是否通过窃取原模型所得。</p>
+<h2 id="三、-AIGC风险的检测技术、工具或评估手段、方法论"><a href="#三、-AIGC风险的检测技术、工具或评估手段、方法论" class="headerlink" title="三、 AIGC风险的检测技术、工具或评估手段、方法论"></a>三、 <strong>AIGC风险的检测技术、工具或评估手段、方法论</strong></h2><h4 id="1-AIGC风险检测技术"><a href="#1-AIGC风险检测技术" class="headerlink" title="1. AIGC风险检测技术"></a>1. <strong>AIGC风险检测技术</strong></h4><ol>
+<li>静态代码分析（Static Code Analysis）： 静态代码分析工具可检查源代码或二进制代码，以识别潜在的漏洞、弱点和安全问题。常用工具包括Coverity、Checkmarx和Fortify。</li>
+<li>动态应用程序安全测试（Dynamic Application Security Testing，DAST）： DAST工具模拟攻击者的行为，测试应用程序的运行时环境，以发现漏洞和安全问题。常用工具包括OWASP ZAP和Nessus。</li>
+<li>渗透测试（Penetration Testing）： 渗透测试是一种模拟真实攻击的方法，以识别系统中的弱点和安全漏洞。通常由专业的安全测试团队执行。</li>
+<li>漏洞扫描工具： 漏洞扫描工具自动扫描网络、应用程序和系统，以检测已知漏洞和弱点。常用工具包括Nessus、OpenVAS和Qualys。</li>
+<li>威胁建模和风险评估： 使用方法论如FAIR（Factor Analysis of Information Risk）和STRIDE，以识别和分析潜在的威胁，评估风险，并制定应对策略。</li>
+<li>安全审查： 对设计文档、源代码和配置进行仔细审查，以识别安全性问题和最佳实践是否得到遵守。</li>
+<li>安全编码指南： 使用安全编码指南和最佳实践，例如OWASP Top Ten，为开发人员提供指导，以编写更安全的代码。</li>
+<li>持续集成&#x2F;持续交付（CI&#x2F;CD）安全工具： 集成安全性测试工具到CI&#x2F;CD流程中，以确保代码在部署之前经过自动安全测试。</li>
+<li>安全信息和事件管理（SIEM）系统： 部署SIEM系统，用于监控网络和应用程序，检测异常活动并响应安全事件。</li>
+<li>模糊测试（Fuzz Testing）： 模糊测试工具生成大量的随机或半随机数据输入，以测试应用程序对异常输入的响应，以发现漏洞。</li>
+<li>身份验证和访问控制审计： 实施身份验证和访问控制审计，以确保只有授权用户可以访问敏感资源。</li>
+<li>外部威胁情报（Threat Intelligence）： 订阅外部威胁情报服务，以了解当前的威胁趋势和攻击者活动。</li>
+<li>安全开发生命周期（SDLC）： 集成安全性活动和控制点到软件开发生命周期中，以确保安全性考虑在每个阶段都有涵盖。</li>
+<li>合规性扫描： 使用自动化合规性扫描工具，以验证系统是否符合适用的法规和标准。</li>
+<li>持续监控和日志分析： 设置系统的持续监控，分析日志以检测异常活动和安全事件。</li>
+</ol>
+<h4 id="2-AIGC风险检测工具"><a href="#2-AIGC风险检测工具" class="headerlink" title="2. AIGC风险检测工具"></a>2. <strong>AIGC风险检测工具</strong></h4><h5 id="LLMFuzzer（风险检测工具）"><a href="#LLMFuzzer（风险检测工具）" class="headerlink" title="LLMFuzzer（风险检测工具）"></a><strong>LLMFuzzer（风险检测工具）</strong></h5><p>链接：<a target="_blank" rel="noopener" href="https://github.com/mnns/LLMFuzzer">https://github.com/mnns/LLMFuzzer</a></p>
+<p>LLMFuzzer 是第一个专为大型语言模型 （LLM） 设计的开源模糊测试框架，特别是通过 LLM API 将它们集成到应用程序中。</p>
+<p>特点：</p>
+<p>LLM  的鲁棒模糊测试</p>
+<p>LLM API 集成测试 </p>
+<p>广泛的模糊测试策略 </p>
+<p>模块化架构，易于扩展 </p>
+<h5 id="CleverHans（风险检测工具）"><a href="#CleverHans（风险检测工具）" class="headerlink" title="CleverHans（风险检测工具）"></a><strong>CleverHans（风险检测工具）</strong></h5><p>链接：<a target="_blank" rel="noopener" href="https://github.com/cleverhans-lab/cleverhans#contributing">https://github.com/cleverhans-lab/cleverhans#contributing</a></p>
+<p>该存储库包含 CleverHans 的源代码，这是一个 Python 库 对机器学习系统对对抗性示例的脆弱性进行基准测试。</p>
+<p>特点：</p>
+<p>侧重于提供攻击的实现针对机器学习模型，帮助对模型进行基准测试 对抗性实验。</p>
+<h5 id="garak（风险检测工具）"><a href="#garak（风险检测工具）" class="headerlink" title="garak（风险检测工具）"></a><strong>garak（风险检测工具）</strong></h5><p>链接：<a target="_blank" rel="noopener" href="https://github.com/leondz/garak">https://github.com/leondz/garak</a></p>
+<p>garak检查是否可以使 LLM 以我们不希望的方式失败。 探测幻觉、数据泄露、及时注射、错误信息、毒性产生、越狱和许多其他弱点。它是针对LLM的一款漏洞扫描程序。</p>
+<h5 id="PsychoEvals（风险检测工具）"><a href="#PsychoEvals（风险检测工具）" class="headerlink" title="PsychoEvals（风险检测工具）"></a><strong>PsychoEvals（风险检测工具）</strong></h5><p>链接：<a target="_blank" rel="noopener" href="https://github.com/NextWordDev/psychoevals">https://github.com/NextWordDev/psychoevals</a></p>
+<p>以MBTI人格评估、提示词注入检测为基础的LLM安全评估轻量框架</p>
+<h5 id="rebuff（风险防御工具）"><a href="#rebuff（风险防御工具）" class="headerlink" title="rebuff（风险防御工具）"></a><strong>rebuff（风险防御工具）</strong></h5><p>链接：<a target="_blank" rel="noopener" href="https://github.com/protectai/rebuff">https://github.com/protectai/rebuff</a></p>
+<p>Rebuff 旨在通过多层防御来保护 AI 应用程序免受提示注入 （PI） 攻击。</p>
+<p>特点：</p>
+<p>启发式方法：在潜在的恶意输入到达 LLM 之前过滤掉它。</p>
+<p>基于 LLM 的检测：使用专用的 LLM 来分析传入的提示并识别潜在的攻击。</p>
+<p>VectorDB：将以前攻击的嵌入存储在向量数据库中，以识别和防止将来发生类似攻击。</p>
+<p>token令牌：将token添加到提示中以检测泄漏，允许框架将有关传入提示的嵌入存储在向量数据库中，并防止未来的攻击。</p>
+<h5 id="CalypsoAI-Moderator（风险防御工具）"><a href="#CalypsoAI-Moderator（风险防御工具）" class="headerlink" title="CalypsoAI Moderator（风险防御工具）"></a><strong>CalypsoAI Moderator（风险防御工具）</strong></h5><p>链接：<a target="_blank" rel="noopener" href="https://calypsoai.com/">https://calypsoai.com/</a></p>
+<p>CalypsoAI Moderator针对数据丢失、恶意代码、越狱和幻觉等安全风险进行防护。</p>
+<h5 id="cspm-gpt（由-GPT-4-提供支持的云安全态势管理-）"><a href="#cspm-gpt（由-GPT-4-提供支持的云安全态势管理-）" class="headerlink" title="cspm-gpt（由 GPT-4 提供支持的云安全态势管理 ）"></a><strong>cspm-gpt（由 GPT-4 提供支持的云安全态势管理 ）</strong></h5><p>链接<a target="_blank" rel="noopener" href="https://github.com/samvas-codes/cspm-gpt">https://github.com/samvas-codes/cspm-gpt</a></p>
+<p>展示了如何使用 LLM 和 langchain agent、以提问的方式了解云环境的安全状况。</p>
+<h5 id="微软Counterfit-AI-安全风险评估"><a href="#微软Counterfit-AI-安全风险评估" class="headerlink" title="微软Counterfit( AI 安全风险评估**)**"></a><strong>微软Counterfit(</strong> AI 安全风险评估**)**</h5><p>链接：<a target="_blank" rel="noopener" href="https://www.microsoft.com/en-us/security/blog/2021/05/03/ai-security-risk-assessment-using-counterfit/">https://www.microsoft.com/en-us/security/blog/2021/05/03/ai-security-risk-assessment-using-counterfit/</a></p>
+<h2 id="四、-其他企业相关建设思路"><a href="#四、-其他企业相关建设思路" class="headerlink" title="四、 其他企业相关建设思路"></a>四、 <strong>其他企业相关建设思路</strong></h2><h3 id="1-VIVO的安全思考与实践"><a href="#1-VIVO的安全思考与实践" class="headerlink" title="1. VIVO的安全思考与实践"></a>1. <strong>VIVO的安全思考与实践</strong></h3><p><img src="https://hsmyzj-1322074094.cos.ap-beijing.myqcloud.com/202501061641022.png" srcset="/img/loading.gif" lazyload alt="img"></p>
+<p>AI内生安全左移建设</p>
+<p><img src="https://hsmyzj-1322074094.cos.ap-beijing.myqcloud.com/202501061641067.png" srcset="/img/loading.gif" lazyload alt="img"></p>
+<p>内容安全能力建设</p>
+<p><img src="https://hsmyzj-1322074094.cos.ap-beijing.myqcloud.com/202501061641099.png" srcset="/img/loading.gif" lazyload alt="img"></p>
+<p><img src="https://hsmyzj-1322074094.cos.ap-beijing.myqcloud.com/202501061641143.png" srcset="/img/loading.gif" lazyload alt="img"></p>
+<p><img src="https://hsmyzj-1322074094.cos.ap-beijing.myqcloud.com/202501061641310.png" srcset="/img/loading.gif" lazyload alt="img"></p>
+<p>产品运营安全体系建设</p>
+<p><img src="https://hsmyzj-1322074094.cos.ap-beijing.myqcloud.com/202501061641586.png" srcset="/img/loading.gif" lazyload alt="img"></p>
+<p>隐私安全体系建设</p>
+<p><img src="https://hsmyzj-1322074094.cos.ap-beijing.myqcloud.com/202501061641758.png" srcset="/img/loading.gif" lazyload alt="img"></p>
+<h3 id="2-百度（百度AI安全研究）"><a href="#2-百度（百度AI安全研究）" class="headerlink" title="2. 百度（百度AI安全研究）"></a>2. <strong>百度（百度AI安全研究）</strong></h3><p>链接：<a target="_blank" rel="noopener" href="https://anquan.baidu.com/research/aisec">https://anquan.baidu.com/research/aisec</a></p>
+<p>​	    <a target="_blank" rel="noopener" href="https://anquan.baidu.com/product/llmsec">https://anquan.baidu.com/product/llmsec</a></p>
+<p><img src="https://hsmyzj-1322074094.cos.ap-beijing.myqcloud.com/202501061641775.png" srcset="/img/loading.gif" lazyload alt="img"></p>
+<p>整体大纲</p>
+<p><img src="https://hsmyzj-1322074094.cos.ap-beijing.myqcloud.com/202501061641920.png" srcset="/img/loading.gif" lazyload alt="img"></p>
+<p>数据安全与隐私保护</p>
+<p><img src="https://hsmyzj-1322074094.cos.ap-beijing.myqcloud.com/202501061641178.png" srcset="/img/loading.gif" lazyload alt="img"></p>
+<p>模型保护</p>
+<p><img src="https://hsmyzj-1322074094.cos.ap-beijing.myqcloud.com/202501061641530.png" srcset="/img/loading.gif" lazyload alt="img"></p>
+<p>AIGC内容合规</p>
+<p><img src="https://hsmyzj-1322074094.cos.ap-beijing.myqcloud.com/202501061641608.png" srcset="/img/loading.gif" lazyload alt="img"></p>
+<p>大模型运营安全风控</p>
+<p><img src="https://hsmyzj-1322074094.cos.ap-beijing.myqcloud.com/202501061641631.png" srcset="/img/loading.gif" lazyload alt="img"></p>
+<h3 id="3-阿里云（AIGC安全方案）"><a href="#3-阿里云（AIGC安全方案）" class="headerlink" title="3. 阿里云（AIGC安全方案）"></a>3. <strong>阿里云（AIGC安全方案）</strong></h3><p>链接：<a target="_blank" rel="noopener" href="https://www.aliyun.com/activity/security/secAIGC">https://www.aliyun.com/activity/security/secAIGC</a></p>
+<p>AIGC安全开发运营框架</p>
+<p><img src="https://hsmyzj-1322074094.cos.ap-beijing.myqcloud.com/202501061641667.png" srcset="/img/loading.gif" lazyload alt="img"></p>
+<p>模型开发阶段</p>
+<p><img src="https://hsmyzj-1322074094.cos.ap-beijing.myqcloud.com/202501061641797.png" srcset="/img/loading.gif" lazyload alt="img"></p>
+<p>模型应用上线阶段</p>
+<p><img src="https://hsmyzj-1322074094.cos.ap-beijing.myqcloud.com/202501061641998.png" srcset="/img/loading.gif" lazyload alt="img"></p>
+<p>模型运营阶段</p>
+<p><img src="https://hsmyzj-1322074094.cos.ap-beijing.myqcloud.com/202501061641056.png" srcset="/img/loading.gif" lazyload alt="img"></p>
+<h3 id="4-网易易盾（内容风险产品）"><a href="#4-网易易盾（内容风险产品）" class="headerlink" title="4. 网易易盾（内容风险产品）"></a>4. <strong>网易易盾（内容风险产品）</strong></h3><p>链接：<a target="_blank" rel="noopener" href="https://dun.163.com/solution/aigc">https://dun.163.com/solution/aigc</a></p>
+<p><img src="https://hsmyzj-1322074094.cos.ap-beijing.myqcloud.com/202501061641115.png" srcset="/img/loading.gif" lazyload alt="img"></p>
+<p><img src="https://hsmyzj-1322074094.cos.ap-beijing.myqcloud.com/202501061641206.png" srcset="/img/loading.gif" lazyload alt="img"></p>
+<p><img src="https://hsmyzj-1322074094.cos.ap-beijing.myqcloud.com/202501061641241.png" srcset="/img/loading.gif" lazyload alt="img"></p>
+<h3 id="5-蚂蚁-AI风险检测平台"><a href="#5-蚂蚁-AI风险检测平台" class="headerlink" title="5. 蚂蚁(AI风险检测平台)"></a>5. <strong>蚂蚁(AI风险检测平台)</strong></h3><p>链接：<a target="_blank" rel="noopener" href="https://acta.alipay.com/home">https://acta.alipay.com/home</a></p>
+<p><img src="https://hsmyzj-1322074094.cos.ap-beijing.myqcloud.com/202501061641256.png" srcset="/img/loading.gif" lazyload alt="img"></p>
+<h3 id="6-微软"><a href="#6-微软" class="headerlink" title="6. 微软"></a>6. <strong>微软</strong></h3><p>1、 微软对抗性机器学习威胁矩阵：<a target="_blank" rel="noopener" href="https://github.com/mitre/advmlthreatmatrix">GitHub - mitre&#x2F;advmlthreatmatrix: Adversarial Threat Landscape for AI Systems</a></p>
+<p>2、 微软Counterfit ：<a target="_blank" rel="noopener" href="https://www.microsoft.com/en-us/security/blog/2021/05/03/ai-security-risk-assessment-using-counterfit/">AI security risk assessment using Counterfit | Microsoft Security Blog</a></p>
+<h2 id="五、-参考资料附录"><a href="#五、-参考资料附录" class="headerlink" title="五、 参考资料附录"></a>五、 <strong>参考资料附录</strong></h2><table>
+<thead>
+<tr>
+<th><strong>类别</strong></th>
+<th>**文章&#x2F;**<strong>工具</strong> <strong>题目</strong></th>
+<th><strong>相关文章链接</strong></th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>相关文章</strong></td>
+<td>AI安全技术与实战图书（腾讯朱雀实验室）</td>
+<td><strong>纸质书</strong></td>
+</tr>
+<tr>
+<td>AI相关文档库</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/mo-xiaoxi/GPTSecurity/blob/main/docs/README.md">https://github.com/mo-xiaoxi/GPTSecurity/blob/main/docs/README.md</a></td>
+<td></td>
+</tr>
+<tr>
+<td>生成式人工智能带来的数据安全挑战及应对</td>
+<td><a target="_blank" rel="noopener" href="https://www.secrss.com/articles/59595">https://www.secrss.com/articles/59595</a></td>
+<td></td>
+</tr>
+<tr>
+<td>AIGC工具导航</td>
+<td><a target="_blank" rel="noopener" href="https://www.aigc.cn/">https://www.aigc.cn/</a></td>
+<td></td>
+</tr>
+<tr>
+<td>AI安全——对抗样本技术综述与应用</td>
+<td><a target="_blank" rel="noopener" href="http://www.sicris.cn/CN/abstract/abstract687.shtml">http://www.sicris.cn/CN/abstract/abstract687.shtml</a></td>
+<td></td>
+</tr>
+<tr>
+<td>大模型安全与治理探讨</td>
+<td><a target="_blank" rel="noopener" href="https://www.secrss.com/articles/60162">https://www.secrss.com/articles/60162</a></td>
+<td></td>
+</tr>
+<tr>
+<td>破坏模型完整性——数据投毒攻击</td>
+<td><a target="_blank" rel="noopener" href="https://flashgene.com/archives/118300.html">https://flashgene.com/archives/118300.html</a></td>
+<td></td>
+</tr>
+<tr>
+<td>华为AI安全白皮书</td>
+<td><a target="_blank" rel="noopener" href="https://www-file.huawei.com/-/media/corporate/pdf/cyber-security/ai-security-white-paper-cn.pdf">https://www-file.huawei.com/-/media/corporate/pdf/cyber-security/ai-security-white-paper-cn.pdf</a></td>
+<td></td>
+</tr>
+<tr>
+<td>中国信通院AI安全白皮书</td>
+<td><a target="_blank" rel="noopener" href="http://www.caict.ac.cn/kxyj/qwfb/ztbg/202012/P020201209408499730071.pdf">http://www.caict.ac.cn/kxyj/qwfb/ztbg/202012/P020201209408499730071.pdf</a></td>
+<td></td>
+</tr>
+<tr>
+<td>人工智能安全标准化白皮书</td>
+<td><a target="_blank" rel="noopener" href="https://www.tc260.org.cn/upload/2023-05-31/1685501487351066337.pdf">https://www.tc260.org.cn/upload/2023-05-31/1685501487351066337.pdf</a></td>
+<td></td>
+</tr>
+<tr>
+<td>MITRE | ATLAS™</td>
+<td><a target="_blank" rel="noopener" href="https://atlas.mitre.org/">https://atlas.mitre.org/</a></td>
+<td></td>
+</tr>
+<tr>
+<td>大语言模型工程实践</td>
+<td><a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s/cntF579zWJehGQYJidah6A">https://mp.weixin.qq.com/s/cntF579zWJehGQYJidah6A</a></td>
+<td></td>
+</tr>
+<tr>
+<td>新一代人工智能伦理规范</td>
+<td><a target="_blank" rel="noopener" href="https://www.safea.gov.cn/kjbgz/202109/t20210926_177063.html">https://www.safea.gov.cn/kjbgz/202109/t20210926_177063.html</a></td>
+<td></td>
+</tr>
+<tr>
+<td>模型安全后门攻击</td>
+<td><a target="_blank" rel="noopener" href="https://aisecuritybook.github.io/source/chap8.html#sec-input-space-backdoor">https://aisecuritybook.github.io/source/chap8.html#sec-input-space-backdoor</a></td>
+<td></td>
+</tr>
+<tr>
+<td>训练数据投毒相关文章</td>
+<td><a target="_blank" rel="noopener" href="https://www.lakera.ai/blog/training-data-poisoninghttps://ar5iv.labs.arxiv.org/html/2202.10276https://ar5iv.labs.arxiv.org/html/2207.08486https://aisecuritybook.github.io/source/chap4.html">https://www.lakera.ai/blog/training-data-poisoninghttps://ar5iv.labs.arxiv.org/html/2202.10276https://ar5iv.labs.arxiv.org/html/2207.08486https://aisecuritybook.github.io/source/chap4.html</a></td>
+<td></td>
+</tr>
+<tr>
+<td>语言模型中的训练数据泄漏分析</td>
+<td><a target="_blank" rel="noopener" href="https://ar5iv.labs.arxiv.org/html/2101.05405">https://ar5iv.labs.arxiv.org/html/2101.05405</a></td>
+<td></td>
+</tr>
+<tr>
+<td>利用对抗性鲁棒性保护AI系统</td>
+<td><a target="_blank" rel="noopener" href="https://research.ibm.com/blog/securing-ai-workflows-with-adversarial-robustness">https://research.ibm.com/blog/securing-ai-workflows-with-adversarial-robustness</a></td>
+<td></td>
+</tr>
+<tr>
+<td>了解和管理人工智能威胁</td>
+<td><a target="_blank" rel="noopener" href="https://www.isaca.org/resources/isaca-journal/issues/2020/volume-1/understanding-and-managing-the-artificial-intelligence-threat">https://www.isaca.org/resources/isaca-journal/issues/2020/volume-1/understanding-and-managing-the-artificial-intelligence-threat</a></td>
+<td></td>
+</tr>
+<tr>
+<td>OWASP十大大型语言模型应用解释</td>
+<td><a target="_blank" rel="noopener" href="https://www.lakera.ai/blog/owasp-top-10-for-large-language-model-applications-guide">https://www.lakera.ai/blog/owasp-top-10-for-large-language-model-applications-guide</a></td>
+<td></td>
+</tr>
+<tr>
+<td>AI安全——对抗样本技术综述与应用</td>
+<td><a target="_blank" rel="noopener" href="http://www.sicris.cn/CN/abstract/abstract687.shtml">http://www.sicris.cn/CN/abstract/abstract687.shtml</a></td>
+<td></td>
+</tr>
+<tr>
+<td>模型安全：对抗攻击</td>
+<td><a target="_blank" rel="noopener" href="https://aisecuritybook.github.io/source/chap6.html">https://aisecuritybook.github.io/source/chap6.html</a></td>
+<td></td>
+</tr>
+<tr>
+<td>人工智能安全笔记（5）后门攻击</td>
+<td><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/626020461">https://zhuanlan.zhihu.com/p/626020461</a></td>
+<td></td>
+</tr>
+<tr>
+<td>模型安全：后门攻击</td>
+<td><a target="_blank" rel="noopener" href="https://aisecuritybook.github.io/source/chap8.html#sec-input-space-backdoor">https://aisecuritybook.github.io/source/chap8.html#sec-input-space-backdoor</a></td>
+<td></td>
+</tr>
+<tr>
+<td>模型窃取攻击相关</td>
+<td><a target="_blank" rel="noopener" href="https://owasp.org/www-project-machine-learning-security-top-10/docs/ML05_2023-Model_Stealinghttps://aisecuritybook.github.io/source/chap10.htmlhttps://aisecuritybook.github.io/source/chap10.htmlhttps://aisecuritybook.github.io/source/chap4.html">https://owasp.org/www-project-machine-learning-security-top-10/docs/ML05_2023-Model_Stealinghttps://aisecuritybook.github.io/source/chap10.htmlhttps://aisecuritybook.github.io/source/chap10.htmlhttps://aisecuritybook.github.io/source/chap4.html</a></td>
+<td></td>
+</tr>
+<tr>
+<td>数据安全：攻击</td>
+<td><a target="_blank" rel="noopener" href="https://aisecuritybook.github.io/source/chap4.html">https://aisecuritybook.github.io/source/chap4.html</a></td>
+<td></td>
+</tr>
+<tr>
+<td>模型属性推理攻击</td>
+<td><a target="_blank" rel="noopener" href="https://www.nightfall.ai/ai-security-101/model-attribute-inference-attackshttps://aisecuritybook.github.io/source/chap4.html">https://www.nightfall.ai/ai-security-101/model-attribute-inference-attackshttps://aisecuritybook.github.io/source/chap4.html</a></td>
+<td></td>
+</tr>
+<tr>
+<td>AI挖洞？利用ChatGPT辅助工作初探</td>
+<td><a target="_blank" rel="noopener" href="https://www.gandalf.site/2022/12/aichatgpt.html">https://www.gandalf.site/2022/12/aichatgpt.html</a></td>
+<td></td>
+</tr>
+<tr>
+<td>读懂AI另一面：“我”存在被滥用和失控风险</td>
+<td><a target="_blank" rel="noopener" href="http://news.enorth.com.cn/system/2023/11/27/054709138.shtml">http://news.enorth.com.cn/system/2023/11/27/054709138.shtml</a></td>
+<td></td>
+</tr>
+<tr>
+<td>什么是动态应用安全测试（DAST）</td>
+<td><a target="_blank" rel="noopener" href="https://juejin.cn/post/7125355591283212324">https://juejin.cn/post/7125355591283212324</a></td>
+<td></td>
+</tr>
+<tr>
+<td>7 个顶级静态代码分析工具</td>
+<td><a target="_blank" rel="noopener" href="https://www.infoq.cn/article/w0dqwy4dwzxyixbaxl5d">https://www.infoq.cn/article/w0dqwy4dwzxyixbaxl5d</a></td>
+<td></td>
+</tr>
+<tr>
+<td>长亭安全服务白皮书</td>
+<td><a target="_blank" rel="noopener" href="https://portal-data-cn.obs.cn-north-4.myhuaweicloud.com/marketplace/public/app/attachment/20190815/227c1509-9dd0-44c6-b5da-9ddcbbeeba13/1908150623086994.pdf">https://portal-data-cn.obs.cn-north-4.myhuaweicloud.com/marketplace/public/app/attachment/20190815/227c1509-9dd0-44c6-b5da-9ddcbbeeba13/1908150623086994.pdf</a></td>
+<td></td>
+</tr>
+<tr>
+<td>渗透测试的8个步骤</td>
+<td><a target="_blank" rel="noopener" href="https://www.freebuf.com/column/196291.html">https://www.freebuf.com/column/196291.html</a></td>
+<td></td>
+</tr>
+<tr>
+<td>AI 安全风险管理的最佳实践</td>
+<td><a target="_blank" rel="noopener" href="https://www.microsoft.com/en-us/security/blog/2021/12/09/best-practices-for-ai-security-risk-management/">https://www.microsoft.com/en-us/security/blog/2021/12/09/best-practices-for-ai-security-risk-management/</a></td>
+<td></td>
+</tr>
+<tr>
+<td>代码安全指南</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/Tencent/secguide">https://github.com/Tencent/secguide</a></td>
+<td></td>
+</tr>
+<tr>
+<td>2023 年 CI&#x2F;CD 管道的安全性和合规性最佳做法</td>
+<td><a target="_blank" rel="noopener" href="https://www.opsmx.com/blog/security-and-compliance-best-practices-for-ci-cd-pipelines-in-2023/">https://www.opsmx.com/blog/security-and-compliance-best-practices-for-ci-cd-pipelines-in-2023/</a></td>
+<td></td>
+</tr>
+<tr>
+<td>SIEM：安全信息和事件管理解释</td>
+<td><a target="_blank" rel="noopener" href="https://www.splunk.com/en_us/blog/learn/siem-security-information-event-management.html">https://www.splunk.com/en_us/blog/learn/siem-security-information-event-management.html</a></td>
+<td></td>
+</tr>
+<tr>
+<td>安全软件开发生命周期简介</td>
+<td><a target="_blank" rel="noopener" href="https://www.freebuf.com/articles/network/306867.html">https://www.freebuf.com/articles/network/306867.html</a></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>风险<strong><strong>检测</strong></strong>工具</strong></td>
+<td>LLMFuzzer</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/mnns/LLMFuzzer">https://github.com/mnns/LLMFuzzer</a></td>
+</tr>
+<tr>
+<td>CleverHans</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/cleverhans-lab/cleverhans#contributing">https://github.com/cleverhans-lab/cleverhans#contributing</a></td>
+<td></td>
+</tr>
+<tr>
+<td>garak</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/leondz/garak">https://github.com/leondz/garak</a></td>
+<td></td>
+</tr>
+<tr>
+<td>PsychoEvals</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/NextWordDev/psychoevals">https://github.com/NextWordDev/psychoevals</a></td>
+<td></td>
+</tr>
+<tr>
+<td>微软Counterfit</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/Azure/counterfit/">https://github.com/Azure/counterfit/</a></td>
+<td></td>
+</tr>
+<tr>
+<td>CodeQL</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/github/codeql">https://github.com/github/codeql</a></td>
+<td></td>
+</tr>
+<tr>
+<td>Hacker AI</td>
+<td><a target="_blank" rel="noopener" href="https://theresanaiforthat.com/ai/hacker-ai/">https://theresanaiforthat.com/ai/hacker-ai/</a></td>
+<td></td>
+</tr>
+<tr>
+<td>snyk 代码检查器</td>
+<td><a target="_blank" rel="noopener" href="https://snyk.io/code-checker/">https://snyk.io/code-checker/</a></td>
+<td></td>
+</tr>
+<tr>
+<td>Machine Learning Privacy Meter</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/privacytrustlab/ml_privacy_meter">https://github.com/privacytrustlab/ml_privacy_meter</a></td>
+<td></td>
+</tr>
+<tr>
+<td>Robuscope</td>
+<td><a target="_blank" rel="noopener" href="https://www.iks.fraunhofer.de/en/services/testing-ai-models-online.html">https://www.iks.fraunhofer.de/en/services/testing-ai-models-online.html</a></td>
+<td></td>
+</tr>
+<tr>
+<td>scribbr</td>
+<td><a target="_blank" rel="noopener" href="https://www.scribbr.com/">https://www.scribbr.com/</a></td>
+<td></td>
+</tr>
+<tr>
+<td>PaddleSleeve</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/PaddlePaddle/PaddleSleeve">https://github.com/PaddlePaddle/PaddleSleeve</a></td>
+<td></td>
+</tr>
+<tr>
+<td>trinka</td>
+<td><a target="_blank" rel="noopener" href="https://www.trinka.ai/ai-content-detector">https://www.trinka.ai/ai-content-detector</a></td>
+<td></td>
+</tr>
+<tr>
+<td>Awesome-Backdoor-in-Deep-Learning</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/zihao-ai/Awesome-Backdoor-in-Deep-Learning">https://github.com/zihao-ai/Awesome-Backdoor-in-Deep-Learning</a></td>
+<td></td>
+</tr>
+<tr>
+<td>外部威胁情报平台</td>
+<td><a target="_blank" rel="noopener" href="https://ti.360.net/">360安全大脑</a><a target="_blank" rel="noopener" href="https://x.threatbook.com/">微步在线X情报社区-威胁情报查询_威胁分析平台_开放社区</a><a target="_blank" rel="noopener" href="https://ti.qianxin.com/">奇安信威胁情报中心</a><a target="_blank" rel="noopener" href="https://ti.dbappsecurity.com.cn/">安全星图平台</a><a target="_blank" rel="noopener" href="https://www.antiycloud.com/#/antiy/index">安天威胁情报中心</a></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>风险****防御工具</strong></td>
+<td>rebuff</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/protectai/rebuff">https://github.com/protectai/rebuff</a></td>
+</tr>
+<tr>
+<td>CalypsoAI Moderator</td>
+<td><a target="_blank" rel="noopener" href="https://calypsoai.com/">https://calypsoai.com/</a></td>
+<td></td>
+</tr>
+<tr>
+<td>cspm-gpt</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/samvas-codes/cspm-gpt">https://github.com/samvas-codes/cspm-gpt</a></td>
+<td></td>
+</tr>
+</tbody></table>
+
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>AIGC安全调研</div>
+      <div>http://example.com/2025/01/06/AIGC安全调研/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>John Doe</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2025年1月6日</div>
+        </div>
+      
+      
+      
+        <div class="license-meta-item">
+          <div>许可协议</div>
+          <div>
+            
+              
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                    <i class="iconfont icon-cc-by"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2025/01/06/sdk%E6%8C%87%E7%BA%B9%E6%B1%87%E6%80%BB/" title="sdk指纹汇总">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">sdk指纹汇总</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2025/01/06/Python%E5%9F%BA%E7%A1%80%E7%AC%94%E8%AE%B0/" title="Python基础笔记">
+                        <span class="hidden-mobile">Python基础笔记</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>目录</span>
+  </p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+    </div>
+  
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.4/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.20.1/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/5.0.0/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
+</body>
+</html>

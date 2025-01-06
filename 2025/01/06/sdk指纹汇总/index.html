@@ -1,0 +1,6594 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+
+  <link rel="apple-touch-icon" sizes="76x76" href="https://avatars.githubusercontent.com/u/193379203?s=400&amp;u=0b52982067f8b5c236021fc6ebd137770c8942d9&amp;v=4">
+  <link rel="icon" href="https://avatars.githubusercontent.com/u/193379203?s=400&amp;u=0b52982067f8b5c236021fc6ebd137770c8942d9&amp;v=4">
+  
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="John Doe">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="label name    信鸽推送 libxguardian.so   Mars libmarsxlog.so   xCrash libxcrash.so   Weex libweexjss.so   Pangle SDK libfile_lock_pg.so   MNN libMNN_CL.so   小米更新 SDK libsdk_patcher_jni.so   HUAWEI AR E">
+<meta property="og:type" content="article">
+<meta property="og:title" content="sdk指纹汇总">
+<meta property="og:url" content="http://example.com/2025/01/06/sdk%E6%8C%87%E7%BA%B9%E6%B1%87%E6%80%BB/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="label name    信鸽推送 libxguardian.so   Mars libmarsxlog.so   xCrash libxcrash.so   Weex libweexjss.so   Pangle SDK libfile_lock_pg.so   MNN libMNN_CL.so   小米更新 SDK libsdk_patcher_jni.so   HUAWEI AR E">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://www.yuque.com/api/services/graph/generate_redirect/latex?IntentServiceRunner">
+<meta property="article:published_time" content="2025-01-06T08:42:31.000Z">
+<meta property="article:modified_time" content="2025-01-06T08:42:54.985Z">
+<meta property="article:author" content="John Doe">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://www.yuque.com/api/services/graph/generate_redirect/latex?IntentServiceRunner">
+  
+  
+  
+  <title>sdk指纹汇总 - Hexo</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1749284_5i9bdhy70f8.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1736178_k526ubmyhba.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+  
+
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"example.com","root":"/","version":"1.9.8","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false},"umami":{"src":null,"website_id":null,"domains":null,"start_time":"2024-01-01T00:00:00.000Z","token":null,"api_server":null}},"search_path":"/local-search.xml","include_content_in_search":true};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+
+  
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 70vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>SLL779</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/" target="_self">
+                <i class="iconfont icon-home-fill"></i>
+                <span>首页</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/" target="_self">
+                <i class="iconfont icon-archive-fill"></i>
+                <span>归档</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/" target="_self">
+                <i class="iconfont icon-category-fill"></i>
+                <span>分类</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/" target="_self">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>标签</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/" target="_self">
+                <i class="iconfont icon-user-fill"></i>
+                <span>关于</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
+              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('/img/default.png') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle" data-typed-text="sdk指纹汇总"></span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2025-01-06 16:42" pubdate>
+          2025年1月6日 下午
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          6.1k 字
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          52 分钟
+        
+      </span>
+    
+
+    
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <h1 id="seo-header">sdk指纹汇总</h1>
+            
+            
+              <div class="markdown-body">
+                
+                <table>
+<thead>
+<tr>
+<th>label</th>
+<th>name</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>信鸽推送</td>
+<td>libxguardian.so</td>
+</tr>
+<tr>
+<td>Mars</td>
+<td>libmarsxlog.so</td>
+</tr>
+<tr>
+<td>xCrash</td>
+<td>libxcrash.so</td>
+</tr>
+<tr>
+<td>Weex</td>
+<td>libweexjss.so</td>
+</tr>
+<tr>
+<td>Pangle SDK</td>
+<td>libfile_lock_pg.so</td>
+</tr>
+<tr>
+<td>MNN</td>
+<td>libMNN_CL.so</td>
+</tr>
+<tr>
+<td>小米更新 SDK</td>
+<td>libsdk_patcher_jni.so</td>
+</tr>
+<tr>
+<td>HUAWEI AR Engine</td>
+<td>libhuawei_arengine_impl.so</td>
+</tr>
+<tr>
+<td>Fresco</td>
+<td>libnative-imagetranscoder.so</td>
+</tr>
+<tr>
+<td>Yoga</td>
+<td>liblib_fb_fbjni.so</td>
+</tr>
+<tr>
+<td>Bugly</td>
+<td>libBugly.so</td>
+</tr>
+<tr>
+<td>React Native</td>
+<td>libreactnativejnifb.so</td>
+</tr>
+<tr>
+<td>AndFix</td>
+<td>libandfix.so</td>
+</tr>
+<tr>
+<td>Fresco</td>
+<td>libnative-filters.so</td>
+</tr>
+<tr>
+<td>Bugly</td>
+<td>libBugly-rqd.so</td>
+</tr>
+<tr>
+<td>DuMix</td>
+<td>libImgRecognition.so</td>
+</tr>
+<tr>
+<td>Facebook SDK</td>
+<td>libfb.so</td>
+</tr>
+<tr>
+<td>GPUImage</td>
+<td>libgpuimage-library.so</td>
+</tr>
+<tr>
+<td>Fresco</td>
+<td>libwebpimage.so</td>
+</tr>
+<tr>
+<td>React Native</td>
+<td>libjsinspector.so</td>
+</tr>
+<tr>
+<td>Yoga</td>
+<td>libyoga.so</td>
+</tr>
+<tr>
+<td>SQLCipher</td>
+<td>libsqlcipher.so</td>
+</tr>
+<tr>
+<td>腾讯云直播 SDK</td>
+<td>libsaturn.so</td>
+</tr>
+<tr>
+<td>腾讯云通信 SDK</td>
+<td>libqalcodecwrapper.so</td>
+</tr>
+<tr>
+<td>Fresco</td>
+<td>libimagepipeline.so</td>
+</tr>
+<tr>
+<td>腾讯云短视频 SDK</td>
+<td>libtxplayer.so</td>
+</tr>
+<tr>
+<td>TensorFlow Lite</td>
+<td>libtensorflowlite_jni.so</td>
+</tr>
+<tr>
+<td>glog</td>
+<td>libglog.so</td>
+</tr>
+<tr>
+<td>银联 SDK</td>
+<td>libuptsmaddonmi.so</td>
+</tr>
+<tr>
+<td>IJKPlayer</td>
+<td>libijkplayer.so</td>
+</tr>
+<tr>
+<td>Yoga</td>
+<td>libyouga.so</td>
+</tr>
+<tr>
+<td>腾讯云 HTTPDNS</td>
+<td>libhttpdns.so</td>
+</tr>
+<tr>
+<td>AndroLua</td>
+<td>libluajava.so</td>
+</tr>
+<tr>
+<td>阿里聚安全</td>
+<td>libsgmain.so</td>
+</tr>
+<tr>
+<td>HUAWEI AR Engine</td>
+<td>libhuawei_arengine_jni.so</td>
+</tr>
+<tr>
+<td>Unity</td>
+<td>libmain.so</td>
+</tr>
+<tr>
+<td>阿里聚安全</td>
+<td>libsgavmp.so</td>
+</tr>
+<tr>
+<td>Weex</td>
+<td>libweexcore.so</td>
+</tr>
+<tr>
+<td>腾讯云短视频 SDK</td>
+<td>libtxsdl.so</td>
+</tr>
+<tr>
+<td>Xamarin</td>
+<td>libmonodroid_bundle_app.so</td>
+</tr>
+<tr>
+<td>RenderScript</td>
+<td>librsjni_androidx.so</td>
+</tr>
+<tr>
+<td>React Native</td>
+<td>libreactnativeblob.so</td>
+</tr>
+<tr>
+<td>梆梆安全</td>
+<td>libdexjni.so</td>
+</tr>
+<tr>
+<td>Flutter</td>
+<td>libapp.so</td>
+</tr>
+<tr>
+<td>Weex</td>
+<td>libweexjsb.so</td>
+</tr>
+<tr>
+<td>岳鹰 SDK</td>
+<td>libcrashsdk.so</td>
+</tr>
+<tr>
+<td>环信 IM</td>
+<td>libhyphenate.so</td>
+</tr>
+<tr>
+<td>小爱 SDK</td>
+<td>libmibraindec.so</td>
+</tr>
+<tr>
+<td>MSA SDK</td>
+<td>libA3AEECD8.so</td>
+</tr>
+<tr>
+<td>IJKPlayer</td>
+<td>libijkffmpeg.so</td>
+</tr>
+<tr>
+<td>阿里聚安全</td>
+<td>libsgsgmiddletier.so</td>
+</tr>
+<tr>
+<td>MSA SDK</td>
+<td>lib39285EFA.so</td>
+</tr>
+<tr>
+<td>小米游戏 SDK</td>
+<td>libconnectionbase.so</td>
+</tr>
+<tr>
+<td>MSA SDK</td>
+<td>libsecsdk.so</td>
+</tr>
+<tr>
+<td>ARCore</td>
+<td>libarcore_sdk_jni.so</td>
+</tr>
+<tr>
+<td>React Native</td>
+<td>libreactnative.so</td>
+</tr>
+<tr>
+<td>腾讯移动分析</td>
+<td>libMtaNativeCrash.so</td>
+</tr>
+<tr>
+<td>微博 SDK</td>
+<td>libweibosdkcore.so</td>
+</tr>
+<tr>
+<td>Xamarin</td>
+<td>libmonodroid.so</td>
+</tr>
+<tr>
+<td>Weex</td>
+<td>libweexjst.so</td>
+</tr>
+<tr>
+<td>Xamarin</td>
+<td>libaot-mscorlib.dll.so</td>
+</tr>
+<tr>
+<td>高德 SDK</td>
+<td>libapssdk.so</td>
+</tr>
+<tr>
+<td>ViroCore</td>
+<td>libarcore_sdk_c.so</td>
+</tr>
+<tr>
+<td>腾讯地图 SDK</td>
+<td>libtxmapengine.so</td>
+</tr>
+<tr>
+<td>Bmob 后端云</td>
+<td>libbmob.so</td>
+</tr>
+<tr>
+<td>梆梆安全</td>
+<td>libSecShell.so</td>
+</tr>
+<tr>
+<td>Pangle SDK</td>
+<td>libbuffer_pg.so</td>
+</tr>
+<tr>
+<td>React Native</td>
+<td>libJavaScriptCore.so</td>
+</tr>
+<tr>
+<td>微博 SDK</td>
+<td>libwind.so</td>
+</tr>
+<tr>
+<td>uCrop</td>
+<td>libucrop.so</td>
+</tr>
+<tr>
+<td>Flutter</td>
+<td>libflutter.so</td>
+</tr>
+<tr>
+<td>融云 IM</td>
+<td>libRongIMLib.so</td>
+</tr>
+<tr>
+<td>Fresco</td>
+<td>libbitmaps.so</td>
+</tr>
+<tr>
+<td>wgs2gcj</td>
+<td>libJni_wgs2gcj.so</td>
+</tr>
+<tr>
+<td>Bugsnag</td>
+<td>libbugsnag-plugin-android-anr.so</td>
+</tr>
+<tr>
+<td>realm</td>
+<td>librealm-jni.so</td>
+</tr>
+<tr>
+<td>OpenCV</td>
+<td>libopencv_java3.so</td>
+</tr>
+<tr>
+<td>BoostMultiDex</td>
+<td>libboost_multidex.so</td>
+</tr>
+<tr>
+<td>libchrome</td>
+<td>libchrome.so</td>
+</tr>
+<tr>
+<td>React Native</td>
+<td>libglog_init.so</td>
+</tr>
+<tr>
+<td>OpenSSL</td>
+<td>libopenssl.so</td>
+</tr>
+<tr>
+<td>android-gif-drawable</td>
+<td>libpl_droidsonroids_gif.so</td>
+</tr>
+<tr>
+<td>极光认证 SDK</td>
+<td>libCtaApiLib.so</td>
+</tr>
+<tr>
+<td>个推</td>
+<td>libgetuiext3.so</td>
+</tr>
+<tr>
+<td>Unity</td>
+<td>libunity.so</td>
+</tr>
+<tr>
+<td>腾讯流量联盟</td>
+<td>libBeacon.so</td>
+</tr>
+<tr>
+<td>Fresco</td>
+<td>libgifimage.so</td>
+</tr>
+<tr>
+<td>React Native</td>
+<td>libjsc.so</td>
+</tr>
+<tr>
+<td>Xamarin</td>
+<td>libmonosgen-2.0.so</td>
+</tr>
+<tr>
+<td>小爱 SDK</td>
+<td>libmibrainjni.so</td>
+</tr>
+<tr>
+<td>MMKV</td>
+<td>libmmkv.so</td>
+</tr>
+<tr>
+<td>Weex</td>
+<td>libweexjssr.so</td>
+</tr>
+<tr>
+<td>梆梆安全</td>
+<td>libSecShell-x86.so</td>
+</tr>
+<tr>
+<td>腾讯云短视频 SDK</td>
+<td>libliteavsdk.so</td>
+</tr>
+<tr>
+<td>IJKPlayer</td>
+<td>libijksdl.so</td>
+</tr>
+<tr>
+<td>Bugsnag</td>
+<td>libbugsnag-ndk.so</td>
+</tr>
+<tr>
+<td>GCanvas</td>
+<td>libgcanvas.so</td>
+</tr>
+<tr>
+<td>百度 LBS</td>
+<td>libindoor.so</td>
+</tr>
+<tr>
+<td>HUAWEI AR Engine</td>
+<td>libhuawei_arengine_ndk.so</td>
+</tr>
+<tr>
+<td>C++ 共享库</td>
+<td>libgnustl_shared.so</td>
+</tr>
+<tr>
+<td>小米游戏 SDK</td>
+<td>libmilinkconnection.so</td>
+</tr>
+<tr>
+<td>C++ 共享库</td>
+<td>libc++_shared.so</td>
+</tr>
+<tr>
+<td>Weex</td>
+<td>libWTF.so</td>
+</tr>
+<tr>
+<td>PLDroidPlayer</td>
+<td>libQPlayer.so</td>
+</tr>
+<tr>
+<td>阿里聚安全</td>
+<td>libsgsecuritybody.so</td>
+</tr>
+<tr>
+<td>Pangle SDK</td>
+<td>libtobEmbedEncrypt.so</td>
+</tr>
+<tr>
+<td>银联 SDK</td>
+<td>libuptsmaddon.so</td>
+</tr>
+<tr>
+<td>银联 SDK</td>
+<td>libuptsmservice.so</td>
+</tr>
+<tr>
+<td>React Native</td>
+<td>libreactnativejni.so</td>
+</tr>
+<tr>
+<td>React Native</td>
+<td>libjscexecutor.so</td>
+</tr>
+<tr>
+<td>小爱 SDK</td>
+<td>libmibrainvad2.so</td>
+</tr>
+<tr>
+<td>WCDB</td>
+<td>libwcdb.so</td>
+</tr>
+<tr>
+<td>360 加固</td>
+<td>libjiagu.so</td>
+</tr>
+<tr>
+<td>腾讯云短视频 SDK</td>
+<td>libtxffmpeg.so</td>
+</tr>
+<tr>
+<td>TRTC SDK</td>
+<td>libtraeimp-rtmp.so</td>
+</tr>
+<tr>
+<td>银联 SDK</td>
+<td>libentryexpro.so</td>
+</tr>
+<tr>
+<td>SQLCipher</td>
+<td>libstlport_shared.so</td>
+</tr>
+<tr>
+<td>libYUV</td>
+<td>libYUV.so</td>
+</tr>
+<tr>
+<td>Fresco</td>
+<td>libstatic-webp.so</td>
+</tr>
+<tr>
+<td>Ping++</td>
+<td>libpingpp.so</td>
+</tr>
+<tr>
+<td>Xamarin</td>
+<td>libxamarin-app.so</td>
+</tr>
+<tr>
+<td>梆梆安全</td>
+<td>libDexHelper.so</td>
+</tr>
+<tr>
+<td>libYUV</td>
+<td>libyuv.so</td>
+</tr>
+<tr>
+<td>信鸽推送</td>
+<td>libtpnsSecurity.so</td>
+</tr>
+<tr>
+<td>Unity</td>
+<td>libmono.so</td>
+</tr>
+<tr>
+<td>烈焰弹幕使</td>
+<td>libndkbitmap.so</td>
+</tr>
+<tr>
+<td>MNN</td>
+<td>libMNN.so</td>
+</tr>
+<tr>
+<td>腾讯地图 SDK</td>
+<td>libtencentloc.so</td>
+</tr>
+<tr>
+<td>MNN</td>
+<td>libMNN_Express.so</td>
+</tr>
+<tr>
+<td>xCrash</td>
+<td>libxcrash_dumper.so</td>
+</tr>
+<tr>
+<td>FrameSequence</td>
+<td>libframesequence.so</td>
+</tr>
+<tr>
+<td>Xamarin</td>
+<td>libmono-btls-shared.so</td>
+</tr>
+<tr>
+<td>FreeType</td>
+<td>libfreetype.so</td>
+</tr>
+<tr>
+<td>TDLib</td>
+<td>libtdjni.so</td>
+</tr>
+<tr>
+<td>Fresco</td>
+<td>libmemchunk.so</td>
+</tr>
+<tr>
+<td>梆梆安全</td>
+<td>libDexHelper-x86.so</td>
+</tr>
+<tr>
+<td>腾讯移动分析</td>
+<td>libmtanativecrash_v2.so</td>
+</tr>
+<tr>
+<td>React Native</td>
+<td>libfolly_json.so</td>
+</tr>
+<tr>
+<td>微博 SDK</td>
+<td>libutility.so</td>
+</tr>
+<tr>
+<td>Weex</td>
+<td>libWeexEagle.so</td>
+</tr>
+<tr>
+<td>LAME</td>
+<td>libmp3lame.so</td>
+</tr>
+<tr>
+<td>腾讯云通信 SDK</td>
+<td>libqalmsfboot.so</td>
+</tr>
+<tr>
+<td>Crashlytics</td>
+<td>libcrashlytics.so</td>
+</tr>
+<tr>
+<td>Unreal Engine</td>
+<td>libUE4.so</td>
+</tr>
+<tr>
+<td>Xamarin</td>
+<td>libmono-native.so</td>
+</tr>
+<tr>
+<td>Golang</td>
+<td>libgojni.so</td>
+</tr>
+<tr>
+<td>Epic</td>
+<td>libepic.so</td>
+</tr>
+<tr>
+<td>RenderScript</td>
+<td>librsjni.so</td>
+</tr>
+<tr>
+<td>米大师</td>
+<td>libwtecdh.so</td>
+</tr>
+<tr>
+<td>讯飞 SDK</td>
+<td>libmsc.so</td>
+</tr>
+<tr>
+<td>腾讯云通信 SDK</td>
+<td>libwtcrypto.so</td>
+</tr>
+<tr>
+<td>HardCoder</td>
+<td>libhardcoder.so</td>
+</tr>
+<tr>
+<td>Fresco</td>
+<td>libwebp.so</td>
+</tr>
+<tr>
+<td>腾讯云通信 SDK</td>
+<td>libImSDK.so</td>
+</tr>
+<tr>
+<td>AndFix</td>
+<td>libandfix_x86.so</td>
+</tr>
+<tr>
+<td>RenderScript</td>
+<td>libRSSupport.so</td>
+</tr>
+<tr>
+<td>Agora RTC SDK</td>
+<td>libagora-rtc-sdk-jni.so</td>
+</tr>
+<tr>
+<td>Hippy</td>
+<td>libhippybridge.so</td>
+</tr>
+<tr>
+<td>小爱 SDK</td>
+<td>libmibrainsdk.so</td>
+</tr>
+<tr>
+<td>梆梆安全</td>
+<td>libsecexe.so</td>
+</tr>
+<tr>
+<td>Pangle SDK</td>
+<td>libnms.so</td>
+</tr>
+<tr>
+<td>Hippy</td>
+<td>libflexbox.so</td>
+</tr>
+<tr>
+<td>高德地图 SDK</td>
+<td>libAMapSDK_MAP_v(.*).so</td>
+</tr>
+<tr>
+<td>Xamarin</td>
+<td>libaot-Xamarin.Android.(.*).dll.so</td>
+</tr>
+<tr>
+<td>Cronet</td>
+<td>libcronet.(.*).so</td>
+</tr>
+<tr>
+<td>百川 SDK</td>
+<td>libcocklogic-(.*).so</td>
+</tr>
+<tr>
+<td>百度云推送</td>
+<td>libbdpush_V(.*).so</td>
+</tr>
+<tr>
+<td>极光推送</td>
+<td>libjcore(.*).so</td>
+</tr>
+<tr>
+<td>libtnet</td>
+<td>libtnet-(.*).so</td>
+</tr>
+<tr>
+<td>阿里聚安全</td>
+<td>libsgavmpso-(.*).so</td>
+</tr>
+<tr>
+<td>阿里聚安全</td>
+<td>libsgsecuritybodyso-(.*).so</td>
+</tr>
+<tr>
+<td>阿里聚安全</td>
+<td>libsgsgmiddletierso-(.*).so</td>
+</tr>
+<tr>
+<td>百度地图 SDK</td>
+<td>libBaiduMapSDK_v(.*).so</td>
+</tr>
+<tr>
+<td>百度地图 SDK</td>
+<td>libBaiduMapSDK_base_v(.*).so</td>
+</tr>
+<tr>
+<td>百度地图 SDK</td>
+<td>libBaiduMapSDK_map_v(.*).so</td>
+</tr>
+<tr>
+<td>百度地图 SDK</td>
+<td>liblocSDK(.*)[0-9]a.so</td>
+</tr>
+<tr>
+<td>腾讯乐固</td>
+<td>libshell-super(.*).so</td>
+</tr>
+<tr>
+<td>腾讯乐固</td>
+<td>libshella-(.*).so</td>
+</tr>
+<tr>
+<td>MiPush</td>
+<td>com.xiaomi.mipush.sdk.MessageHandleService</td>
+</tr>
+<tr>
+<td>MiPush</td>
+<td>com.xiaomi.mipush.sdk.PushMessageHandler</td>
+</tr>
+<tr>
+<td>HUAWEI Push</td>
+<td>com.huawei.hms.support.api.push.service.HmsMsgService</td>
+</tr>
+<tr>
+<td>Jetpack Room</td>
+<td>androidx.room.MultiInstanceInvalidationService</td>
+</tr>
+<tr>
+<td>Google Sign-In</td>
+<td>com.google.android.gms.auth.api.signin.RevocationBoundService</td>
+</tr>
+<tr>
+<td>友盟推送</td>
+<td>com.umeng.message.UmengService</td>
+</tr>
+<tr>
+<td>快应用</td>
+<td>org.hapjs.(.*)</td>
+</tr>
+<tr>
+<td>Google Cast</td>
+<td>com.google.android.gms.cast.framework.ReconnectionService</td>
+</tr>
+<tr>
+<td>Mtop SDK</td>
+<td>mtopsdk.xstate.XStateService</td>
+</tr>
+<tr>
+<td>百度云推送</td>
+<td>com.baidu.android.pushservice.HmsPushPatchMessageService</td>
+</tr>
+<tr>
+<td>腾讯移动推送</td>
+<td>com.tencent.tpns.mqttchannel.services.MqttService</td>
+</tr>
+<tr>
+<td>MiPush</td>
+<td>com.xiaomi.push.service.XMJobService</td>
+</tr>
+<tr>
+<td>Matrix</td>
+<td>com.tencent.matrix.resource.CanaryWorkerService</td>
+</tr>
+<tr>
+<td>阿里移动推送</td>
+<td>com.alibaba.sdk.android.push.channel.KeepChannelService</td>
+</tr>
+<tr>
+<td>Firebase</td>
+<td>com.google.firebase.components.ComponentDiscoveryService</td>
+</tr>
+<tr>
+<td>AppGallery Connect</td>
+<td>com.huawei.agconnect.core.ServiceDiscovery</td>
+</tr>
+<tr>
+<td>BoostMultiDex</td>
+<td>com.bytedance.boost_multidex.OptimizeService</td>
+</tr>
+<tr>
+<td>Android-Job</td>
+<td>com.evernote.android.job.JobRescheduleService</td>
+</tr>
+<tr>
+<td>Firebase</td>
+<td>com.google.android.datatransport.runtime.scheduling.jobscheduling.JobInfoSchedulerService</td>
+</tr>
+<tr>
+<td>阿里移动推送</td>
+<td>com.taobao.accs.data.MsgDistributeService</td>
+</tr>
+<tr>
+<td>TBS</td>
+<td>com.tencent.smtt.export.external.DexClassLoaderProviderService</td>
+</tr>
+<tr>
+<td>Google Cast</td>
+<td>com.google.android.gms.cast.framework.media.MediaNotificationService</td>
+</tr>
+<tr>
+<td>OPPO Push</td>
+<td>com.coloros.mcssdk.PushService</td>
+</tr>
+<tr>
+<td>腾讯广告 SDK</td>
+<td>com.qq.e.downloader.DownloadService</td>
+</tr>
+<tr>
+<td>快手广告 SDK</td>
+<td>com.ksad.download.service.DownloadService</td>
+</tr>
+<tr>
+<td>Firebase</td>
+<td>com.google.android.datatransport.runtime.backends.TransportBackendDiscovery</td>
+</tr>
+<tr>
+<td>OPPO Push</td>
+<td>com.heytap.msp.push.service.DataMessageCallbackService</td>
+</tr>
+<tr>
+<td>VirtualAPK</td>
+<td>com.didi.virtualapk.delegate.RemoteService</td>
+</tr>
+<tr>
+<td>友盟推送</td>
+<td>com.umeng.message.UmengMessageCallbackHandlerService</td>
+</tr>
+<tr>
+<td>FileDownloader</td>
+<td>com.liulishuo.filedownloader.services.FileDownloadService$SeparateProcessService</td>
+</tr>
+<tr>
+<td>阿里移动推送</td>
+<td>com.taobao.agoo.TaobaoMessageIntentReceiverService</td>
+</tr>
+<tr>
+<td>FCM</td>
+<td>com.google.firebase.messaging.FirebaseMessagingService</td>
+</tr>
+<tr>
+<td>友盟推送</td>
+<td>com.umeng.update.net.DownloadingService</td>
+</tr>
+<tr>
+<td>Meizu Push</td>
+<td>com.meizu.cloud.pushsdk.NotificationService</td>
+</tr>
+<tr>
+<td>腾讯云通信</td>
+<td>com.tencent.qalsdk.service.QalAssistService</td>
+</tr>
+<tr>
+<td>OPPO Push</td>
+<td>com.heytap.mcssdk.AppPushService</td>
+</tr>
+<tr>
+<td>友盟推送</td>
+<td>com.umeng.message.XiaomiIntentService</td>
+</tr>
+<tr>
+<td>阿里移动推送</td>
+<td>com.alibaba.sdk.android.push.channel.TaobaoRecvService</td>
+</tr>
+<tr>
+<td>Android-Job</td>
+<td>com.evernote.android.job.v14.PlatformAlarmService</td>
+</tr>
+<tr>
+<td>Android-Job</td>
+<td>com.evernote.android.job.v21.PlatformJobService</td>
+</tr>
+<tr>
+<td>阿里移动推送</td>
+<td>com.alibaba.sdk.android.push.channel.CheckService</td>
+</tr>
+<tr>
+<td>网易云通信 SDK</td>
+<td>com.netease.nimlib.job.NIMJobService</td>
+</tr>
+<tr>
+<td>信鸽推送</td>
+<td>com.tencent.android.tpush.service.XGDaemonService</td>
+</tr>
+<tr>
+<td>Jetpack WorkManager</td>
+<td>androidx.work.impl.background.systemjob.SystemJobService</td>
+</tr>
+<tr>
+<td>阿里移动推送</td>
+<td>com.taobao.accs.internal.AccsJobService</td>
+</tr>
+<tr>
+<td>Android-Job</td>
+<td>com.evernote.android.job.v14.PlatformAlarmServiceExact</td>
+</tr>
+<tr>
+<td>百度云推送</td>
+<td>com.baidu.android.pushservice.PushService</td>
+</tr>
+<tr>
+<td>Firebase Analytics</td>
+<td>com.google.android.gms.measurement.AppMeasurementJobService</td>
+</tr>
+<tr>
+<td>阿里移动推送</td>
+<td>com.taobao.accs.ChannelService</td>
+</tr>
+<tr>
+<td>Matrix</td>
+<td>com.tencent.matrix.resource.CanaryResultService</td>
+</tr>
+<tr>
+<td>Tinker</td>
+<td>com.tencent.tinker.lib.service.TinkerPatchService</td>
+</tr>
+<tr>
+<td>阿里移动推送</td>
+<td>com.alibaba.sdk.android.push.AliyunPushIntentService</td>
+</tr>
+<tr>
+<td>百度地图 SDK</td>
+<td>com.baidu.location.f</td>
+</tr>
+<tr>
+<td>HUAWEI Push</td>
+<td>com.huawei.updatesdk.service.deamon.download.DownloadService</td>
+</tr>
+<tr>
+<td>Bugly</td>
+<td>com.tencent.bugly.beta.tinker.TinkerResultService</td>
+</tr>
+<tr>
+<td>信鸽推送</td>
+<td>com.tencent.android.tpush.service.XGPushService</td>
+</tr>
+<tr>
+<td>阿里移动推送</td>
+<td>com.alibaba.sdk.android.push.MsgService</td>
+</tr>
+<tr>
+<td>Weex</td>
+<td>com.alibaba.android.bindingx.plugin.weex.WXBindingXModuleService</td>
+</tr>
+<tr>
+<td>极光推送</td>
+<td>cn.jpush.android.service.PushService</td>
+</tr>
+<tr>
+<td>MiPush</td>
+<td>com.xiaomi.push.service.XMPushService</td>
+</tr>
+<tr>
+<td>腾讯广告 SDK</td>
+<td>com.qq.e.comm.DownloadService</td>
+</tr>
+<tr>
+<td>高德地图 SDK</td>
+<td>com.amap.api.location.APSService</td>
+</tr>
+<tr>
+<td>腾讯云通信</td>
+<td>com.tencent.qalsdk.service.QalService</td>
+</tr>
+<tr>
+<td>友盟推送</td>
+<td>com.umeng.message.UmengDownloadResourceService</td>
+</tr>
+<tr>
+<td>支付宝 SDK</td>
+<td>com.alipay.android.app.MspService</td>
+</tr>
+<tr>
+<td>Tinker</td>
+<td>com.tencent.tinker.lib.service.TinkerPatchService<img src="https://www.yuque.com/api/services/graph/generate_redirect/latex?IntentServiceRunner" srcset="/img/loading.gif" lazyload alt="img">InnerService</td>
+</tr>
+<tr>
+<td>百度云推送</td>
+<td>com.baidu.android.pushservice.CommandService</td>
+</tr>
+<tr>
+<td>PCDN SDK</td>
+<td>com.edge.pcdn.PcdnLiveService</td>
+</tr>
+<tr>
+<td>网易云通信 SDK</td>
+<td>com.netease.nimlib.service.NimService$Aux</td>
+</tr>
+<tr>
+<td>Firebase Analytics</td>
+<td>com.google.android.gms.measurement.AppMeasurementService</td>
+</tr>
+<tr>
+<td>Google Analytics</td>
+<td>com.google.android.gms.analytics.AnalyticsJobService</td>
+</tr>
+<tr>
+<td>Tinker</td>
+<td>com.tencent.tinker.lib.service.TinkerPatchService$InnerService</td>
+</tr>
+<tr>
+<td>网易云通信 SDK</td>
+<td>com.netease.nimlib.service.ResponseService</td>
+</tr>
+<tr>
+<td>Pangle SDK</td>
+<td>com.bytedance.tea.crash.upload.CrashUploadService</td>
+</tr>
+<tr>
+<td>AndroidUtilCode</td>
+<td>com.blankj.utilcode.util.MessengerUtils$ServerService</td>
+</tr>
+<tr>
+<td>Google Analytics</td>
+<td>com.google.android.gms.analytics.AnalyticsService</td>
+</tr>
+<tr>
+<td>PCDN SDK</td>
+<td>com.edge.pcdn.PcdnVodService</td>
+</tr>
+<tr>
+<td>Firebase</td>
+<td>com.google.firebase.iid.FirebaseInstanceIdService</td>
+</tr>
+<tr>
+<td>信鸽推送</td>
+<td>com.tencent.android.tpush.service.XGPushServiceV4</td>
+</tr>
+<tr>
+<td>信鸽推送</td>
+<td>com.tencent.android.tpush.service.XGPushServiceV3</td>
+</tr>
+<tr>
+<td>VirtualAPK</td>
+<td>com.didi.virtualapk.delegate.LocalService</td>
+</tr>
+<tr>
+<td>网易云通信 SDK</td>
+<td>com.netease.nimlib.service.NimService</td>
+</tr>
+<tr>
+<td>腾讯移动推送</td>
+<td>com.tencent.android.tpush.service.XGVipPushService</td>
+</tr>
+<tr>
+<td>友盟推送</td>
+<td>com.umeng.message.UmengIntentService</td>
+</tr>
+<tr>
+<td>vivo Push</td>
+<td>com.vivo.push.sdk.service.CommandClientService</td>
+</tr>
+<tr>
+<td>阿里移动推送</td>
+<td>com.taobao.accs.ChannelService$KernelService</td>
+</tr>
+<tr>
+<td>极光推送</td>
+<td>cn.jpush.android.service.DownloadService</td>
+</tr>
+<tr>
+<td>百度云推送</td>
+<td>com.baidu.android.pushservice.job.PushJobService</td>
+</tr>
+<tr>
+<td>Tinker</td>
+<td>com.tencent.tinker.lib.service.TinkerPatchForeService</td>
+</tr>
+<tr>
+<td>Jetpack WorkManager</td>
+<td>androidx.work.impl.foreground.SystemForegroundService</td>
+</tr>
+<tr>
+<td>个推</td>
+<td>com.igexin.sdk.PushService</td>
+</tr>
+<tr>
+<td>极光推送</td>
+<td>cn.jpush.android.service.DaemonService</td>
+</tr>
+<tr>
+<td>AndPermission</td>
+<td>com.yanzhenjie.permission.bridge.BridgeService</td>
+</tr>
+<tr>
+<td>OPPO Push</td>
+<td>com.heytap.mcssdk.PushService</td>
+</tr>
+<tr>
+<td>FileDownloader</td>
+<td>com.liulishuo.filedownloader.services.FileDownloadService$SharedMainProcessService</td>
+</tr>
+<tr>
+<td>腾讯移动推送</td>
+<td>com.tencent.android.tpush.rpc.XGRemoteService</td>
+</tr>
+<tr>
+<td>招商银行 SDK</td>
+<td>cmb.pb.cmbsafe.CmbService</td>
+</tr>
+<tr>
+<td>Tinker</td>
+<td>com.tencent.tinker.lib.service.DefaultTinkerResultService</td>
+</tr>
+<tr>
+<td>阿里移动推送</td>
+<td>org.android.agoo.accs.AgooService</td>
+</tr>
+<tr>
+<td>友盟推送</td>
+<td>com.umeng.message.UmengMessageIntentReceiverService</td>
+</tr>
+<tr>
+<td>OPPO Push</td>
+<td>com.heytap.msp.push.service.CompatibleDataMessageCallbackService</td>
+</tr>
+<tr>
+<td>RePlugin</td>
+<td>com.qihoo360.replugin.component.service.server.PluginPitService(.*)</td>
+</tr>
+<tr>
+<td>Pangle SDK</td>
+<td>com.ss.android.socialbase.(.*)</td>
+</tr>
+<tr>
+<td>Pangle SDK</td>
+<td>com.bytedance.sdk.openadsdk.(.*)</td>
+</tr>
+<tr>
+<td>米大师</td>
+<td>com.tencent.midas.wx.APMidasWXPayActivity</td>
+</tr>
+<tr>
+<td>腾讯开放平台</td>
+<td>com.tencent.connect.common.AssistActivity</td>
+</tr>
+<tr>
+<td>腾讯广告 SDK</td>
+<td>com.qq.e.ads.RewardvideoLandscapeADActivity</td>
+</tr>
+<tr>
+<td>腾讯开放平台</td>
+<td>com.tencent.tauth.AuthActivity</td>
+</tr>
+<tr>
+<td>快手广告 SDK</td>
+<td>com.kuaishou.commercial.downloader.center.AdDownloadCenterV2Activity</td>
+</tr>
+<tr>
+<td>银联 SDK</td>
+<td>com.unionpay.uppay.PayActivity</td>
+</tr>
+<tr>
+<td>腾讯广告 SDK</td>
+<td>com.qq.e.ads.PortraitADActivity</td>
+</tr>
+<tr>
+<td>HMS Update</td>
+<td>com.huawei.updatesdk.service.otaupdate.AppUpdateActivity</td>
+</tr>
+<tr>
+<td>腾讯广告 SDK</td>
+<td>com.qq.e.ads.LandscapeADActivity</td>
+</tr>
+<tr>
+<td>个推</td>
+<td>com.igexin.sdk.GActivity</td>
+</tr>
+<tr>
+<td>支付宝 SDK</td>
+<td>com.alipay.sdk.app.H5PayActivity</td>
+</tr>
+<tr>
+<td>vivo Push</td>
+<td>com.vivo.push.sdk.LinkProxyClientActivity</td>
+</tr>
+<tr>
+<td>AndroidUtilCode</td>
+<td>com.blankj.utilcode.util.UtilsTransActivity</td>
+</tr>
+<tr>
+<td>TBS</td>
+<td>com.tencent.smtt.sdk.VideoActivity</td>
+</tr>
+<tr>
+<td>腾讯广告 SDK</td>
+<td>com.qq.e.ads.ADActivity</td>
+</tr>
+<tr>
+<td>支付宝 SDK</td>
+<td>com.ali.auth.third.ui.LoginWebViewActivity</td>
+</tr>
+<tr>
+<td>支付宝 SDK</td>
+<td>com.ali.auth.third.ui.LoginActivity</td>
+</tr>
+<tr>
+<td>百度云推送</td>
+<td>com.baidu.android.pushservice.hwproxy.HwNotifyActivity</td>
+</tr>
+<tr>
+<td>支付宝 SDK</td>
+<td>com.alipay.sdk.app.H5OpenAuthActivity</td>
+</tr>
+<tr>
+<td>Weex</td>
+<td>com.taobao.weex.WXGlobalEventReceiver</td>
+</tr>
+<tr>
+<td>支付宝 SDK</td>
+<td>com.alipay.sdk.app.AlipayResultActivity</td>
+</tr>
+<tr>
+<td>HMS Core</td>
+<td>com.huawei.hms.activity.EnableServiceActivity</td>
+</tr>
+<tr>
+<td>极光推送</td>
+<td>cn.jpush.android.service.JNotifyActivity</td>
+</tr>
+<tr>
+<td>移动号码认证</td>
+<td>com.cmic.sso.sdk.activity.LoginAuthActivity</td>
+</tr>
+<tr>
+<td>Google AdMob</td>
+<td>com.google.android.gms.ads.AdActivity</td>
+</tr>
+<tr>
+<td>EasyPermissions</td>
+<td>pub.devrel.easypermissions.AppSettingsDialogHolderActivity</td>
+</tr>
+<tr>
+<td>HUAWEI Ads Kit</td>
+<td>com.huawei.openalliance.ad.activity.PPSLauncherActivity</td>
+</tr>
+<tr>
+<td>AndPermission</td>
+<td>com.yanzhenjie.permission.PermissionActivity</td>
+</tr>
+<tr>
+<td>HMS Core</td>
+<td>com.huawei.android.hms.agent.hwid.HMSSignInAgentActivity</td>
+</tr>
+<tr>
+<td>HUAWEI DTM</td>
+<td>com.huawei.hms.dtm.PreviewActivity</td>
+</tr>
+<tr>
+<td>微博 SDK</td>
+<td>com.sina.weibo.sdk.web.WeiboSdkWebActivity</td>
+</tr>
+<tr>
+<td>ARCore</td>
+<td>com.google.ar.core.InstallActivity</td>
+</tr>
+<tr>
+<td>腾讯移动推送</td>
+<td>com.tencent.android.tpush.TpnsActivity</td>
+</tr>
+<tr>
+<td>支付宝 SDK</td>
+<td>com.ali.auth.third.ui.webview.BaseWebViewActivity</td>
+</tr>
+<tr>
+<td>HMS Update</td>
+<td>com.huawei.updatesdk.support.pm.PackageInstallerActivity</td>
+</tr>
+<tr>
+<td>阿里聚安全</td>
+<td>com.alibaba.wireless.security.open.middletier.fc.ui.ContainerActivity</td>
+</tr>
+<tr>
+<td>腾讯广告 SDK</td>
+<td>com.qq.e.ads.RewardvideoPortraitADActivity</td>
+</tr>
+<tr>
+<td>Facebook SDK</td>
+<td>com.facebook.FacebookActivity</td>
+</tr>
+<tr>
+<td>android-crop</td>
+<td>com.soundcloud.android.crop.CropImageActivity</td>
+</tr>
+<tr>
+<td>AppAuth</td>
+<td>net.openid.appauth.RedirectUriReceiverActivity</td>
+</tr>
+<tr>
+<td>Facebook SDK</td>
+<td>com.facebook.CustomTabMainActivity</td>
+</tr>
+<tr>
+<td>极光推送</td>
+<td>cn.jpush.android.ui.PushActivity</td>
+</tr>
+<tr>
+<td>支付宝 SDK</td>
+<td>com.alipay.sdk.app.PayResultActivity</td>
+</tr>
+<tr>
+<td>AndroidUtilCode</td>
+<td>com.blankj.utilcode.util.UtilsTransActivity4MainProcess</td>
+</tr>
+<tr>
+<td>银联 SDK</td>
+<td>com.unionpay.UPPayWapActivity</td>
+</tr>
+<tr>
+<td>React Native</td>
+<td>com.facebook.react.devsupport.DevSettingsActivity</td>
+</tr>
+<tr>
+<td>个推</td>
+<td>com.igexin.sdk.PushActivity</td>
+</tr>
+<tr>
+<td>AndPermission</td>
+<td>com.yanzhenjie.permission.bridge.BridgeActivity</td>
+</tr>
+<tr>
+<td>AppAuth</td>
+<td>net.openid.appauth.AuthorizationManagementActivity</td>
+</tr>
+<tr>
+<td>小米账号开放平台</td>
+<td>com.xiaomi.account.openauth.AuthorizeActivity</td>
+</tr>
+<tr>
+<td>Google Play Service</td>
+<td>com.google.android.gms.common.api.GoogleApiActivity</td>
+</tr>
+<tr>
+<td>Ping++</td>
+<td>com.pingplusplus.android.PaymentActivity</td>
+</tr>
+<tr>
+<td>翼支付</td>
+<td>com.bestpay.app.H5PayActivity</td>
+</tr>
+<tr>
+<td>移动应用推广 SDK</td>
+<td>com.baidu.mobads.AppActivity</td>
+</tr>
+<tr>
+<td>Matisse</td>
+<td>com.zhihu.matisse.internal.ui.SelectedPreviewActivity</td>
+</tr>
+<tr>
+<td>Google Sign-In</td>
+<td>com.google.android.gms.auth.api.signin.internal.SignInHubActivity</td>
+</tr>
+<tr>
+<td>Matisse</td>
+<td>com.zhihu.matisse.internal.ui.AlbumPreviewActivity</td>
+</tr>
+<tr>
+<td>阿里移动推送</td>
+<td>com.alibaba.sdk.android.push.keeplive.PushExtActivity</td>
+</tr>
+<tr>
+<td>微博 SDK</td>
+<td>com.sina.weibo.sdk.component.WeiboSdkBrowser</td>
+</tr>
+<tr>
+<td>微博 SDK</td>
+<td>com.sina.weibo.sdk.share.WbShareToStoryActivity</td>
+</tr>
+<tr>
+<td>快应用</td>
+<td>org.hapjs.(.*)</td>
+</tr>
+<tr>
+<td>Facebook SDK</td>
+<td>com.facebook.CustomTabActivity</td>
+</tr>
+<tr>
+<td>uCrop</td>
+<td>com.yalantis.ucrop.UCropActivity</td>
+</tr>
+<tr>
+<td>米大师</td>
+<td>com.tencent.midas.proxyactivity.APMidasPayProxyActivity</td>
+</tr>
+<tr>
+<td>Bugly</td>
+<td>com.tencent.bugly.beta.ui.BetaActivity</td>
+</tr>
+<tr>
+<td>微博 SDK</td>
+<td>com.sina.weibo.sdk.share.WbShareResultActivity</td>
+</tr>
+<tr>
+<td>U-Share</td>
+<td>com.umeng.socialize.media.WBShareCallBackActivity</td>
+</tr>
+<tr>
+<td>Jetpack Slice</td>
+<td>androidx.slice.compat.SlicePermissionActivity</td>
+</tr>
+<tr>
+<td>HMS Core</td>
+<td>com.huawei.android.hms.agent.common.HMSAgentActivity</td>
+</tr>
+<tr>
+<td>Google Play Billing</td>
+<td>com.android.billingclient.api.ProxyBillingActivity</td>
+</tr>
+<tr>
+<td>HMS Core</td>
+<td>com.huawei.android.hms.agent.pay.HMSPayAgentActivity</td>
+</tr>
+<tr>
+<td>微博 SDK</td>
+<td>com.sina.weibo.sdk.share.WbShareTransActivity</td>
+</tr>
+<tr>
+<td>Matisse</td>
+<td>com.zhihu.matisse.ui.MatisseActivity</td>
+</tr>
+<tr>
+<td>防水墙</td>
+<td>com.tencent.captchasdk.TCaptchaPopupActivity</td>
+</tr>
+<tr>
+<td>HMS Core</td>
+<td>com.huawei.hms.activity.BridgeActivity</td>
+</tr>
+<tr>
+<td>支付宝 SDK</td>
+<td>com.alipay.sdk.auth.AuthActivity</td>
+</tr>
+<tr>
+<td>极光推送</td>
+<td>cn.jpush.android.ui.PopWinActivity</td>
+</tr>
+<tr>
+<td>Unity</td>
+<td>com.unity3d.player.UnityPlayerActivity</td>
+</tr>
+<tr>
+<td>uCrop</td>
+<td>com.yalantis.ucrop.PictureMultiCuttingActivity</td>
+</tr>
+<tr>
+<td>支付宝 SDK</td>
+<td>com.alipay.sdk.app.H5AuthActivity</td>
+</tr>
+<tr>
+<td>招商银行 SDK</td>
+<td>cmb.pb.ui.PBKeyboardActivity</td>
+</tr>
+<tr>
+<td>Tinker</td>
+<td>com.tencent.tinker.loader.hotplug.ActivityStubs(.*)</td>
+</tr>
+<tr>
+<td>Pangle SDK</td>
+<td>com.bytedance.sdk.openadsdk.(.*)</td>
+</tr>
+<tr>
+<td>Pangle SDK</td>
+<td>com.ss.android.socialbase.appdownloader.(.*)</td>
+</tr>
+<tr>
+<td>Pangle SDK</td>
+<td>com.ss.android.downloadlib.(.*)</td>
+</tr>
+<tr>
+<td>Pangle SDK</td>
+<td>com.yxcorp.gifshow.ad(.*)</td>
+</tr>
+<tr>
+<td>Pangle SDK</td>
+<td>com.yxcorp.map.advertisement.(.*)</td>
+</tr>
+<tr>
+<td>Meizu Push(GeTui Proxy)</td>
+<td>com.igexin.sdk.FlymePushReceiver</td>
+</tr>
+<tr>
+<td>Google Analytics</td>
+<td>com.google.android.gms.analytics.AnalyticsReceiver</td>
+</tr>
+<tr>
+<td>HUAWEI Push</td>
+<td>com.huawei.hms.support.api.push.PushMsgReceiver</td>
+</tr>
+<tr>
+<td>Pangle SDK</td>
+<td>com.ss.android.downloadlib.core.download.DownloadReceiver</td>
+</tr>
+<tr>
+<td>极光推送</td>
+<td>cn.jpush.android.service.SchedulerReceiver</td>
+</tr>
+<tr>
+<td>Firebase</td>
+<td>com.google.firebase.iid.FirebaseInstanceIdReceiver</td>
+</tr>
+<tr>
+<td>Pangle SDK</td>
+<td>com.bytedance.embedapplog.collector.Collector</td>
+</tr>
+<tr>
+<td>App Center</td>
+<td>com.microsoft.appcenter.distribute.DownloadManagerReceiver</td>
+</tr>
+<tr>
+<td>Firebase Analytics</td>
+<td>com.google.android.gms.measurement.AppMeasurementReceiver</td>
+</tr>
+<tr>
+<td>小米更新 SDK</td>
+<td>com.market.sdk.DownloadCompleteReceiver</td>
+</tr>
+<tr>
+<td>Android-Job</td>
+<td>com.evernote.android.job.v14.PlatformAlarmReceiver</td>
+</tr>
+<tr>
+<td>MiPush</td>
+<td>com.xiaomi.push.service.receivers.NetworkStatusReceiver</td>
+</tr>
+<tr>
+<td>个推</td>
+<td>com.igexin.sdk.PushReceiver</td>
+</tr>
+<tr>
+<td>HUAWEI Push</td>
+<td>com.huawei.hms.support.api.push.PushReceiver</td>
+</tr>
+<tr>
+<td>Meizu Push(TPNS Proxy)</td>
+<td>com.tencent.android.mzpush.MZPushMessageReceiver</td>
+</tr>
+<tr>
+<td>Android-Job</td>
+<td>com.evernote.android.job.JobBootReceiver</td>
+</tr>
+<tr>
+<td>Jetpack WorkManager</td>
+<td>androidx.work.impl.background.systemalarm.RescheduleReceiver</td>
+</tr>
+<tr>
+<td>Google Cast</td>
+<td>com.google.android.gms.cast.framework.media.MediaIntentReceiver</td>
+</tr>
+<tr>
+<td>阿里移动推送</td>
+<td>com.alibaba.sdk.android.push.SystemEventReceiver</td>
+</tr>
+<tr>
+<td>阿里移动推送</td>
+<td>com.taobao.accs.ServiceReceiver</td>
+</tr>
+<tr>
+<td>Jetpack Media</td>
+<td>androidx.media.session.MediaButtonReceiver</td>
+</tr>
+<tr>
+<td>Meizu Push(JPush Proxy)</td>
+<td>cn.jpush.android.service.PluginMeizuPlatformsReceiver</td>
+</tr>
+<tr>
+<td>MiPush(Aliyun Proxy)</td>
+<td>org.android.agoo.xiaomi.MiPushBroadcastReceiver</td>
+</tr>
+<tr>
+<td>极光推送</td>
+<td>cn.jpush.android.service.PushReceiver</td>
+</tr>
+<tr>
+<td>阿里移动推送</td>
+<td>com.taobao.accs.EventReceiver</td>
+</tr>
+<tr>
+<td>友盟推送</td>
+<td>com.umeng.message.NotificationProxyBroadcastReceiver</td>
+</tr>
+<tr>
+<td>个推</td>
+<td>com.igexin.download.DownloadReceiver</td>
+</tr>
+<tr>
+<td>vivo Push(Aliyun Proxy)</td>
+<td>org.android.agoo.vivo.PushMessageReceiverImpl</td>
+</tr>
+<tr>
+<td>MiPush(TPNS Proxy)</td>
+<td>com.tencent.android.mipush.XMPushMessageReceiver</td>
+</tr>
+<tr>
+<td>百度云推送</td>
+<td>com.baidu.android.pushservice.RegistrationReceiver</td>
+</tr>
+<tr>
+<td>网易云通信 SDK</td>
+<td>com.netease.nimlib.service.NimReceiver</td>
+</tr>
+<tr>
+<td>Jetpack WorkManager</td>
+<td>androidx.work.impl.diagnostics.DiagnosticsReceiver</td>
+</tr>
+<tr>
+<td>MiPush(JPush Proxy)</td>
+<td>cn.jpush.android.service.PluginXiaomiPlatformsReceiver</td>
+</tr>
+<tr>
+<td>Meizu Push</td>
+<td>com.meizu.cloud.pushsdk.SystemReceiver</td>
+</tr>
+<tr>
+<td>Jetpack WorkManager</td>
+<td>androidx.work.impl.utils.ForceStopRunnable$BroadcastReceiver</td>
+</tr>
+<tr>
+<td>Firebase</td>
+<td>com.google.android.datatransport.runtime.scheduling.jobscheduling.AlarmManagerSchedulerBroadcastReceiver</td>
+</tr>
+<tr>
+<td>HUAWEI Push(GeTui Proxy)</td>
+<td>com.igexin.sdk.HmsPushSubReceiver</td>
+</tr>
+<tr>
+<td>HUAWEI Push</td>
+<td>com.huawei.android.pushagent.PushBootReceiver</td>
+</tr>
+<tr>
+<td>HUAWEI Push(Aliyun Proxy)</td>
+<td>org.android.agoo.huawei.HuaweiPushReceiver</td>
+</tr>
+<tr>
+<td>百度云推送</td>
+<td>com.baidu.android.pushservice.PushServiceReceiver</td>
+</tr>
+<tr>
+<td>Firebase Analytics</td>
+<td>com.google.android.gms.measurement.AppMeasurementInstallReferrerReceiver</td>
+</tr>
+<tr>
+<td>HUAWEI Push</td>
+<td>com.huawei.hms.support.api.push.PushEventReceiver</td>
+</tr>
+<tr>
+<td>快手广告 SDK</td>
+<td>com.ksad.download.DownloadReceiver</td>
+</tr>
+<tr>
+<td>网易云通信 SDK</td>
+<td>com.netease.nimlib.service.ResponseReceiver</td>
+</tr>
+<tr>
+<td>极光推送</td>
+<td>cn.jpush.android.service.AlarmReceiver</td>
+</tr>
+<tr>
+<td>Facebook SDK</td>
+<td>com.facebook.CurrentAccessTokenExpirationBroadcastReceiver</td>
+</tr>
+<tr>
+<td>腾讯移动推送</td>
+<td>com.tencent.android.tpush.XGPushReceiver</td>
+</tr>
+<tr>
+<td>MiPush</td>
+<td>com.xiaomi.push.service.receivers.PingReceiver</td>
+</tr>
+<tr>
+<td>HUAWEI Push</td>
+<td>com.huawei.android.pushagent.PushEventReceiver</td>
+</tr>
+<tr>
+<td>MiPush(GeTui Proxy)</td>
+<td>com.igexin.sdk.MiuiPushReceiver</td>
+</tr>
+<tr>
+<td>阿里移动推送</td>
+<td>com.taobao.agoo.AgooCommondReceiver</td>
+</tr>
+<tr>
+<td>vivo Push(TPNS Proxy)</td>
+<td>com.tencent.android.vivopush.VivoPushMessageReceiver</td>
+</tr>
+<tr>
+<td>Jetpack Remote Callback</td>
+<td>androidx.remotecallback.ProviderRelayReceiver</td>
+</tr>
+<tr>
+<td>Jetpack WorkManager</td>
+<td>androidx.work.impl.background.systemalarm.ConstraintProxyUpdateReceiver</td>
+</tr>
+<tr>
+<td>神策分析 SDK</td>
+<td>com.sensorsdata.analytics.android.sdk.SensorsDataContentProvider</td>
+</tr>
+<tr>
+<td>OkDownload</td>
+<td>com.liulishuo.okdownload.OkDownloadProvider</td>
+</tr>
+<tr>
+<td>腾讯移动分析</td>
+<td>com.tencent.mid.api.MidProvider</td>
+</tr>
+<tr>
+<td>Picasso</td>
+<td>com.squareup.picasso.PicassoProvider</td>
+</tr>
+<tr>
+<td>File Provider</td>
+<td>android.support.v4.content.FileProvider</td>
+</tr>
+<tr>
+<td>极光推送</td>
+<td>cn.jpush.android.service.DownloadProvider</td>
+</tr>
+<tr>
+<td>Facebook SDK</td>
+<td>com.facebook.internal.FacebookInitProvider</td>
+</tr>
+<tr>
+<td>Jetpack WorkManager</td>
+<td>androidx.work.impl.WorkManagerInitializer</td>
+</tr>
+<tr>
+<td>Jetpack App Startup</td>
+<td>androidx.startup.InitializationProvider</td>
+</tr>
+<tr>
+<td>AndroidAutoSize</td>
+<td>me.jessyan.autosize.InitProvider</td>
+</tr>
+<tr>
+<td>Jetpack Lifecycle</td>
+<td>androidx.lifecycle.ProcessLifecycleOwnerInitializer</td>
+</tr>
+<tr>
+<td>神策分析 SDK</td>
+<td>com.sensorsdata.analytics.android.sdk.data.SensorsDataContentProvider</td>
+</tr>
+<tr>
+<td>腾讯移动推送</td>
+<td>com.tencent.tpns.baseapi.base.SettingsContentProvider</td>
+</tr>
+<tr>
+<td>Audience Network</td>
+<td>com.facebook.ads.AudienceNetworkContentProvider</td>
+</tr>
+<tr>
+<td>Bmob 后端云</td>
+<td>cn.bmob.v3.util.BmobContentProvider</td>
+</tr>
+<tr>
+<td>移动应用推广 SDK</td>
+<td>com.baidu.mobads.openad.FileProvider</td>
+</tr>
+<tr>
+<td>ShareSDK</td>
+<td>cn.sharesdk.framework.utils.ShareSDKFileProvider</td>
+</tr>
+<tr>
+<td>HMS Update</td>
+<td>com.huawei.updatesdk.fileprovider.UpdateSdkFileProvider</td>
+</tr>
+<tr>
+<td>Shizuku</td>
+<td>moe.shizuku.api.ShizukuProvider</td>
+</tr>
+<tr>
+<td>File Provider</td>
+<td>androidx.core.content.FileProvider</td>
+</tr>
+<tr>
+<td>Facebook SDK</td>
+<td>com.facebook.FacebookContentProvider</td>
+</tr>
+<tr>
+<td>七鱼 SDK</td>
+<td>com.qiyukf.nim.uikit.provider.UnicornProvider</td>
+</tr>
+<tr>
+<td>AgentWeb</td>
+<td>com.just.agentweb.AgentWebFileProvider</td>
+</tr>
+<tr>
+<td>Bugly</td>
+<td>com.tencent.bugly.beta.utils.BuglyFileProvider</td>
+</tr>
+<tr>
+<td>Jetpack Lifecycle</td>
+<td>android.arch.lifecycle.ProcessLifecycleOwnerInitializer</td>
+</tr>
+<tr>
+<td>HMS Update</td>
+<td>com.huawei.hms.update.provider.UpdateProvider</td>
+</tr>
+<tr>
+<td>AndPermission</td>
+<td>com.yanzhenjie.permission.FileProvider</td>
+</tr>
+<tr>
+<td>个推</td>
+<td>com.igexin.download.DownloadProvider</td>
+</tr>
+<tr>
+<td>网易云通信 SDK</td>
+<td>com.netease.nimlib.ipc.NIMContentProvider</td>
+</tr>
+<tr>
+<td>友盟推送</td>
+<td>com.umeng.message.provider.MessageProvider</td>
+</tr>
+<tr>
+<td>Crashlytics</td>
+<td>com.crashlytics.android.CrashlyticsInitProvider</td>
+</tr>
+<tr>
+<td>腾讯移动推送</td>
+<td>com.tencent.android.tpush.XGPushProvider</td>
+</tr>
+<tr>
+<td>HMS Core AAID</td>
+<td>com.huawei.hms.aaid.InitProvider</td>
+</tr>
+<tr>
+<td>Firebase</td>
+<td>com.google.firebase.provider.FirebaseInitProvider</td>
+</tr>
+<tr>
+<td>极光推送</td>
+<td>cn.jpush.android.service.Downloadrovider</td>
+</tr>
+<tr>
+<td>AndroidUtilCode</td>
+<td>com.blankj.utilcode.util.UtilsFileProvider</td>
+</tr>
+<tr>
+<td>RePlugin</td>
+<td>com.qihoo360.mobilesafe.svcmanager.ServiceProvider</td>
+</tr>
+<tr>
+<td>腾讯移动推送</td>
+<td>com.tencent.android.tpush.SettingsContentProvider</td>
+</tr>
+<tr>
+<td>Google AdMob</td>
+<td>com.google.android.gms.ads.MobileAdsInitProvider</td>
+</tr>
+<tr>
+<td>AppGallery Connect</td>
+<td>com.huawei.agconnect.core.provider.AGConnectInitializeProvider</td>
+</tr>
+<tr>
+<td>极光推送</td>
+<td>cn.jpush.android.service.DataProvider</td>
+</tr>
+<tr>
+<td>百度云推送</td>
+<td>com.baidu.android.pushservice.PushInfoProvider</td>
+</tr>
+<tr>
+<td>HUAWEI Push</td>
+<td>com.huawei.hms.support.api.push.PushProvider</td>
+</tr>
+<tr>
+<td>HUAWEI Ads Kit</td>
+<td>com.huawei.openalliance.ad.download.DownloadFileProvider</td>
+</tr>
+<tr>
+<td>AndroidUtilCode</td>
+<td>com.blankj.utilcode.util.Utils$FileProvider4UtilCode</td>
+</tr>
+<tr>
+<td>Firebase Performance</td>
+<td>com.google.firebase.perf.provider.FirebasePerfProvider</td>
+</tr>
+<tr>
+<td>腾讯移动推送</td>
+<td>com.tencent.android.tpush.XGVipPushKAProvider</td>
+</tr>
+<tr>
+<td>RePlugin</td>
+<td>com.qihoo360.replugin.(.*)</td>
+</tr>
+<tr>
+<td>Material Design Components</td>
+<td>com.google.android.material</td>
+</tr>
+<tr>
+<td>Jetpack Lifecycle</td>
+<td>androidx.lifecycle</td>
+</tr>
+<tr>
+<td>Jetpack Interpolator</td>
+<td>androidx.interpolator</td>
+</tr>
+<tr>
+<td>IJKPlayer</td>
+<td>tv.danmaku.ijk</td>
+</tr>
+<tr>
+<td>Protocol Buffer</td>
+<td>com.google.protobuf</td>
+</tr>
+<tr>
+<td>Jetpack Loader</td>
+<td>androidx.loader</td>
+</tr>
+<tr>
+<td>TBS</td>
+<td>com.tencent.smtt</td>
+</tr>
+<tr>
+<td>Jetpack Transition</td>
+<td>androidx.transition</td>
+</tr>
+<tr>
+<td>Jetpack DrawerLayout</td>
+<td>androidx.drawerlayout</td>
+</tr>
+<tr>
+<td>MiPush</td>
+<td>com.xiaomi.push</td>
+</tr>
+<tr>
+<td>Jetpack AppCompat</td>
+<td>androidx.appcompat</td>
+</tr>
+<tr>
+<td>Butter Knife</td>
+<td>butterknife.internal</td>
+</tr>
+<tr>
+<td>Jetpack RecyclerView</td>
+<td>androidx.recyclerview</td>
+</tr>
+<tr>
+<td>腾讯地图 SDK</td>
+<td>com.tencent.map</td>
+</tr>
+<tr>
+<td>Jetpack DocumentFile</td>
+<td>androidx.documentfile</td>
+</tr>
+<tr>
+<td>Jetpack Media</td>
+<td>androidx.media</td>
+</tr>
+<tr>
+<td>Jetpack MultiDex</td>
+<td>androidx.multidex</td>
+</tr>
+<tr>
+<td>UTDID</td>
+<td>com.ta.utdid2</td>
+</tr>
+<tr>
+<td>Jetpack SlidingPaneLayout</td>
+<td>androidx.slidingpanelayout</td>
+</tr>
+<tr>
+<td>Support Library</td>
+<td>android.support.v4</td>
+</tr>
+<tr>
+<td>Support Library</td>
+<td>android.support.v7</td>
+</tr>
+<tr>
+<td>MiPush</td>
+<td>com.xiaomi.xmpush</td>
+</tr>
+<tr>
+<td>GreenDAO</td>
+<td>org.greenbot.greendao</td>
+</tr>
+<tr>
+<td>Jetpack Collection</td>
+<td>androidx.collection</td>
+</tr>
+<tr>
+<td>HMS Analytics Kit</td>
+<td>com.huawei.hianalytics</td>
+</tr>
+<tr>
+<td>Jetpack SwipeRefreshLayout</td>
+<td>androidx.swiperefreshlayout</td>
+</tr>
+<tr>
+<td>Jetpack AsyncLayoutInflater</td>
+<td>androidx.asynclayoutinflater</td>
+</tr>
+<tr>
+<td>Jetpack Preference</td>
+<td>androidx.preference</td>
+</tr>
+<tr>
+<td>Jetpack ViewPager</td>
+<td>androidx.viewpager</td>
+</tr>
+<tr>
+<td>fastjson</td>
+<td>com.alibaba.fastjson</td>
+</tr>
+<tr>
+<td>Jetpack Browser</td>
+<td>androidx.browser</td>
+</tr>
+<tr>
+<td>Jetpack VectorDrawable</td>
+<td>androidx.vectordrawable</td>
+</tr>
+<tr>
+<td>FlexBox</td>
+<td>com.google.android.flexbox</td>
+</tr>
+<tr>
+<td>Firebase</td>
+<td>com.google.firebase</td>
+</tr>
+<tr>
+<td>App Center</td>
+<td>com.microsoft.appcenter</td>
+</tr>
+<tr>
+<td>Jetpack Room</td>
+<td>androidx.room</td>
+</tr>
+<tr>
+<td>Jetpack ConstraintLayout</td>
+<td>androidx.constraintlayout</td>
+</tr>
+<tr>
+<td>EventBus</td>
+<td>org.greenbot.eventbus</td>
+</tr>
+<tr>
+<td>Jetpack CoordinatorLayout</td>
+<td>androidx.coordinatorlayout</td>
+</tr>
+<tr>
+<td>MiPush</td>
+<td>com.xiaomi.mipush</td>
+</tr>
+<tr>
+<td>Glide</td>
+<td>com.bumptech.glide</td>
+</tr>
+<tr>
+<td>Jetpack CustomView</td>
+<td>androidx.customview</td>
+</tr>
+<tr>
+<td>微博 SDK</td>
+<td>com.sina.weibo</td>
+</tr>
+<tr>
+<td>Jetpack CardView</td>
+<td>androidx.cardview</td>
+</tr>
+<tr>
+<td>Google Mobile Service</td>
+<td>com.google.android.gms</td>
+</tr>
+<tr>
+<td>Jetpack Arch Core</td>
+<td>androidx.arch</td>
+</tr>
+<tr>
+<td>Jetpack Annotation</td>
+<td>androidx.annotation</td>
+</tr>
+<tr>
+<td>Lottie</td>
+<td>com.airbnb.lottie</td>
+</tr>
+<tr>
+<td>Jetpack Print</td>
+<td>androidx.print</td>
+</tr>
+<tr>
+<td>Butter Knife</td>
+<td>butterknife.runtime</td>
+</tr>
+<tr>
+<td>Fresco</td>
+<td>com.facebook.fresco</td>
+</tr>
+<tr>
+<td>Jetpack Fragment</td>
+<td>androidx.fragment</td>
+</tr>
+<tr>
+<td>高德 SDK</td>
+<td>com.amap.api</td>
+</tr>
+<tr>
+<td>Jetpack Legacy</td>
+<td>androidx.legacy</td>
+</tr>
+<tr>
+<td>Jetpack CursorAdapter</td>
+<td>androidx.cursoradapter</td>
+</tr>
+<tr>
+<td>Jetpack Versionedparcelable</td>
+<td>androidx.versionedparcelable</td>
+</tr>
+<tr>
+<td>Jetpack Savedstate</td>
+<td>androidx.savedstate</td>
+</tr>
+<tr>
+<td>Jetpack SQLite</td>
+<td>androidx.sqlite</td>
+</tr>
+<tr>
+<td>Bugly</td>
+<td>com.tencent.bugly</td>
+</tr>
+<tr>
+<td>ZXing</td>
+<td>com.google.zxing</td>
+</tr>
+<tr>
+<td>Jetpack ExifInterface</td>
+<td>androidx.exifinterface</td>
+</tr>
+<tr>
+<td>Jetpack Core</td>
+<td>androidx.core</td>
+</tr>
+<tr>
+<td>Jetpack WorkManager</td>
+<td>androidx.work</td>
+</tr>
+<tr>
+<td>Kotlin Sequences</td>
+<td>kotlin.sequences</td>
+</tr>
+<tr>
+<td>Kotlin Reflect</td>
+<td>kotlin.reflect</td>
+</tr>
+<tr>
+<td>Jetpack ViewPager2</td>
+<td>androidx.viewpager2</td>
+</tr>
+<tr>
+<td>TBS</td>
+<td>com.tencent.tbs</td>
+</tr>
+<tr>
+<td>ExoPlayer</td>
+<td>com.google.android.exoplayer2</td>
+</tr>
+<tr>
+<td>Jetpack DataBinding</td>
+<td>androidx.databinding</td>
+</tr>
+<tr>
+<td>gson</td>
+<td>com.google.gson</td>
+</tr>
+<tr>
+<td>Jetpack LocalBroadcastManager</td>
+<td>androidx.localbroadcastmanager</td>
+</tr>
+<tr>
+<td>Jetpack Activity</td>
+<td>androidx.activity</td>
+</tr>
+<tr>
+<td>Kotlin Coroutines</td>
+<td>kotlin.coroutines.(.*)</td>
+</tr>
+<tr>
+<td>Kotlin Coroutines</td>
+<td>kotlinx.coroutines.(.*)</td>
+</tr>
+<tr>
+<td>Kotlin</td>
+<td>kotlin.(.*)</td>
+</tr>
+<tr>
+<td>OKHttp3</td>
+<td>okhttp3.(.*)</td>
+</tr>
+<tr>
+<td>Retrofit2</td>
+<td>retrofit2.(.*)</td>
+</tr>
+<tr>
+<td>Okio</td>
+<td>okio.(.*)</td>
+</tr>
+<tr>
+<td>支付宝 SDK</td>
+<td>com.alipay.(.*)</td>
+</tr>
+<tr>
+<td>Flutter</td>
+<td>io.flutter.(.*)</td>
+</tr>
+<tr>
+<td>MediaInfoLib</td>
+<td>libmediainfo.so</td>
+</tr>
+<tr>
+<td>libSDL</td>
+<td>libSDL2.so</td>
+</tr>
+<tr>
+<td>Telegram APIs</td>
+<td>libtmessages.(.*).so</td>
+</tr>
+<tr>
+<td>腾讯云手游安全</td>
+<td>libtersafe2.so</td>
+</tr>
+<tr>
+<td>U-App SDK</td>
+<td>libumeng-spy.so</td>
+</tr>
+<tr>
+<td>VirtualApp</td>
+<td>com.lody.virtual.(.*)</td>
+</tr>
+<tr>
+<td>VirtualApp</td>
+<td>com.lody.virtual.client.stub.DaemonService</td>
+</tr>
+<tr>
+<td>Jetpack WorkManager</td>
+<td>androidx.work.impl.background.systemalarm.ConstraintProxy$NetworkStateProxy</td>
+</tr>
+<tr>
+<td>Jetpack WorkManager</td>
+<td>androidx.work.impl.background.systemalarm.ConstraintProxy$StorageNotLowProxy</td>
+</tr>
+<tr>
+<td>Jetpack WorkManager</td>
+<td>androidx.work.impl.background.systemalarm.ConstraintProxy$BatteryNotLowProxy</td>
+</tr>
+<tr>
+<td>Jetpack WorkManager</td>
+<td>androidx.work.impl.background.systemalarm.ConstraintProxy$BatteryChargingProxy</td>
+</tr>
+<tr>
+<td>Google Play Service</td>
+<td>com.google.android.play.core.common.PlayCoreDialogWrapperActivity</td>
+</tr>
+<tr>
+<td>Google Play Service</td>
+<td>com.google.android.play.core.missingsplits.PlayCoreMissingSplitsActivity</td>
+</tr>
+<tr>
+<td>Google Play Service</td>
+<td>com.google.android.libraries.phenotype.registration.PhenotypeMetadataHolderService</td>
+</tr>
+<tr>
+<td>Google Play Service</td>
+<td>com.google.android.libraries.phenotype.client.stable.AccountRemovedBroadcastReceiver</td>
+</tr>
+<tr>
+<td>Google Play Service</td>
+<td>com.google.android.libraries.phenotype.client.stable.PhenotypeUpdateBackgroundBroadcastReceiver</td>
+</tr>
+<tr>
+<td>小米更新 SDK</td>
+<td>com.market.sdk.LazyFileProvider</td>
+</tr>
+<tr>
+<td>小米更新 SDK</td>
+<td>com.xiaomi.market.sdk.DownloadCompleteReceiver</td>
+</tr>
+<tr>
+<td>AVPro Video</td>
+<td>libAVProLocal.so</td>
+</tr>
+<tr>
+<td>libaria2</td>
+<td>libaria2c.so</td>
+</tr>
+<tr>
+<td>libGDX</td>
+<td>libgdx-box2d.so</td>
+</tr>
+<tr>
+<td>libGDX</td>
+<td>libgdx.so</td>
+</tr>
+<tr>
+<td>libGDX</td>
+<td>libgdx-freetype.so</td>
+</tr>
+<tr>
+<td>jlibtorrent</td>
+<td>libjlibtorrent-(.*).so</td>
+</tr>
+<tr>
+<td>libtorrent4j</td>
+<td>libtorrent4j-(.*).so</td>
+</tr>
+<tr>
+<td>Jetpack WorkManager</td>
+<td>androidx.work.impl.background.systemalarm.SystemAlarmService</td>
+</tr>
+<tr>
+<td>微博 SDK</td>
+<td>com.sina.weibo.sdk.web.WebActivity</td>
+</tr>
+<tr>
+<td>微博 SDK</td>
+<td>com.sina.weibo.sdk.share.ShareChatActivity</td>
+</tr>
+<tr>
+<td>微博 SDK</td>
+<td>com.sina.weibo.sdk.share.ShareTransActivity</td>
+</tr>
+<tr>
+<td>微博 SDK</td>
+<td>com.sina.weibo.sdk.share.ShareStoryActivity</td>
+</tr>
+<tr>
+<td>微博 SDK</td>
+<td>com.sina.weibo.sdk.share.ShareResultActivity</td>
+</tr>
+<tr>
+<td>数美 SDK</td>
+<td>libsmsdk.so</td>
+</tr>
+<tr>
+<td>Google Play Service</td>
+<td>com.google.android.play.core.assetpacks.AssetPackExtractionService</td>
+</tr>
+<tr>
+<td>移动应用推广 SDK</td>
+<td>com.baidu.mobads.production.rewardvideo.MobRewardVideoActivity</td>
+</tr>
+<tr>
+<td>Mtop SDK</td>
+<td>mtopsdk.extra.antiattack.CheckCodeValidateActivity</td>
+</tr>
+<tr>
+<td>米大师</td>
+<td>com.tencent.midas.jsbridge.APWebJSBridgeActivity</td>
+</tr>
+<tr>
+<td>智齿客服 SDK</td>
+<td>com.sobot.chat.conversation.SobotChatActivity</td>
+</tr>
+<tr>
+<td>智齿客服 SDK</td>
+<td>com.sobot.chat.activity.SobotPhotoActivity</td>
+</tr>
+<tr>
+<td>智齿客服 SDK</td>
+<td>com.sobot.chat.activity.WebViewActivity</td>
+</tr>
+<tr>
+<td>智齿客服 SDK</td>
+<td>com.sobot.chat.activity.SobotSkillGroupActivity</td>
+</tr>
+<tr>
+<td>智齿客服 SDK</td>
+<td>com.sobot.chat.activity.SobotPostMsgActivity</td>
+</tr>
+<tr>
+<td>智齿客服 SDK</td>
+<td>com.sobot.chat.activity.SobotConsultationListActivity</td>
+</tr>
+<tr>
+<td>智齿客服 SDK</td>
+<td>com.sobot.chat.activity.SobotPhotoListActivity</td>
+</tr>
+<tr>
+<td>智齿客服 SDK</td>
+<td>com.sobot.chat.activity.SobotCusFieldActivity</td>
+</tr>
+<tr>
+<td>智齿客服 SDK</td>
+<td>com.sobot.chat.activity.SobotPostCategoryActivity</td>
+</tr>
+<tr>
+<td>智齿客服 SDK</td>
+<td>com.sobot.chat.activity.SobotQueryFromActivity</td>
+</tr>
+<tr>
+<td>智齿客服 SDK</td>
+<td>com.sobot.chat.activity.SobotChooseCityActivity</td>
+</tr>
+<tr>
+<td>智齿客服 SDK</td>
+<td>com.sobot.chat.activity.SobotChooseFileActivity</td>
+</tr>
+<tr>
+<td>智齿客服 SDK</td>
+<td>com.sobot.chat.activity.SobotFileDetailActivity</td>
+</tr>
+<tr>
+<td>智齿客服 SDK</td>
+<td>com.sobot.chat.activity.SobotCameraActivity</td>
+</tr>
+<tr>
+<td>智齿客服 SDK</td>
+<td>com.sobot.chat.activity.SobotVideoActivity</td>
+</tr>
+<tr>
+<td>智齿客服 SDK</td>
+<td>com.sobot.chat.activity.SobotTicketDetailActivity</td>
+</tr>
+<tr>
+<td>智齿客服 SDK</td>
+<td>com.sobot.chat.activity.SobotHelpCenterActivity</td>
+</tr>
+<tr>
+<td>智齿客服 SDK</td>
+<td>com.sobot.chat.activity.SobotProblemCategoryActivity</td>
+</tr>
+<tr>
+<td>智齿客服 SDK</td>
+<td>com.sobot.chat.activity.SobotProblemDetailActivity</td>
+</tr>
+<tr>
+<td>智齿客服 SDK</td>
+<td>com.sobot.chat.activity.SobotPostLeaveMsgActivity</td>
+</tr>
+<tr>
+<td>智齿客服 SDK</td>
+<td>com.sobot.chat.widget.dialog.SobotRobotListActivity</td>
+</tr>
+<tr>
+<td>智齿客服 SDK</td>
+<td>com.sobot.chat.widget.dialog.SobotReplyActivity</td>
+</tr>
+<tr>
+<td>智齿客服 SDK</td>
+<td>com.sobot.chat.widget.dialog.SobotTicketEvaluateActivity</td>
+</tr>
+<tr>
+<td>智齿客服 SDK</td>
+<td>com.sobot.chat.widget.dialog.SobotEvaluateActivity</td>
+</tr>
+<tr>
+<td>智齿客服 SDK</td>
+<td>com.sobot.chat.widget.dialog.SobotPostMsgTmpListActivity</td>
+</tr>
+<tr>
+<td>智齿客服 SDK</td>
+<td>com.sobot.chat.core.channel.SobotTCPServer</td>
+</tr>
+<tr>
+<td>智齿客服 SDK</td>
+<td>com.sobot.chat.server.SobotSessionServer</td>
+</tr>
+<tr>
+<td>智齿客服 SDK</td>
+<td>com.sobot.chat.provider.SobotFileProvider</td>
+</tr>
+<tr>
+<td>乐播 SDK</td>
+<td>libhpplayae.so</td>
+</tr>
+<tr>
+<td>乐播 SDK</td>
+<td>libed25519.so</td>
+</tr>
+<tr>
+<td>乐播 SDK</td>
+<td>com.hpplay.sdk.source.permission.PermissionBridgeActivity</td>
+</tr>
+<tr>
+<td>乐播 SDK</td>
+<td>com.hpplay.sdk.source.process.LelinkSdkService</td>
+</tr>
+<tr>
+<td>乐播 SDK</td>
+<td>com.hpplay.sdk.source.mirror.ScreenCastService</td>
+</tr>
+<tr>
+<td>FFmpeg</td>
+<td>libavcodec.so</td>
+</tr>
+<tr>
+<td>FFmpeg</td>
+<td>libavfilter.so</td>
+</tr>
+<tr>
+<td>FFmpeg</td>
+<td>libavformat.so</td>
+</tr>
+<tr>
+<td>FFmpeg</td>
+<td>libavutil.so</td>
+</tr>
+<tr>
+<td>React Native</td>
+<td>libfolly_futures.so</td>
+</tr>
+<tr>
+<td>GlideWebpDecoder</td>
+<td>libglide-webp.so</td>
+</tr>
+<tr>
+<td>LeakCanary</td>
+<td>leakcanary.internal.PlumberInstaller</td>
+</tr>
+<tr>
+<td>LeakCanary</td>
+<td>leakcanary.internal.HeapAnalyzerService</td>
+</tr>
+<tr>
+<td>LeakCanary</td>
+<td>leakcanary.internal.RequestStoragePermissionActivity</td>
+</tr>
+<tr>
+<td>LeakCanary</td>
+<td>leakcanary.internal.activity.LeakLauncherActivity</td>
+</tr>
+<tr>
+<td>LeakCanary</td>
+<td>leakcanary.internal.activity.LeakActivity</td>
+</tr>
+<tr>
+<td>LeakCanary</td>
+<td>leakcanary.internal.NotificationReceiver</td>
+</tr>
+<tr>
+<td>LeakCanary</td>
+<td>leakcanary.internal.LeakCanaryFileProvider</td>
+</tr>
+<tr>
+<td>LeakCanary</td>
+<td>leakcanary.internal.AppWatcherInstaller$MainProcess</td>
+</tr>
+<tr>
+<td>ABSCL</td>
+<td>no.nordicsemi.android.support.v18.scanner.PendingIntentReceiver</td>
+</tr>
+<tr>
+<td>ABSCL</td>
+<td>no.nordicsemi.android.support.v18.scanner.ScannerService</td>
+</tr>
+<tr>
+<td>xLua</td>
+<td>libxlua.so</td>
+</tr>
+<tr>
+<td>QAPM</td>
+<td>libapmart.so</td>
+</tr>
+<tr>
+<td>QAPM</td>
+<td>libapmcrash.so</td>
+</tr>
+<tr>
+<td>QAPM</td>
+<td>libapmdalvik.so</td>
+</tr>
+<tr>
+<td>QAPM</td>
+<td>libapmioFake.so</td>
+</tr>
+<tr>
+<td>PictureSelector</td>
+<td>com.luck.picture.lib.PictureFileProvider</td>
+</tr>
+<tr>
+<td>PictureSelector</td>
+<td>com.luck.picture.lib.PictureSelectorActivity</td>
+</tr>
+<tr>
+<td>PictureSelector</td>
+<td>com.luck.picture.lib.PictureSelectorWeChatStyleActivity</td>
+</tr>
+<tr>
+<td>PictureSelector</td>
+<td>com.luck.picture.lib.PictureSelectorCameraEmptyActivity</td>
+</tr>
+<tr>
+<td>PictureSelector</td>
+<td>com.luck.picture.lib.PictureCustomCameraActivity</td>
+</tr>
+<tr>
+<td>PictureSelector</td>
+<td>com.luck.picture.lib.PicturePreviewActivity</td>
+</tr>
+<tr>
+<td>PictureSelector</td>
+<td>com.luck.picture.lib.PictureSelectorPreviewWeChatStyleActivity</td>
+</tr>
+<tr>
+<td>PictureSelector</td>
+<td>com.luck.picture.lib.PictureVideoPlayActivity</td>
+</tr>
+<tr>
+<td>PictureSelector</td>
+<td>com.luck.picture.lib.PictureExternalPreviewActivity</td>
+</tr>
+<tr>
+<td>PictureSelector</td>
+<td>com.luck.picture.lib.PicturePlayAudioActivity</td>
+</tr>
+<tr>
+<td>ShareSDK</td>
+<td>cn.sharesdk.tencent.qq.ReceiveActivity</td>
+</tr>
+<tr>
+<td>FFmpeg</td>
+<td>libswscale.so</td>
+</tr>
+<tr>
+<td>FFmpeg</td>
+<td>libswresample.so</td>
+</tr>
+<tr>
+<td>FFmpeg</td>
+<td>libavdevice.so</td>
+</tr>
+<tr>
+<td>Shizuku</td>
+<td>rikka.shizuku.ShizukuProvider</td>
+</tr>
+<tr>
+<td>米大师</td>
+<td>com.tencent.midas.qq.APMidasQQWalletActivity</td>
+</tr>
+<tr>
+<td>极光推送</td>
+<td>cn.jpush.android.service.PluginHuaweiPlatformsService</td>
+</tr>
+<tr>
+<td>极光推送</td>
+<td>cn.jpush.android.service.PluginOppoPushService</td>
+</tr>
+<tr>
+<td>极光推送</td>
+<td>cn.jpush.android.service.PluginVivoMessageReceiver</td>
+</tr>
+<tr>
+<td>极光推送</td>
+<td>cn.jpush.android.asus.AsusPushMessageReceiver</td>
+</tr>
+<tr>
+<td>极光推送</td>
+<td>cn.jpush.android.service.DActivity</td>
+</tr>
+<tr>
+<td>腾讯广告 SDK</td>
+<td>com.qq.e.comm.GDTFileProvider</td>
+</tr>
+<tr>
+<td>Flutter</td>
+<td>io.flutter.plugins.urllauncher.WebViewActivity</td>
+</tr>
+<tr>
+<td>Flutter</td>
+<td>io.flutter.embedding.android.FlutterActivity</td>
+</tr>
+<tr>
+<td>FlutterBoost</td>
+<td>com.idlefish.flutterboost.containers.BoostFlutterActivity</td>
+</tr>
+<tr>
+<td>CRI Sofdec2</td>
+<td>libcri_mana_vpx.so</td>
+</tr>
+<tr>
+<td>CRI ADX2</td>
+<td>libcri_ware_unity.so</td>
+</tr>
+<tr>
+<td>iconv</td>
+<td>libiconv.so</td>
+</tr>
+<tr>
+<td>Unity</td>
+<td>libil2cpp.so</td>
+</tr>
+<tr>
+<td>SQLite</td>
+<td>libsqlite.so</td>
+</tr>
+<tr>
+<td>SQLite</td>
+<td>libsqlite3.so</td>
+</tr>
+<tr>
+<td>MMA SDK</td>
+<td>libMMANDKSignature.so</td>
+</tr>
+<tr>
+<td>cocos2d-cpp</td>
+<td>libcocos2dcpp.so</td>
+</tr>
+<tr>
+<td>LibVLC</td>
+<td>libmla.so</td>
+</tr>
+<tr>
+<td>LibVLC</td>
+<td>libvlc.so</td>
+</tr>
+<tr>
+<td>LibVLC</td>
+<td>libvlcjni.so</td>
+</tr>
+<tr>
+<td>OpenCV</td>
+<td>libopencv_core.so</td>
+</tr>
+<tr>
+<td>OpenCV</td>
+<td>libopencv_imgproc.so</td>
+</tr>
+<tr>
+<td>WebRTC</td>
+<td>libjingle_peerconnection_so.so</td>
+</tr>
+<tr>
+<td>ApngDrawable</td>
+<td>libapng-drawable.so</td>
+</tr>
+<tr>
+<td>Google VR SDK</td>
+<td>libgvr.so</td>
+</tr>
+<tr>
+<td>PayPal</td>
+<td>com.paypal.android.sdk.payments.PayPalService</td>
+</tr>
+<tr>
+<td>Qt5</td>
+<td>libQt5(.*).so</td>
+</tr>
+<tr>
+<td>Qt5</td>
+<td>libplugins_audio(.*).so</td>
+</tr>
+<tr>
+<td>Qt5</td>
+<td>libplugins_bearer(.*).so</td>
+</tr>
+<tr>
+<td>Qt5</td>
+<td>libplugins_gamepads(.*).so</td>
+</tr>
+<tr>
+<td>Qt5</td>
+<td>libplugins_geometryloaders(.*).so</td>
+</tr>
+<tr>
+<td>Qt5</td>
+<td>libplugins_geoservices(.*).so</td>
+</tr>
+<tr>
+<td>Qt5</td>
+<td>libplugins_iconengines(.*).so</td>
+</tr>
+<tr>
+<td>Qt5</td>
+<td>libplugins_mediaservice(.*).so</td>
+</tr>
+<tr>
+<td>Qt5</td>
+<td>libplugins_platforms_android(.*).so</td>
+</tr>
+<tr>
+<td>Qt5</td>
+<td>libplugins_playlistformats(.*).so</td>
+</tr>
+<tr>
+<td>Qt5</td>
+<td>libplugins_position(.*).so</td>
+</tr>
+<tr>
+<td>Qt5</td>
+<td>libplugins_qmltooling(.*).so</td>
+</tr>
+<tr>
+<td>Qt5</td>
+<td>libplugins_renderplugins(.*).so</td>
+</tr>
+<tr>
+<td>Qt5</td>
+<td>libplugins_sceneparsers(.*).so</td>
+</tr>
+<tr>
+<td>Qt5</td>
+<td>libplugins_sensors_libqtsensors(.*).so</td>
+</tr>
+<tr>
+<td>Qt5</td>
+<td>libplugins_sqldrivers(.*).so</td>
+</tr>
+<tr>
+<td>Qt5</td>
+<td>libplugins_styles(.*).so</td>
+</tr>
+<tr>
+<td>Qt5</td>
+<td>libplugins_texttospeech(.*).so</td>
+</tr>
+<tr>
+<td>Qt5</td>
+<td>libplugins_video_videonode(.*).so</td>
+</tr>
+<tr>
+<td>Qt5</td>
+<td>libplugins_webview(.*).so</td>
+</tr>
+<tr>
+<td>Qt5</td>
+<td>libqml_Qt3D(.*).so</td>
+</tr>
+<tr>
+<td>Qt5</td>
+<td>libqml_Qt(.*).so</td>
+</tr>
+<tr>
+<td>OpenSSL</td>
+<td>libssl.so</td>
+</tr>
+<tr>
+<td>OpenSSL</td>
+<td>libcrypto.so</td>
+</tr>
+<tr>
+<td>Qt5</td>
+<td>libplugins_imageformats(.*).so</td>
+</tr>
+<tr>
+<td>BurstLinker</td>
+<td>libBurstLinker.so</td>
+</tr>
+<tr>
+<td>Crashlytics</td>
+<td>libcrashlytics-common.so</td>
+</tr>
+<tr>
+<td>Crashlytics</td>
+<td>libcrashlytics-handler.so</td>
+</tr>
+<tr>
+<td>Crashlytics</td>
+<td>libcrashlytics-trampoline.so</td>
+</tr>
+<tr>
+<td>360 加固</td>
+<td>libjiagu_a64.so</td>
+</tr>
+<tr>
+<td>360 加固</td>
+<td>libjiagu_x64.so</td>
+</tr>
+<tr>
+<td>360 加固</td>
+<td>libjiagu_x86.so</td>
+</tr>
+<tr>
+<td>支付宝 SDK</td>
+<td>com.alipay.sdk.app.APayEntranceActivity</td>
+</tr>
+<tr>
+<td>DataFinder</td>
+<td>com.bytedance.applog.util.SimulateLaunchActivity</td>
+</tr>
+<tr>
+<td>DataFinder</td>
+<td>com.bytedance.applog.migrate.MigrateDetectorActivity</td>
+</tr>
+<tr>
+<td>DataFinder</td>
+<td>com.bytedance.applog.collector.Collector</td>
+</tr>
+<tr>
+<td>腾讯移动推送</td>
+<td>com.tencent.android.tpush.inappmessage.InAppMessageActivity</td>
+</tr>
+<tr>
+<td>ReToast</td>
+<td>github.ryuunoakaihitomi.retoast._Initializer</td>
+</tr>
+<tr>
+<td>Sofire</td>
+<td>libfire.so</td>
+</tr>
+<tr>
+<td>Sofire</td>
+<td>com.baidu.sofire.MyProvider</td>
+</tr>
+<tr>
+<td>ZBar</td>
+<td>libzbar.so</td>
+</tr>
+<tr>
+<td>Rclone</td>
+<td>librclone.so</td>
+</tr>
+<tr>
+<td>高德地图 SDK</td>
+<td>libAMapSDK_NAVI_v(.*).so</td>
+</tr>
+<tr>
+<td>OpenCV</td>
+<td>libopencv_java4.so</td>
+</tr>
+<tr>
+<td>Ren’Py</td>
+<td>librenpython.so</td>
+</tr>
+<tr>
+<td>HUAWEI Push(Aliyun Proxy)</td>
+<td>org.android.agoo.huawei.HuaweiPushMessageService</td>
+</tr>
+<tr>
+<td>React Native</td>
+<td>com.reactnativecommunity.webview.RNCWebViewFileProvider</td>
+</tr>
+<tr>
+<td>HMS ML Kit</td>
+<td>com.huawei.hms.mlsdk.common.provider.MLInitializerProvider</td>
+</tr>
+<tr>
+<td>ZBar</td>
+<td>libzbarjni.so</td>
+</tr>
+<tr>
+<td>HUAWEI Push(Aliyun Proxy)</td>
+<td>org.android.agoo.huawei.HuaweiPushMessageService</td>
+</tr>
+<tr>
+<td>Conscrypt</td>
+<td>libconscrypt_jni.so</td>
+</tr>
+<tr>
+<td>Pangle SDK</td>
+<td>libmetasec_ml.so</td>
+</tr>
+<tr>
+<td>xHook</td>
+<td>libxhook_lib.so</td>
+</tr>
+<tr>
+<td>KOOM</td>
+<td>libkoom-java.so</td>
+</tr>
+<tr>
+<td>KOOM</td>
+<td>libkwai-linker.so</td>
+</tr>
+<tr>
+<td>KOOM</td>
+<td>com.kwai.koom.javaoom.analysis.HeapAnalyzeService</td>
+</tr>
+<tr>
+<td>Sentry</td>
+<td>libsentry.so</td>
+</tr>
+<tr>
+<td>Sentry</td>
+<td>libsentry-android.so</td>
+</tr>
+<tr>
+<td>Sentry</td>
+<td>io.sentry.android.core.SentryInitProvider</td>
+</tr>
+<tr>
+<td>百度地图 SDK</td>
+<td>liblocSDK(.*)[0-9]b.so</td>
+</tr>
+<tr>
+<td>OPPO Push(GeTui Proxy)</td>
+<td>com.igexin.sdk.OppoPushService</td>
+</tr>
+<tr>
+<td>vivo Push(GeTui Proxy)</td>
+<td>com.igexin.sdk.VivoPushMessageReceiver</td>
+</tr>
+<tr>
+<td>快应用</td>
+<td>org.hapjs.(.*)</td>
+</tr>
+<tr>
+<td>Dexter</td>
+<td>com.karumi.dexter.DexterActivity</td>
+</tr>
+<tr>
+<td>Google AdMob</td>
+<td>com.google.android.gms.ads.AdService</td>
+</tr>
+<tr>
+<td>网易云捕</td>
+<td>libbugrpt.so</td>
+</tr>
+<tr>
+<td>开普勒 SDK</td>
+<td>com.kepler.jd.login.AuthSuccessActivity</td>
+</tr>
+<tr>
+<td>开普勒 SDK</td>
+<td>com.kepler.jd.sdk.KeplerMidActivity</td>
+</tr>
+<tr>
+<td>开普勒 SDK</td>
+<td>com.kepler.jd.sdk.WebViewActivity</td>
+</tr>
+<tr>
+<td>开普勒 SDK</td>
+<td>com.kepler.jd.sdk.KeplerBackActivity</td>
+</tr>
+<tr>
+<td>Trichrome</td>
+<td>com.google.android.trichromelibrary</td>
+</tr>
+<tr>
+<td>LibCurl</td>
+<td>libcurl.so</td>
+</tr>
+<tr>
+<td>OpenCC</td>
+<td>libopencc.so</td>
+</tr>
+<tr>
+<td>Opus</td>
+<td>libopus.so</td>
+</tr>
+<tr>
+<td>Log for C++</td>
+<td>liblog4cpp.so</td>
+</tr>
+<tr>
+<td>Live2D Cubism SDK</td>
+<td>libLive2DCubismCore.so</td>
+</tr>
+<tr>
+<td>Yandex SpeechKit</td>
+<td>libYandexSpeechKitJni.(.*).so</td>
+</tr>
+<tr>
+<td>Megazord</td>
+<td>libmegazord.so</td>
+</tr>
+<tr>
+<td>腾讯移动推送</td>
+<td>libxgVipSecurity.so</td>
+</tr>
+<tr>
+<td>HUAWEI Push(TPNS Proxy)</td>
+<td>com.huawei.android.hms.tpns.HWHmsMessageService</td>
+</tr>
+<tr>
+<td>XPopup</td>
+<td>com.lxj.xpopup.util.XPermission$PermissionActivity</td>
+</tr>
+<tr>
+<td>Xpref</td>
+<td>com.bilibili.xpref.XprefProvider</td>
+</tr>
+<tr>
+<td>ML Kit</td>
+<td>com.google.mlkit.common.internal.MlKitInitProvider</td>
+</tr>
+<tr>
+<td>ML Kit</td>
+<td>com.google.mlkit.common.internal.MlKitComponentDiscoveryService</td>
+</tr>
+<tr>
+<td>Torrent library for java</td>
+<td>libtorrent4j.so</td>
+</tr>
+<tr>
+<td>gocryptsfs</td>
+<td>libgocryptfs.so</td>
+</tr>
+<tr>
+<td>Android-TiffBitmapFactory</td>
+<td>libtiff.so</td>
+</tr>
+<tr>
+<td>LibRaw</td>
+<td>libraw.so</td>
+</tr>
+<tr>
+<td>Qt6</td>
+<td>libQt6(.*).so</td>
+</tr>
+<tr>
+<td>AdColony</td>
+<td>libadcolony.so</td>
+</tr>
+<tr>
+<td>Sodium</td>
+<td>libsodium.so</td>
+</tr>
+<tr>
+<td>腾讯语音识别</td>
+<td>libWXVoice.so</td>
+</tr>
+<tr>
+<td>华为帐号服务</td>
+<td>com.huawei.hms.hwid.internal.ui.activity.HwIdSignInHubActivity</td>
+</tr>
+<tr>
+<td>华为帐号服务</td>
+<td>com.huawei.hms.account.internal.ui.activity.AccountSignInHubActivity</td>
+</tr>
+<tr>
+<td>HUAWEI Ads Kit</td>
+<td>com.huawei.openalliance.ad.activity.PPSBridgeActivity</td>
+</tr>
+<tr>
+<td>HUAWEI Ads Kit</td>
+<td>com.huawei.openalliance.ad.activity.PPSNotificationActivity</td>
+</tr>
+<tr>
+<td>HUAWEI Ads Kit</td>
+<td>com.huawei.openalliance.ad.activity.AgProtocolActivity</td>
+</tr>
+<tr>
+<td>HMS Analytics Kit</td>
+<td>com.huawei.hms.analytics.receiver.HiAnalyticsSvcEvtReceiver</td>
+</tr>
+<tr>
+<td>HMS Analytics Kit</td>
+<td>com.huawei.hms.analytics.provider.AnalyticsInitializeProvider</td>
+</tr>
+<tr>
+<td>梆梆安全</td>
+<td>com.secneo.apkwrapper.CP</td>
+</tr>
+<tr>
+<td>闪验 SDK</td>
+<td>libShanYCore.so</td>
+</tr>
+<tr>
+<td>顶象无感验证 SDK</td>
+<td>libDXRisk(.*).so</td>
+</tr>
+<tr>
+<td>Android Crazy Linker</td>
+<td>libchrome_android_linker.so</td>
+</tr>
+<tr>
+<td>顶象无感验证 SDK</td>
+<td>libDXRiskComm(.*).so</td>
+</tr>
+<tr>
+<td>顶象无感验证 SDK</td>
+<td>libDXCaptcha(.*).so</td>
+</tr>
+<tr>
+<td>Clash Core</td>
+<td>libclash.so</td>
+</tr>
+<tr>
+<td>Artemis Engine</td>
+<td>libartemis.so</td>
+</tr>
+<tr>
+<td>Mapbox GL Native</td>
+<td>libmapbox-gl.so</td>
+</tr>
+<tr>
+<td>kraken</td>
+<td>libkraken_jsc.so</td>
+</tr>
+<tr>
+<td>Jetpack Compose</td>
+<td>androidx.compose.ui.tooling.PreviewActivity</td>
+</tr>
+<tr>
+<td>Jetpack Compose</td>
+<td>androidx.compose.ui.tooling.data.TestActivity</td>
+</tr>
+<tr>
+<td>Jetpack Compose</td>
+<td>androidx.compose.ui.tooling.preview.PreviewActivity</td>
+</tr>
+<tr>
+<td>CodeLocator</td>
+<td>com.bytedance.tools.codelocator.CodeLocatorProvider</td>
+</tr>
+<tr>
+<td>Jetpack ProfileInstaller</td>
+<td>androidx.profileinstaller.ProfileInstallReceiver</td>
+</tr>
+<tr>
+<td>Qigsaw</td>
+<td>com.iqiyi.android.qigsaw.core.splitinstall.remote.SplitInstallService</td>
+</tr>
+<tr>
+<td>Qigsaw</td>
+<td>com.iqiyi.android.qigsaw.core.splitinstall.SplitCleanService</td>
+</tr>
+<tr>
+<td>Qigsaw</td>
+<td>com.iqiyi.android.qigsaw.core.splitrequest.splitinfo.SplitUpdateService</td>
+</tr>
+<tr>
+<td>Qigsaw</td>
+<td>com.iqiyi.android.qigsaw.core.DefaultObtainUserConfirmationDialog</td>
+</tr>
+<tr>
+<td>Google Play Service</td>
+<td>com.google.android.play.core.assetpacks.ExtractionForegroundService</td>
+</tr>
+<tr>
+<td>ZXing Android Embedded</td>
+<td>com.journeyapps.barcodescanner.CaptureActivity</td>
+</tr>
+<tr>
+<td>ProcessPhoenix</td>
+<td>com.jakewharton.processphoenix.ProcessPhoenix</td>
+</tr>
+<tr>
+<td>IJKPlayer</td>
+<td>tv.danmaku.ijk.media.player.services.IjkMediaPlayerService</td>
+</tr>
+<tr>
+<td>IJKPlayer</td>
+<td>tv.danmaku.ijk.media.player.services.IjkMediaPlayerNoUIActivity</td>
+</tr>
+<tr>
+<td>Firebase C++ SDK</td>
+<td>libFirebaseCpp(.*).so</td>
+</tr>
+<tr>
+<td>LSPatch</td>
+<td>liblspd.so</td>
+</tr>
+<tr>
+<td>LSPatch</td>
+<td>org.lsposed.lspatch</td>
+</tr>
+<tr>
+<td>Trojan-Go</td>
+<td>libtrojan-go.so</td>
+</tr>
+<tr>
+<td>Rime Core</td>
+<td>librime.so</td>
+</tr>
+<tr>
+<td>Rime Core</td>
+<td>librime_jni.so</td>
+</tr>
+<tr>
+<td>Lib XUL</td>
+<td>libxul.so</td>
+</tr>
+<tr>
+<td>阿里聚安全</td>
+<td>libsgmiddletier.so</td>
+</tr>
+<tr>
+<td>小米账号开放平台</td>
+<td>com.xiaomi.accountsdk.diagnosis.ui.PassportDiagnosisActivity</td>
+</tr>
+<tr>
+<td>腾讯广告 SDK</td>
+<td>com.qq.e.ads.DialogActivity</td>
+</tr>
+<tr>
+<td>实人认证 SDK</td>
+<td>com.alibaba.security.realidentity.activity.RPWebViewActivity</td>
+</tr>
+<tr>
+<td>实人认证 SDK</td>
+<td>com.alibaba.security.realidentity.activity.RPTakePhotoActivity</td>
+</tr>
+<tr>
+<td>实人认证 SDK</td>
+<td>com.alibaba.security.biometrics.activity.ALModelLoadingActivity</td>
+</tr>
+<tr>
+<td>实人认证 SDK</td>
+<td>com.alibaba.security.biometrics.activity.ALBiometricsActivity</td>
+</tr>
+<tr>
+<td>实人认证 SDK</td>
+<td>libALBiometricsJni.so</td>
+</tr>
+<tr>
+<td>微博 SDK</td>
+<td>libsharewind.so</td>
+</tr>
+<tr>
+<td>Facebook SDK</td>
+<td>libfbjni.so</td>
+</tr>
+<tr>
+<td>Sentry</td>
+<td>io.sentry.android.core.SentryPerformanceProvider</td>
+</tr>
+<tr>
+<td>微博 SDK</td>
+<td>com.sina.weibo.sdk.content.FileProvider</td>
+</tr>
+<tr>
+<td>友盟推送</td>
+<td>com.umeng.message.notify.UPushMessageNotifyActivity</td>
+</tr>
+<tr>
+<td>友盟推送</td>
+<td>com.umeng.message.UPushBoardActivity</td>
+</tr>
+<tr>
+<td>友盟推送</td>
+<td>com.umeng.message.UMessageNotifyActivity</td>
+</tr>
+<tr>
+<td>Meizu Push</td>
+<td>com.meizu.cloud.pushsdk.MzPushSystemReceiver</td>
+</tr>
+<tr>
+<td>抖音 SDK</td>
+<td>com.bytedance.sdk.open.douyin.ui.DouYinWebAuthorizeActivity</td>
+</tr>
+<tr>
+<td>Pangle SDK</td>
+<td>com.bytedance.sdk.openadsdk.stub.server.DownloaderServerManager</td>
+</tr>
+<tr>
+<td>Pangle SDK</td>
+<td>com.bytedance.pangle.servermanager.MainServerManager</td>
+</tr>
+<tr>
+<td>Pangle SDK</td>
+<td>com.bytedance.pangle.provider.MainProcessProviderProxy</td>
+</tr>
+<tr>
+<td>ZBar</td>
+<td>cn.bertsir.zbar.utils.QrFileProvider</td>
+</tr>
+<tr>
+<td>Neptune</td>
+<td>org.qiyi.pluginlibrary.install.PluginInstallerService</td>
+</tr>
+<tr>
+<td>Neptune</td>
+<td>org.qiyi.pluginlibrary.pm.PluginPackageManagerService</td>
+</tr>
+<tr>
+<td>Neptune</td>
+<td>org.qiyi.pluginlibrary.component.(.*)</td>
+</tr>
+<tr>
+<td>Neptune</td>
+<td>org.qiyi.pluginlibrary.component.ServiceProxy0</td>
+</tr>
+<tr>
+<td>Neptune</td>
+<td>org.qiyi.pluginlibrary.component.ServiceProxy1</td>
+</tr>
+<tr>
+<td>Neptune</td>
+<td>org.qiyi.pluginlibrary.component.ServiceProxy2</td>
+</tr>
+<tr>
+<td>Neptune</td>
+<td>org.qiyi.pluginlibrary.component.ServiceProxy3</td>
+</tr>
+<tr>
+<td>Neptune</td>
+<td>org.qiyi.pluginlibrary.component.ContentProviderProxy1</td>
+</tr>
+<tr>
+<td>Neptune</td>
+<td>org.qiyi.pluginlibrary.pm.PluginPackageManagerProvider</td>
+</tr>
+<tr>
+<td>360 加固</td>
+<td>libX86Bridge.so</td>
+</tr>
+<tr>
+<td>快应用</td>
+<td>org.hapjs.(.*)</td>
+</tr>
+<tr>
+<td>VirtualAPK</td>
+<td>com.didi.virtualapk.delegate.RemoteContentProvider</td>
+</tr>
+<tr>
+<td>VirtualAPK</td>
+<td>com.didi.virtualapk.(.*)</td>
+</tr>
+<tr>
+<td>OPPO Push(GeTui Proxy)</td>
+<td>com.igexin.sdk.OppoAppPushService</td>
+</tr>
+<tr>
+<td>HUAWEI Push(GeTui Proxy)</td>
+<td>com.igexin.sdk.HmsPushMessageService</td>
+</tr>
+<tr>
+<td>HMS Core</td>
+<td>com.huawei.hms.device.provider.CheckHmsProvider</td>
+</tr>
+<tr>
+<td>招商银行 SDK</td>
+<td>cmbapi.CMBApiEntryActivity</td>
+</tr>
+<tr>
+<td>Pangle SDK</td>
+<td>libpangleflipped.so</td>
+</tr>
+<tr>
+<td>Agora RTC SDK</td>
+<td>libagora_ai_denoise_extension.so</td>
+</tr>
+<tr>
+<td>Agora RTC SDK</td>
+<td>libagora_ci_extension.so</td>
+</tr>
+<tr>
+<td>Agora RTC SDK</td>
+<td>libagora_dav1d_extension.so</td>
+</tr>
+<tr>
+<td>Agora RTC SDK</td>
+<td>libagora_fd_extension.so</td>
+</tr>
+<tr>
+<td>Agora RTC SDK</td>
+<td>libagora_fdkaac.so</td>
+</tr>
+<tr>
+<td>Agora RTC SDK</td>
+<td>libagora_jnd_extension.so</td>
+</tr>
+<tr>
+<td>Agora RTC SDK</td>
+<td>libagora-mpg123.so</td>
+</tr>
+<tr>
+<td>Agora RTC SDK</td>
+<td>libagora_segmentation_extension.so</td>
+</tr>
+<tr>
+<td>Agora RTC SDK</td>
+<td>libagora_super_resolution_extension.so</td>
+</tr>
+<tr>
+<td>Agora RTC SDK</td>
+<td>libagora_video_process_extension.so</td>
+</tr>
+<tr>
+<td>Agora RTC SDK</td>
+<td>libagora-core.so</td>
+</tr>
+<tr>
+<td>Agora RTC SDK</td>
+<td>libagora-ffmpeg.so</td>
+</tr>
+<tr>
+<td>Agora RTC SDK</td>
+<td>libagora-rtc-sdk.so</td>
+</tr>
+<tr>
+<td>Agora RTC SDK</td>
+<td>libagora-soundtouch.so</td>
+</tr>
+<tr>
+<td>Filament</td>
+<td>libfilament-utils-jni.so</td>
+</tr>
+<tr>
+<td>Filament</td>
+<td>libfilament-jni.so</td>
+</tr>
+<tr>
+<td>Filament</td>
+<td>libgltfio-jni.so</td>
+</tr>
+<tr>
+<td>Jetpack Test</td>
+<td>androidx.test.core.app.InstrumentationActivityInvoker$BootstrapActivity</td>
+</tr>
+<tr>
+<td>Jetpack Test</td>
+<td>androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity</td>
+</tr>
+<tr>
+<td>Jetpack Test</td>
+<td>androidx.test.core.app.InstrumentationActivityInvoker$EmptyFloatingActivity</td>
+</tr>
+<tr>
+<td>Hermes</td>
+<td>libhermes-executor-debug.so</td>
+</tr>
+<tr>
+<td>Hermes</td>
+<td>libhermes-executor-release.so</td>
+</tr>
+<tr>
+<td>Hermes</td>
+<td>libhermes-inspector.so</td>
+</tr>
+<tr>
+<td>Hermes</td>
+<td>libhermes.so</td>
+</tr>
+<tr>
+<td>阿里聚安全</td>
+<td>libsgmainso-(.*).so</td>
+</tr>
+<tr>
+<td>MSA SDK</td>
+<td>libmsaoaidauth.so</td>
+</tr>
+<tr>
+<td>MSA SDK</td>
+<td>libmsaoaidsec.so</td>
+</tr>
+<tr>
+<td>闪验 SDK</td>
+<td>com.chuanglan.shanyan_sdk.view.ShanYanOneKeyActivity</td>
+</tr>
+<tr>
+<td>闪验 SDK</td>
+<td>com.chuanglan.shanyan_sdk.view.CmccLoginActivity</td>
+</tr>
+<tr>
+<td>闪验 SDK</td>
+<td>com.chuanglan.shanyan_sdk.view.CTCCPrivacyProtocolActivity</td>
+</tr>
+<tr>
+<td>Pangle SDK</td>
+<td>com.bytedance.sdk.openadsdk.(.*)</td>
+</tr>
+<tr>
+<td>网易云信</td>
+<td>libtraceroute.so</td>
+</tr>
+<tr>
+<td>网易云信</td>
+<td>libne_audio.so</td>
+</tr>
+<tr>
+<td>网易云信</td>
+<td>libhigh-available.so</td>
+</tr>
+<tr>
+<td>网易云信</td>
+<td>libnertc_sdk.so</td>
+</tr>
+<tr>
+<td>网易云信</td>
+<td>libvideoeffect.so</td>
+</tr>
+<tr>
+<td>网易云信</td>
+<td>liblivestreaming.so</td>
+</tr>
+<tr>
+<td>网易云信</td>
+<td>libnelprender.so</td>
+</tr>
+<tr>
+<td>网易云信</td>
+<td>libnelpengine.so</td>
+</tr>
+<tr>
+<td>网易云信</td>
+<td>libRtsSDK.so</td>
+</tr>
+<tr>
+<td>网易云信</td>
+<td>libneliveplayer.so</td>
+</tr>
+<tr>
+<td>Sense</td>
+<td>com.highcapable.sense.SenseActivity</td>
+</tr>
+<tr>
+<td>Quack</td>
+<td>libquack.so</td>
+</tr>
+<tr>
+<td>AppLovin</td>
+<td>com.applovin.sdk.AppLovinInitProvider</td>
+</tr>
+<tr>
+<td>AppLovin</td>
+<td>com.applovin.(.*)</td>
+</tr>
+<tr>
+<td>AppLovin</td>
+<td>com.applovin.impl.sdk.utils.AppKilledService</td>
+</tr>
+<tr>
+<td>AppLovin</td>
+<td>com.applovin.impl.adview.activity.FullscreenAdService</td>
+</tr>
+<tr>
+<td>Audience Network SDK</td>
+<td>com.facebook.ads.AudienceNetworkActivity</td>
+</tr>
+<tr>
+<td>Kwai Ad SDK</td>
+<td>com.kwad.sdk.api.proxy.(.*)</td>
+</tr>
+<tr>
+<td>Kwai Ad SDK</td>
+<td>com.kwad.sdk.api.proxy.(.*)</td>
+</tr>
+<tr>
+<td>Kwai Ad SDK</td>
+<td>com.kwad.sdk.api.proxy.app.AdSdkFileProvider</td>
+</tr>
+<tr>
+<td>个推</td>
+<td>com.getui.gtc.GtcService</td>
+</tr>
+<tr>
+<td>个推</td>
+<td>com.getui.gtc.base.GtcProvider</td>
+</tr>
+<tr>
+<td>快手开放平台</td>
+<td>com.kwai.auth.login.kwailogin.h5login.KwaiH5LoginActivity</td>
+</tr>
+<tr>
+<td>快手开放平台</td>
+<td>com.kwai.auth.login.kwailogin.applogin.RouteHandlerActivity</td>
+</tr>
+<tr>
+<td>快手开放平台</td>
+<td>com.kwai.opensdk.sdk.openapi.KwaiHandlerActivity</td>
+</tr>
+<tr>
+<td>快手开放平台</td>
+<td>com.kwai.opensdk.sdk.openapi.KwaiRouterActivity</td>
+</tr>
+<tr>
+<td>快手开放平台</td>
+<td>com.kwai.opensdk.sdk.LoadingActivity</td>
+</tr>
+<tr>
+<td>Games plugin for Unity</td>
+<td>com.google.games.bridge.(.*)</td>
+</tr>
+<tr>
+<td>Games plugin for Unity</td>
+<td>libgpg.so</td>
+</tr>
+<tr>
+<td>TBS</td>
+<td>liblbs.so</td>
+</tr>
+<tr>
+<td>cocos2d-x</td>
+<td>libMyGame.so</td>
+</tr>
+<tr>
+<td>GL4ES</td>
+<td>libgl4es.so</td>
+</tr>
+<tr>
+<td>HUAWEI WebView</td>
+<td>libwebviewchromium.huawei.so</td>
+</tr>
+<tr>
+<td>XQUIC</td>
+<td>libxquic.so</td>
+</tr>
+<tr>
+<td>RUpgrade</td>
+<td>libr_upgrade_lib.so</td>
+</tr>
+<tr>
+<td>quiche</td>
+<td>libquiche.so</td>
+</tr>
+<tr>
+<td>Godot Engine</td>
+<td>libgodot_android.so</td>
+</tr>
+<tr>
+<td>GameMaker Studio</td>
+<td>libyoyo.so</td>
+</tr>
+<tr>
+<td>腾讯地图 SDK</td>
+<td>liblocationbeaconid.so</td>
+</tr>
+<tr>
+<td>腾讯地图 SDK</td>
+<td>liblocationlocalenc.so</td>
+</tr>
+<tr>
+<td>智能小程序</td>
+<td>com.baidu.swan.(.*)</td>
+</tr>
+<tr>
+<td>智能小程序</td>
+<td>com.baidu.swan.(.*)</td>
+</tr>
+<tr>
+<td>智能小程序</td>
+<td>com.baidu.swan.uuid.sync.SyncProvider</td>
+</tr>
+<tr>
+<td>腾讯移动推送</td>
+<td>com.tencent.android.tpush.InnerTpnsActivity</td>
+</tr>
+<tr>
+<td>移动号码认证</td>
+<td>com.cmic.sso.sdk.view.LoginAuthActivity</td>
+</tr>
+<tr>
+<td>小米广告 SDK</td>
+<td>com.miui.zeus.mimo.sdk.ad.reward.RewardVideoAdActivity</td>
+</tr>
+<tr>
+<td>小米广告 SDK</td>
+<td>com.miui.zeus.mimo.sdk.view.WebViewActivity</td>
+</tr>
+<tr>
+<td>小米广告 SDK</td>
+<td>com.miui.zeus.landingpage.sdk.activity.WebViewActivity</td>
+</tr>
+<tr>
+<td>Jetpack CameraX</td>
+<td>androidx.camera.core.impl.MetadataHolderService</td>
+</tr>
+<tr>
+<td>MMKV</td>
+<td>com.tencent.mmkv.MMKVContentProvider</td>
+</tr>
+<tr>
+<td>Matrix</td>
+<td>libmatrix-fd.so</td>
+</tr>
+<tr>
+<td>Matrix</td>
+<td>libmatrix-hookcommon.so</td>
+</tr>
+<tr>
+<td>Matrix</td>
+<td>libmatrix-jectl.so</td>
+</tr>
+<tr>
+<td>Matrix</td>
+<td>libmatrix-memguard.so</td>
+</tr>
+<tr>
+<td>Matrix</td>
+<td>libmatrix-memoryhook.so</td>
+</tr>
+<tr>
+<td>Matrix</td>
+<td>libmatrix-pthreadhook.so</td>
+</tr>
+<tr>
+<td>Matrix</td>
+<td>libmatrix-opengl-leak.so</td>
+</tr>
+<tr>
+<td>Matrix</td>
+<td>libmatrix-traffic.so</td>
+</tr>
+<tr>
+<td>Matrix</td>
+<td>libmatrix_resource_canary.so</td>
+</tr>
+<tr>
+<td>Matrix</td>
+<td>libmatrixmrs.so</td>
+</tr>
+<tr>
+<td>Agora RTC SDK</td>
+<td>libAgoraMediaPlayer.so</td>
+</tr>
+<tr>
+<td>Agora RTC SDK</td>
+<td>libagora-player-ffmpeg.so</td>
+</tr>
+<tr>
+<td>TBS</td>
+<td>com.tencent.smtt.utils.FileProvider</td>
+</tr>
+<tr>
+<td>HMS Scan Kit</td>
+<td>com.huawei.hms.hmsscankit.ScanKitActivity</td>
+</tr>
+<tr>
+<td>FinClip</td>
+<td>libsdkcore.so</td>
+</tr>
+<tr>
+<td>FinClip</td>
+<td>libfin-yuvutil.so</td>
+</tr>
+<tr>
+<td>imebra</td>
+<td>libimebra_lib.so</td>
+</tr>
+<tr>
+<td>FMOD</td>
+<td>libfmod.so</td>
+</tr>
+<tr>
+<td>Jetpack Compose</td>
+<td>androidx.compose</td>
+</tr>
+<tr>
+<td>Nebula SDK</td>
+<td>com.alipay.mobile.nebulacore.ui.H5Activity</td>
+</tr>
+<tr>
+<td>Nebula SDK</td>
+<td>com.alipay.mobile.nebulacore.ui.H5TransActivity</td>
+</tr>
+<tr>
+<td>Nebula SDK</td>
+<td>com.alipay.mobile.nebulacore.ui.H5FileChooserActivity</td>
+</tr>
+<tr>
+<td>Nebula SDK</td>
+<td>com.alipay.mobile.nebulacore.ui.H5NetworkCheckActivity</td>
+</tr>
+<tr>
+<td>Nebula SDK</td>
+<td>com.alipay.mobile.nebulacore.wallet.H5DevAppActivity</td>
+</tr>
+<tr>
+<td>Nebula SDK</td>
+<td>com.alipay.mobile.nebulacore.dev.ui.H5BugMeSettingsActivity</td>
+</tr>
+<tr>
+<td>Nebula SDK</td>
+<td>com.alipay.mobile.nebulacore.ui.H5MainProcTinyActivity</td>
+</tr>
+<tr>
+<td>Nebula SDK</td>
+<td>com.alipay.mobile.nebulacore.ui.H5Activity$H5Activity1</td>
+</tr>
+<tr>
+<td>Nebula SDK</td>
+<td>com.alipay.mobile.nebulacore.ui.H5Activity$H5Activity2</td>
+</tr>
+<tr>
+<td>Nebula SDK</td>
+<td>com.alipay.mobile.nebulacore.ui.H5Activity$H5Activity3</td>
+</tr>
+<tr>
+<td>Nebula SDK</td>
+<td>com.alipay.mobile.nebulacore.ui.H5Activity$H5Activity4</td>
+</tr>
+<tr>
+<td>Nebula SDK</td>
+<td>com.alipay.mobile.nebulacore.ui.H5Activity$H5Activity5</td>
+</tr>
+<tr>
+<td>Nebula SDK</td>
+<td>com.alipay.mobile.nebulacore.ui.H5TransActivity$H5TransActivity0</td>
+</tr>
+<tr>
+<td>Nebula SDK</td>
+<td>com.alipay.mobile.nebulacore.ui.H5TransActivity$H5TransActivity1</td>
+</tr>
+<tr>
+<td>Nebula SDK</td>
+<td>com.alipay.mobile.nebulacore.ui.H5TransActivity$H5TransActivity2</td>
+</tr>
+<tr>
+<td>Nebula SDK</td>
+<td>com.alipay.mobile.nebulacore.ui.H5TransActivity$H5TransActivity3</td>
+</tr>
+<tr>
+<td>Nebula SDK</td>
+<td>com.alipay.mobile.nebulacore.ui.H5TransActivity$H5TransActivity4</td>
+</tr>
+<tr>
+<td>Nebula SDK</td>
+<td>com.alipay.mobile.nebulacore.ui.H5TransActivity$H5TransActivity5</td>
+</tr>
+<tr>
+<td>Nebula SDK</td>
+<td>com.alipay.mobile.nebulacore.ui.H5NebulaAppActivity</td>
+</tr>
+<tr>
+<td>Nebula SDK</td>
+<td>com.alipay.mobile.nebulacore.ui.H5TransLandscapeActivity</td>
+</tr>
+<tr>
+<td>Nebula SDK</td>
+<td>com.alipay.mobile.nebula.appcenter.apphandler.loadingview.H5LoadingActivity</td>
+</tr>
+<tr>
+<td>Nebula SDK</td>
+<td>com.alipay.mobile.nebulaappproxy.activity.MiniProgramOpenSettingActivity</td>
+</tr>
+<tr>
+<td>Nebula SDK</td>
+<td>com.alipay.mobile.nebulaappproxy.ipc.H5ProcessTransActivity</td>
+</tr>
+<tr>
+<td>Nebula SDK</td>
+<td>com.alipay.mobile.nebulaappproxy.inside.contact.H5ContactTransparentActivity</td>
+</tr>
+<tr>
+<td>Nebula SDK</td>
+<td>com.alipay.mobile.nebulaappproxy.inside.account.AlipayMiniProgramAuthActivity</td>
+</tr>
+<tr>
+<td>Nebula SDK</td>
+<td>com.alipay.mobile.nebulaappproxy.inside.account.MiniProgramAuthService</td>
+</tr>
+<tr>
+<td>mPaaS 扫一扫</td>
+<td>com.alipay.mobile.scansdk.activity.ToolsCaptureActivity</td>
+</tr>
+<tr>
+<td>mPaaS 扫一扫</td>
+<td>com.alipay.mobile.scansdk.activity.MPaasToolsCaptureActivity</td>
+</tr>
+<tr>
+<td>MiPush</td>
+<td>com.xiaomi.mipush.sdk.NotificationClickedActivity</td>
+</tr>
+<tr>
+<td>旷视 SDK</td>
+<td>com.megvii.meglive_sdk.detect.fmp.FmpLivenessActivity</td>
+</tr>
+<tr>
+<td>旷视 SDK</td>
+<td>com.megvii.meglive_sdk.detect.action.ActionLivenessActivity</td>
+</tr>
+<tr>
+<td>旷视 SDK</td>
+<td>com.megvii.meglive_sdk.detect.color.FmpColorfulActivity</td>
+</tr>
+<tr>
+<td>旷视 SDK</td>
+<td>com.megvii.meglive_sdk.detect.guide.GrantActivity</td>
+</tr>
+<tr>
+<td>旷视 SDK</td>
+<td>com.megvii.meglive_sdk.detect.agreement.UserAgreementActivity</td>
+</tr>
+<tr>
+<td>mPaaS</td>
+<td>com.alipay.mobile.core.loading.impl.LoadingPage</td>
+</tr>
+<tr>
+<td>mPaaS</td>
+<td>com.alipay.mobile.common.logging.process.LogServiceInlite1</td>
+</tr>
+<tr>
+<td>mPaaS</td>
+<td>com.alipay.mobile.common.logging.process.LogServiceInlite2</td>
+</tr>
+<tr>
+<td>mPaaS</td>
+<td>com.alipay.mobile.common.logging.process.LogServiceInlite3</td>
+</tr>
+<tr>
+<td>mPaaS</td>
+<td>com.alipay.mobile.common.logging.process.LogServiceInlite4</td>
+</tr>
+<tr>
+<td>mPaaS</td>
+<td>com.alipay.mobile.common.logging.process.LogServiceInlite5</td>
+</tr>
+<tr>
+<td>mPaaS</td>
+<td>com.alipay.mobile.common.logging.process.LogServiceInMainProcess</td>
+</tr>
+<tr>
+<td>mPaaS</td>
+<td>com.alipay.mobile.common.logging.process.LogServiceInPushProcess</td>
+</tr>
+<tr>
+<td>mPaaS</td>
+<td>com.alipay.mobile.common.logging.process.LogServiceInToolsProcess</td>
+</tr>
+<tr>
+<td>mPaaS</td>
+<td>com.alipay.mobile.logmonitor.TraceStubReceiver</td>
+</tr>
+<tr>
+<td>mPaaS</td>
+<td>com.alipay.mobile.logmonitor.ClientMonitorExtReceiver</td>
+</tr>
+<tr>
+<td>mPaaS</td>
+<td>com.alipay.android.phone.mobilesdk.apm.service.APMInnerService</td>
+</tr>
+<tr>
+<td>mPaaS</td>
+<td>com.alipay.mobile.logmonitor.ClientMonitorService</td>
+</tr>
+<tr>
+<td>mPaaS</td>
+<td>com.alipay.mobile.quinox.activity.StubActivity</td>
+</tr>
+<tr>
+<td>mPaaS</td>
+<td>com.alipay.mobile.quinox.classloader.DexOptServiceInToolsProcess</td>
+</tr>
+<tr>
+<td>mPaaS</td>
+<td>com.alipay.mobile.quinox.preload.PreloadFodderActivity</td>
+</tr>
+<tr>
+<td>mPaaS</td>
+<td>com.alipay.mobile.quinox.preload.PreloadService</td>
+</tr>
+<tr>
+<td>mPaaS</td>
+<td>com.alipay.mobile.quinox.preload.MainPldService</td>
+</tr>
+<tr>
+<td>mPaaS</td>
+<td>com.alipay.mobile.quinox.preload.ExcaliburService</td>
+</tr>
+<tr>
+<td>mPaaS 社交分享</td>
+<td>com.alipay.android.shareassist.ui.WeiboEditActivity</td>
+</tr>
+<tr>
+<td>mPaaS 社交分享</td>
+<td>com.alipay.android.shareassist.ui.WeiboAuthActivity</td>
+</tr>
+<tr>
+<td>mPaaS 社交分享</td>
+<td>com.alipay.auth.AuthWeiboActivity</td>
+</tr>
+<tr>
+<td>mPaaS 社交分享</td>
+<td>com.alipay.android.shareassist.ui.WeiboFrindListActivity</td>
+</tr>
+<tr>
+<td>mPaaS 社交分享</td>
+<td>com.alipay.android.shareassist.ui.WeiboCallbackActivity</td>
+</tr>
+<tr>
+<td>mPaaS 社交分享</td>
+<td>com.alipay.android.shareassist.ui.QQCallbackActivity</td>
+</tr>
+<tr>
+<td>mPaaS</td>
+<td>com.alipay.mobile.common.fgbg.FgBgMonitorService</td>
+</tr>
+<tr>
+<td>mPaaS</td>
+<td>com.alipay.mobile.rome.syncsdk.service.LongLinkService</td>
+</tr>
+<tr>
+<td>智能小程序</td>
+<td>com.baidu.swan.(.*)</td>
+</tr>
+<tr>
+<td>移动应用推广 SDK</td>
+<td>com.baidu.mobads.sdk.api.BdFileProvider</td>
+</tr>
+<tr>
+<td>Flutter</td>
+<td>io.flutter.plugins.imagepicker.ImagePickerFileProvider</td>
+</tr>
+<tr>
+<td>乐播 SDK</td>
+<td>com.hpplay.sdk.source.process.LelinkReceiver</td>
+</tr>
+<tr>
+<td>腾讯御安全</td>
+<td>libTmsdk-(.*)-mfr.so</td>
+</tr>
+<tr>
+<td>Android NDK GIF</td>
+<td>libandroidndkgif.so</td>
+</tr>
+<tr>
+<td>7-Zip</td>
+<td>lib7-Zip-JBinding.so</td>
+</tr>
+<tr>
+<td>GME</td>
+<td>libgmesdk.so</td>
+</tr>
+<tr>
+<td>FFmpeg</td>
+<td>libffmpeg.so</td>
+</tr>
+<tr>
+<td>FFmpeg</td>
+<td>libmobileffmpeg.so</td>
+</tr>
+<tr>
+<td>QuickJS</td>
+<td>libquickjs.so</td>
+</tr>
+<tr>
+<td>Node.js</td>
+<td>libnode.so</td>
+</tr>
+<tr>
+<td>Sandhook</td>
+<td>libsandhook.so</td>
+</tr>
+<tr>
+<td>LSPatch</td>
+<td>liblspatch.so</td>
+</tr>
+<tr>
+<td>Matrix</td>
+<td>com.tencent.matrix.backtrace.WarmUpService</td>
+</tr>
+<tr>
+<td>AgentWeb</td>
+<td>com.just.agentweb.ActionActivity</td>
+</tr>
+<tr>
+<td>旷视 SDK</td>
+<td>libMegActionFmpJni.so</td>
+</tr>
+<tr>
+<td>旷视 SDK</td>
+<td>libMegviiInnerUtils-(.*).so</td>
+</tr>
+<tr>
+<td>旷视 SDK</td>
+<td>libbucket2-new.so</td>
+</tr>
+<tr>
+<td>HMS Scan Kit</td>
+<td>libscannative.so</td>
+</tr>
+<tr>
+<td>Logan</td>
+<td>liblogan.so</td>
+</tr>
+<tr>
+<td>HUAWEI Push</td>
+<td>com.huawei.hms.support.api.push.TransActivity</td>
+</tr>
+<tr>
+<td>MNN</td>
+<td>libmnnkitcore.so</td>
+</tr>
+<tr>
+<td>Bugly</td>
+<td>libBugly-ext.so</td>
+</tr>
+<tr>
+<td>Bugly</td>
+<td>libBugly-webank.so</td>
+</tr>
+<tr>
+<td>cocos2d-x</td>
+<td>libcocos2djs.so</td>
+</tr>
+<tr>
+<td>腾讯地图 SDK</td>
+<td>libtxmapvis.so</td>
+</tr>
+<tr>
+<td>腾讯地图 SDK</td>
+<td>libtmsqmp.so</td>
+</tr>
+<tr>
+<td>网易易盾</td>
+<td>libnesec.so</td>
+</tr>
+<tr>
+<td>Vorbis</td>
+<td>libvorbis.so</td>
+</tr>
+<tr>
+<td>Jetpack Camera2</td>
+<td>androidx.camera.camera2.impl.Camera2Initializer</td>
+</tr>
+<tr>
+<td>腾讯广告 SDK</td>
+<td>com.qq.e.tg.TransPortraitADActivity</td>
+</tr>
+<tr>
+<td>腾讯广告 SDK</td>
+<td>com.qq.e.tg.RewardvideoPortraitADActivity</td>
+</tr>
+<tr>
+<td>腾讯广告 SDK</td>
+<td>com.qq.e.tg.RewardvideoLandscapeADActivity</td>
+</tr>
+<tr>
+<td>腾讯广告 SDK</td>
+<td>com.qq.e.tg.LandscapeADActivity</td>
+</tr>
+<tr>
+<td>腾讯广告 SDK</td>
+<td>com.qq.e.tg.ADActivity</td>
+</tr>
+<tr>
+<td>友盟推送</td>
+<td>com.umeng.message.UmengNotificationReceiver</td>
+</tr>
+<tr>
+<td>极光推送</td>
+<td>cn.android.service.JTransitActivity</td>
+</tr>
+<tr>
+<td>AndroidP7zip</td>
+<td>libp7zip.so</td>
+</tr>
+<tr>
+<td>JAd SDK</td>
+<td>cn.jiguang.ads.app.service.UserService</td>
+</tr>
+<tr>
+<td>JAd SDK</td>
+<td>cn.jiguang.ads.base.component.JAdActivity</td>
+</tr>
+<tr>
+<td>JAd SDK</td>
+<td>cn.jiguang.ads.base.component.JTransparentActivity</td>
+</tr>
+<tr>
+<td>JAd SDK</td>
+<td>cn.jiguang.ads.base.component.JAdProvider</td>
+</tr>
+<tr>
+<td>JAd SDK</td>
+<td>cn.jiguang.ads.base.component.JAdFileProvider</td>
+</tr>
+<tr>
+<td>JAd SDK</td>
+<td>cn.jiguang.ads.base.component.JAdReceiver</td>
+</tr>
+<tr>
+<td>JAd SDK</td>
+<td>cn.jiguang.union.ads.service.JAdFileProvider</td>
+</tr>
+<tr>
+<td>App Center</td>
+<td>com.microsoft.appcenter.distribute.DeepLinkActivity</td>
+</tr>
+<tr>
+<td>App Center</td>
+<td>com.microsoft.appcenter.distribute.AppCenterPackageInstallerReceiver</td>
+</tr>
+<tr>
+<td>Pangle SDK</td>
+<td>com.bytedance.pangle.FileProvider</td>
+</tr>
+<tr>
+<td>Mapbox Mobile Events</td>
+<td>com.mapbox.android.telemetry.provider.MapboxTelemetryInitProvider</td>
+</tr>
+<tr>
+<td>Mapbox Mobile Events</td>
+<td>com.mapbox.android.telemetry.errors.ErrorReporterJobIntentService</td>
+</tr>
+<tr>
+<td>Mapbox Mobile Events</td>
+<td>com.mapbox.android.telemetry.MapboxTelemetryService</td>
+</tr>
+<tr>
+<td>Flipper</td>
+<td>com.facebook.flipper.android.diagnostics.FlipperDiagnosticActivity</td>
+</tr>
+<tr>
+<td>HUAWEI CaaS Engine</td>
+<td>com.huawei.caas.messageservice.JumpActivity</td>
+</tr>
+<tr>
+<td>HUAWEI Health Kit</td>
+<td>com.huawei.hms.hihealth.activity.HealthKitAuthHubActivity</td>
+</tr>
+<tr>
+<td>HUAWEI Health Kit</td>
+<td>com.huawei.hms.hihealth.activity.HealthKitTransparentActivity</td>
+</tr>
+<tr>
+<td>HUAWEI Health Kit</td>
+<td>com.huawei.hms.hihealth.activity.HealthKitWebViewActivity</td>
+</tr>
+<tr>
+<td>ZBar</td>
+<td>cn.bertsir.zbar.QRActivity</td>
+</tr>
+<tr>
+<td>ZBar</td>
+<td>cn.bertsir.zbar.utils.PermissionUtils$PermissionActivity</td>
+</tr>
+<tr>
+<td>实时音视频</td>
+<td>libvolcenginertc.so</td>
+</tr>
+<tr>
+<td>神策分析 SDK</td>
+<td>com.sensorsdata.analytics.android.sdk.dialog.SchemeActivity</td>
+</tr>
+<tr>
+<td>Duktape</td>
+<td>duktape.so</td>
+</tr>
+<tr>
+<td>libusb</td>
+<td>libusb.so</td>
+</tr>
+<tr>
+<td>MongoDB</td>
+<td>libbson.so</td>
+</tr>
+<tr>
+<td>MongoDB</td>
+<td>libcjson.so</td>
+</tr>
+<tr>
+<td>libzip</td>
+<td>libzip.so</td>
+</tr>
+<tr>
+<td>libzip</td>
+<td>libzlib.so</td>
+</tr>
+<tr>
+<td>iApp</td>
+<td>libygsiyu.so</td>
+</tr>
+<tr>
+<td>离线语音合成</td>
+<td>libAisound.so</td>
+</tr>
+<tr>
+<td>libYUV</td>
+<td>libYUVDecoder.so</td>
+</tr>
+<tr>
+<td>libYUV</td>
+<td>libyuv-decoder.so</td>
+</tr>
+<tr>
+<td>Epic</td>
+<td>libarmepic</td>
+</tr>
+<tr>
+<td>RxFFmpeg</td>
+<td>librxffmpeg-core.so</td>
+</tr>
+<tr>
+<td>RxFFmpeg</td>
+<td>librxffmpeg-invoke.so</td>
+</tr>
+<tr>
+<td>RxFFmpeg</td>
+<td>librxffmpeg-player.so</td>
+</tr>
+<tr>
+<td>FMOD</td>
+<td>libfmodL.so</td>
+</tr>
+<tr>
+<td>SHook</td>
+<td>libshook.so</td>
+</tr>
+<tr>
+<td>SHook</td>
+<td>libfoza.so</td>
+</tr>
+<tr>
+<td>SHook</td>
+<td>libspatch.so</td>
+</tr>
+<tr>
+<td>MACE</td>
+<td>libmace.so</td>
+</tr>
+<tr>
+<td>MACE</td>
+<td>libmotion_photo_mace.so</td>
+</tr>
+<tr>
+<td>小米 IoT SDK</td>
+<td>libmiio.so</td>
+</tr>
+<tr>
+<td>小米 IoT SDK</td>
+<td>libIOTCAPIs.so</td>
+</tr>
+<tr>
+<td>小米 IoT SDK</td>
+<td>libmiot_patch.so</td>
+</tr>
+<tr>
+<td>TensorFlow Lite</td>
+<td>libtensorflowlite_gpu_jni.so</td>
+</tr>
+<tr>
+<td>Hermes</td>
+<td>libhermes-executor-common-debug.so</td>
+</tr>
+<tr>
+<td>Hermes</td>
+<td>libhermes-executor-common-release.so</td>
+</tr>
+<tr>
+<td>网易易盾</td>
+<td>libnesec-x86.so</td>
+</tr>
+<tr>
+<td>梆梆安全</td>
+<td>libDexHelper-x86_64.so</td>
+</tr>
+<tr>
+<td>Agora RTC SDK</td>
+<td>libagora-crypto.so</td>
+</tr>
+<tr>
+<td>Agora RTC SDK</td>
+<td>libagora-fdkaac.so</td>
+</tr>
+<tr>
+<td>Agora RTC SDK</td>
+<td>libagora-rtm-sdk-jni.so</td>
+</tr>
+<tr>
+<td>Agora RTC SDK</td>
+<td>libagora_spatial_audio_extension.so</td>
+</tr>
+<tr>
+<td>Agora RTC SDK</td>
+<td>libagora_full_audio_format_extension.so</td>
+</tr>
+<tr>
+<td>MMA SDK</td>
+<td>libMMASignature.so</td>
+</tr>
+<tr>
+<td>阿里聚安全</td>
+<td>libsgcore.so</td>
+</tr>
+<tr>
+<td>阿里聚安全</td>
+<td>libsgnocaptcha.so</td>
+</tr>
+<tr>
+<td>阿里聚安全</td>
+<td>libsgmisc.so</td>
+</tr>
+<tr>
+<td>阿里聚安全</td>
+<td>libsgnocaptchaso(.*).so</td>
+</tr>
+<tr>
+<td>极光认证 SDK</td>
+<td>libquicklogin.so</td>
+</tr>
+<tr>
+<td>极光推送</td>
+<td>cn.jpush.android.service.JPluginFCMMessagingService</td>
+</tr>
+<tr>
+<td>BHook</td>
+<td>libbytehook.so</td>
+</tr>
+<tr>
+<td>高德地图 SDK</td>
+<td>libmp3decoder.so</td>
+</tr>
+<tr>
+<td>高德地图 SDK</td>
+<td>librtbt828.so</td>
+</tr>
+<tr>
+<td>高德地图 SDK</td>
+<td>libwtbt828.so</td>
+</tr>
+<tr>
+<td>libmonochrome</td>
+<td>libmonochrome_64.so</td>
+</tr>
+<tr>
+<td>ncnn</td>
+<td>libncnn.so</td>
+</tr>
+<tr>
+<td>libp2p</td>
+<td>libxp2p.so</td>
+</tr>
+<tr>
+<td>AndroidLame</td>
+<td>libandroidlame.so</td>
+</tr>
+<tr>
+<td>Unity Mono</td>
+<td>libmonobdwgc-2.0.so</td>
+</tr>
+<tr>
+<td>Unity Mono</td>
+<td>libMonoPosixHelper.so</td>
+</tr>
+<tr>
+<td>HDiffPatch</td>
+<td>libhpatchz.so</td>
+</tr>
+<tr>
+<td>梆梆安全</td>
+<td>libpnc-crypto.so</td>
+</tr>
+<tr>
+<td>aria2</td>
+<td>libaria2.so</td>
+</tr>
+<tr>
+<td>FreeReflection</td>
+<td>libfree-reflection.so</td>
+</tr>
+<tr>
+<td>Burst</td>
+<td>lib_burst_generated.so</td>
+</tr>
+<tr>
+<td>Xamarin</td>
+<td>libxa-internal-api.so</td>
+</tr>
+<tr>
+<td>vivo 网游联运 SDK</td>
+<td>libvivo_account_sdk.so</td>
+</tr>
+<tr>
+<td>Lofelt SDK</td>
+<td>liblofelt_sdk.so</td>
+</tr>
+<tr>
+<td>Easy Mobile</td>
+<td>libeasymobile.so</td>
+</tr>
+<tr>
+<td>Pdfium</td>
+<td>libjniPdfium.so</td>
+</tr>
+<tr>
+<td>SandHook</td>
+<td>libsandhook.so</td>
+</tr>
+<tr>
+<td>SandHook</td>
+<td>libsandhook-native.so</td>
+</tr>
+<tr>
+<td>SandHook</td>
+<td>libsandhook-art.so</td>
+</tr>
+<tr>
+<td>SandHook</td>
+<td>libsandhook64.so</td>
+</tr>
+<tr>
+<td>LSPlant</td>
+<td>liblsplant.so</td>
+</tr>
+<tr>
+<td>Smart App Updates</td>
+<td>libApkPatchLibrary.so</td>
+</tr>
+<tr>
+<td>Cardboard SDK</td>
+<td>libpano_video_renderer.so</td>
+</tr>
+<tr>
+<td>Cardboard SDK</td>
+<td>libpanorenderer.so</td>
+</tr>
+<tr>
+<td>Cardboard SDK</td>
+<td>libvraudio_engine.so</td>
+</tr>
+<tr>
+<td>Cardboard SDK</td>
+<td>libvrtoolkit.so</td>
+</tr>
+<tr>
+<td>Cardboard SDK</td>
+<td>libgvrbase.so</td>
+</tr>
+<tr>
+<td>AndroidPhotoFilters</td>
+<td>libNativeImageProcessor.so</td>
+</tr>
+<tr>
+<td>SQLite</td>
+<td>libsqlitex.so</td>
+</tr>
+<tr>
+<td>OpenAL</td>
+<td>libopenal.so</td>
+</tr>
+<tr>
+<td>Google AdMob</td>
+<td>libadmob.so</td>
+</tr>
+<tr>
+<td>Google AdMob</td>
+<td>libadmob-google.so</td>
+</tr>
+<tr>
+<td>LayaAir</td>
+<td>liblayaair.so</td>
+</tr>
+<tr>
+<td>ENet</td>
+<td>libenet.so</td>
+</tr>
+<tr>
+<td>号码认证服务</td>
+<td>libalicomphonenumberauthsdk-release_alijtca_plus.so</td>
+</tr>
+<tr>
+<td>号码认证服务</td>
+<td>libalicomphonenumberauthsdk-log-release_alijtca_plus.so</td>
+</tr>
+<tr>
+<td>号码认证服务</td>
+<td>libalicomphonenumberauthsdk-log-online-standard-release_alijtca_plus.so</td>
+</tr>
+<tr>
+<td>zipw</td>
+<td>libzipw.so</td>
+</tr>
+<tr>
+<td>EasyProtector</td>
+<td>libantitrace.so</td>
+</tr>
+<tr>
+<td>MNN</td>
+<td>libmnnpybridge.so</td>
+</tr>
+<tr>
+<td>MNN</td>
+<td>libmnncv.so</td>
+</tr>
+<tr>
+<td>梆梆安全</td>
+<td>libbangcle_crypto_tool.so</td>
+</tr>
+<tr>
+<td>梆梆安全</td>
+<td>libbangcle_risk.so</td>
+</tr>
+<tr>
+<td>Pdfium</td>
+<td>libmodft2.so</td>
+</tr>
+<tr>
+<td>Pdfium</td>
+<td>libmodpdfium.so</td>
+</tr>
+<tr>
+<td>BoringSSL</td>
+<td>libttboringssl.so</td>
+</tr>
+<tr>
+<td>CFCA</td>
+<td>libSipCryptor.so</td>
+</tr>
+<tr>
+<td>CFCA</td>
+<td>libcfcaMLog.so</td>
+</tr>
+<tr>
+<td>CFCA</td>
+<td>libcfcamkit.so</td>
+</tr>
+<tr>
+<td>CFCA</td>
+<td>libHKESipCryptor.so</td>
+</tr>
+<tr>
+<td>Threadfix</td>
+<td>libthreadfix.so</td>
+</tr>
+<tr>
+<td>PAG</td>
+<td>libpag.so</td>
+</tr>
+<tr>
+<td>PAG</td>
+<td>liblibpag.so</td>
+</tr>
+<tr>
+<td>WebP</td>
+<td>libwebpbackport.so</td>
+</tr>
+<tr>
+<td>Mediastreamer2</td>
+<td>libmediastreamer_base.so</td>
+</tr>
+<tr>
+<td>Mediastreamer2</td>
+<td>libmediastreamer_voip.so</td>
+</tr>
+<tr>
+<td>Mediastreamer2</td>
+<td>libmsx264.so</td>
+</tr>
+<tr>
+<td>阿里云短视频 SDK</td>
+<td>libalivcffmpeg.so</td>
+</tr>
+<tr>
+<td>阿里云短视频 SDK</td>
+<td>libaliresample.so</td>
+</tr>
+<tr>
+<td>同盾设备指纹</td>
+<td>libtongdun.so</td>
+</tr>
+<tr>
+<td>Faceunity Nama SDK</td>
+<td>libCNamaSDK.so</td>
+</tr>
+<tr>
+<td>Faceunity Nama SDK</td>
+<td>libfuai.so</td>
+</tr>
+<tr>
+<td>离线语音合成 SDK</td>
+<td>libbd_etts.so</td>
+</tr>
+<tr>
+<td>离线语音合成 SDK</td>
+<td>libBDSpeechDecoder_V1.so</td>
+</tr>
+<tr>
+<td>MSA SDK</td>
+<td>libnllvm(.*).so</td>
+</tr>
+<tr>
+<td>爱加密</td>
+<td>libexec.so</td>
+</tr>
+<tr>
+<td>爱加密</td>
+<td>libexecmain.so</td>
+</tr>
+<tr>
+<td>爱加密</td>
+<td>libexecmain_x86.so</td>
+</tr>
+<tr>
+<td>爱加密</td>
+<td>libexecoat.so</td>
+</tr>
+<tr>
+<td>爱加密</td>
+<td>libexecoat_x86.so</td>
+</tr>
+<tr>
+<td>语音识别 SDK</td>
+<td>libBaiduSpeechSDK.so</td>
+</tr>
+<tr>
+<td>语音识别 SDK</td>
+<td>libbd_easr_s1_merge_normal_20151216.dat.so</td>
+</tr>
+<tr>
+<td>语音识别 SDK</td>
+<td>libbdEASRAndroid.so</td>
+</tr>
+<tr>
+<td>语音识别 SDK</td>
+<td>libbdSpilWakeup.so</td>
+</tr>
+<tr>
+<td>语音识别 SDK</td>
+<td>libvad.dnn.so</td>
+</tr>
+<tr>
+<td>Frame Pacing</td>
+<td>libswappy.so</td>
+</tr>
+<tr>
+<td>Frame Pacing</td>
+<td>libswappyVk.so</td>
+</tr>
+<tr>
+<td>U-Game 金融风控组件</td>
+<td>libsecurityenv.so</td>
+</tr>
+<tr>
+<td>libhfyuv</td>
+<td>libhfyuv.so</td>
+</tr>
+<tr>
+<td>QuickJS Binding</td>
+<td>libquickjs-android.so</td>
+</tr>
+<tr>
+<td>网易易盾</td>
+<td>libnetsecsdk-(.*).so</td>
+</tr>
+<tr>
+<td>网易易盾</td>
+<td>libnetmobsec-(.*).so</td>
+</tr>
+<tr>
+<td>bspatch</td>
+<td>libbspatch.so</td>
+</tr>
+<tr>
+<td>Tesseract</td>
+<td>libtess.so</td>
+</tr>
+<tr>
+<td>Paddle Lite</td>
+<td>libPaddle.so</td>
+</tr>
+<tr>
+<td>Paddle Lite</td>
+<td>libpaddle_light_api_shared.so</td>
+</tr>
+<tr>
+<td>Paddle Lite</td>
+<td>libpaddle_mobile_jni.so</td>
+</tr>
+<tr>
+<td>Paddle Lite</td>
+<td>libpaddle-mobile.so</td>
+</tr>
+<tr>
+<td>Paddle Lite</td>
+<td>libpaddle_full_api_shared.so</td>
+</tr>
+<tr>
+<td>Paddle Lite</td>
+<td>liblite_pybind.so</td>
+</tr>
+<tr>
+<td>Speex</td>
+<td>libspeex.so</td>
+</tr>
+<tr>
+<td>Speex</td>
+<td>libspeexdsp.so</td>
+</tr>
+<tr>
+<td>AGC APM</td>
+<td>libapms_ndk_anr.so</td>
+</tr>
+<tr>
+<td>mPaaS</td>
+<td>libandroid-phone-(.*).so</td>
+</tr>
+<tr>
+<td>mPaaS</td>
+<td>libcom-mpaas-(.*).so</td>
+</tr>
+<tr>
+<td>阿里云语音服务 SDK</td>
+<td>libztcodec2.so</td>
+</tr>
+<tr>
+<td>阿里移动热修复</td>
+<td>libsophix.so</td>
+</tr>
+<tr>
+<td>Kraken</td>
+<td>libkraken.so</td>
+</tr>
+<tr>
+<td>手游安全 SDK</td>
+<td>libtersafe.so</td>
+</tr>
+<tr>
+<td>手游安全 SDK</td>
+<td>libtersafe2.so</td>
+</tr>
+<tr>
+<td>日志服务 SLS</td>
+<td>libsls_producer.so</td>
+</tr>
+<tr>
+<td>AIUI</td>
+<td>libaiui.so</td>
+</tr>
+<tr>
+<td>旷视 SDK</td>
+<td>libmegface.so</td>
+</tr>
+<tr>
+<td>人像美化 SDK</td>
+<td>libMGBeauty.so</td>
+</tr>
+<tr>
+<td>人像美化 SDK</td>
+<td>libMegviiDlmk.so</td>
+</tr>
+<tr>
+<td>正版曲库直通车</td>
+<td>libtxcopyrightedmedia.so</td>
+</tr>
+<tr>
+<td>libavif</td>
+<td>libavif.so</td>
+</tr>
+<tr>
+<td>libavif</td>
+<td>libavif-jni.so</td>
+</tr>
+<tr>
+<td>python-for-android</td>
+<td>libpymodules.so</td>
+</tr>
+<tr>
+<td>(0.\d*[1-9]))(m)?.so</td>
+<td>(libpython([1-9]\d*.?\d*)</td>
+</tr>
+<tr>
+<td>SDL</td>
+<td>libsdl.so</td>
+</tr>
+<tr>
+<td>SDL</td>
+<td>libsdl_(.*).so</td>
+</tr>
+<tr>
+<td>AVPro Video</td>
+<td>libaudio360.so</td>
+</tr>
+<tr>
+<td>AVPro Video</td>
+<td>libaudio360-JNI.so</td>
+</tr>
+<tr>
+<td>MSDK</td>
+<td>libMSDK.so</td>
+</tr>
+<tr>
+<td>MSDK</td>
+<td>libMsdkAdapter.so</td>
+</tr>
+<tr>
+<td>MSDK</td>
+<td>libMSDKSystem.so</td>
+</tr>
+<tr>
+<td>游戏语音 GVoice</td>
+<td>libGCloudVoice.so</td>
+</tr>
+<tr>
+<td>Matrix</td>
+<td>libio-canary.so</td>
+</tr>
+<tr>
+<td>Matrix</td>
+<td>libmatrix_hprof_analyzer.so</td>
+</tr>
+<tr>
+<td>Matrix</td>
+<td>libmatrix_mem_util.so</td>
+</tr>
+<tr>
+<td>CZXing</td>
+<td>libczxing.so</td>
+</tr>
+<tr>
+<td>Jetpack ShareTarget</td>
+<td>androidx.sharetarget.ChooserTargetServiceCompat</td>
+</tr>
+<tr>
+<td>APMInsight</td>
+<td>libapminsighta.so</td>
+</tr>
+<tr>
+<td>APMInsight</td>
+<td>libapminsightb.so</td>
+</tr>
+<tr>
+<td>PlayerSDK</td>
+<td>libjeffmony.so</td>
+</tr>
+<tr>
+<td>AliNNPython</td>
+<td>libAliNNPython.so</td>
+</tr>
+<tr>
+<td>JusTalk Cloud</td>
+<td>libmtc.so</td>
+</tr>
+<tr>
+<td>JusTalk Cloud</td>
+<td>libzmf.so</td>
+</tr>
+<tr>
+<td>Qimei SDK</td>
+<td>libqmp.so</td>
+</tr>
+<tr>
+<td>FFmpeg</td>
+<td>libffmpegkit.so</td>
+</tr>
+<tr>
+<td>文字识别服务</td>
+<td>libdict-parser.so</td>
+</tr>
+<tr>
+<td>Un7zip</td>
+<td>libun7zip.so</td>
+</tr>
+<tr>
+<td>GaiaX</td>
+<td>libGXAnalyzeAndroid.so</td>
+</tr>
+<tr>
+<td>GaiaX</td>
+<td>libGXAnalyzeCore.so</td>
+</tr>
+<tr>
+<td>TanX</td>
+<td>libalitanx-lib.so</td>
+</tr>
+<tr>
+<td>opencore-amr</td>
+<td>libfdk-aac.so</td>
+</tr>
+<tr>
+<td>AnyChat</td>
+<td>libmediautil_v6.so</td>
+</tr>
+<tr>
+<td>AnyChat</td>
+<td>libmediautil_v7.so</td>
+</tr>
+<tr>
+<td>AnyChat</td>
+<td>libmediautil_v8.so</td>
+</tr>
+<tr>
+<td>AnyChat</td>
+<td>libanychatcore.so</td>
+</tr>
+<tr>
+<td>AnyChat</td>
+<td>libaudio_preprocessing.so</td>
+</tr>
+<tr>
+<td>AnyChat</td>
+<td>libmediacore.so</td>
+</tr>
+<tr>
+<td>AnyChat</td>
+<td>libmediashow.so</td>
+</tr>
+<tr>
+<td>HONOR Push</td>
+<td>com.hihonor.push.sdk.PushReceiver</td>
+</tr>
+<tr>
+<td>HONOR Push</td>
+<td>com.hihonor.push.sdk.init.AutoInitProvider</td>
+</tr>
+<tr>
+<td>腾讯广告 SDK</td>
+<td>com.qq.e.tg.WebAdActivity</td>
+</tr>
+<tr>
+<td>腾讯广告 SDK</td>
+<td>com.qq.e.tg.PortraitADActivity</td>
+</tr>
+<tr>
+<td>Bugly</td>
+<td>libBugly-idasc.so</td>
+</tr>
+<tr>
+<td>Bugly</td>
+<td>libBugly_Native.so</td>
+</tr>
+<tr>
+<td>阿里聚安全</td>
+<td>libsgmiddletierso(.*).so</td>
+</tr>
+<tr>
+<td>阿里聚安全</td>
+<td>libsgmiscso(.*).so</td>
+</tr>
+<tr>
+<td>百度应用加固</td>
+<td>libbaiduprotect.so</td>
+</tr>
+<tr>
+<td>百度应用加固</td>
+<td>libbaiduprotect_x86.so</td>
+</tr>
+<tr>
+<td>百度应用加固</td>
+<td>libbaiduprotect_art.so</td>
+</tr>
+<tr>
+<td>mPaaS</td>
+<td>libmpaas_crypto.so</td>
+</tr>
+<tr>
+<td>mPaaS</td>
+<td>libmpaascpu.so</td>
+</tr>
+<tr>
+<td>百度人脸识别</td>
+<td>libbdface_sdk.so</td>
+</tr>
+<tr>
+<td>百度人脸识别</td>
+<td>libbd_license.so</td>
+</tr>
+<tr>
+<td>百度人脸识别</td>
+<td>libbd_unifylicense.so</td>
+</tr>
+<tr>
+<td>百度人脸识别</td>
+<td>libliantian.so</td>
+</tr>
+<tr>
+<td>百度人脸识别</td>
+<td>libaikl_cluster_arm.so</td>
+</tr>
+<tr>
+<td>百度人脸识别</td>
+<td>libaikl_calc_arm.so</td>
+</tr>
+<tr>
+<td>屹通 SDK</td>
+<td>libyt_safe.so</td>
+</tr>
+<tr>
+<td>屹通 SDK</td>
+<td>libYTKeyboard.so</td>
+</tr>
+<tr>
+<td>PJSIP</td>
+<td>libpjsua2.so</td>
+</tr>
+<tr>
+<td>HUAWEI Push(TPNS Proxy)</td>
+<td>com.tencent.android.hwpush.HWPushMessageReceiver</td>
+</tr>
+<tr>
+<td>友盟推送</td>
+<td>com.umeng.message.component.UmengNotificationReceiver</td>
+</tr>
+<tr>
+<td>AntiFakerAndroidChecker</td>
+<td>libemulator_check.so</td>
+</tr>
+<tr>
+<td>AntiFakerAndroidChecker</td>
+<td>libproperty_get.so</td>
+</tr>
+<tr>
+<td>EasyAR</td>
+<td>libEasyAR.so</td>
+</tr>
+<tr>
+<td>EasyAR</td>
+<td>libEasyARPlayer.so</td>
+</tr>
+<tr>
+<td>Hippy</td>
+<td>libhippy.so</td>
+</tr>
+<tr>
+<td>eID SDK</td>
+<td>libeidjni.so</td>
+</tr>
+<tr>
+<td>金山云短视频编辑 SDK</td>
+<td>libksylive.so</td>
+</tr>
+<tr>
+<td>金山云短视频编辑 SDK</td>
+<td>libksyapm.so</td>
+</tr>
+<tr>
+<td>数字联盟可信 ID SDK</td>
+<td>libdu.so</td>
+</tr>
+<tr>
+<td>腾讯灯塔 SDK</td>
+<td>libbeaconid.so</td>
+</tr>
+<tr>
+<td>人脸核身 SDK</td>
+<td>libYTCommon.so</td>
+</tr>
+<tr>
+<td>人脸核身 SDK</td>
+<td>libYTCommonLiveness.so</td>
+</tr>
+<tr>
+<td>人脸核身 SDK</td>
+<td>libYTLiveness.so</td>
+</tr>
+<tr>
+<td>腾讯云实时音视频 SDK</td>
+<td>libtxsoundtouch.so</td>
+</tr>
+<tr>
+<td>个推</td>
+<td>com.igexin.sdk.GService</td>
+</tr>
+<tr>
+<td>Android Beacon Library</td>
+<td>org.altbeacon.beacon.service.ScanJob</td>
+</tr>
+<tr>
+<td>Android Beacon Library</td>
+<td>org.altbeacon.beacon.BeaconIntentProcessor</td>
+</tr>
+<tr>
+<td>Android Beacon Library</td>
+<td>org.altbeacon.bluetooth.BluetoothTestJob</td>
+</tr>
+<tr>
+<td>Android Beacon Library</td>
+<td>org.altbeacon.beacon.service.BeaconService</td>
+</tr>
+<tr>
+<td>Android Beacon Library</td>
+<td>org.altbeacon.beacon.startup.StartupBroadcastReceiver</td>
+</tr>
+<tr>
+<td>Mira</td>
+<td>com.bytedance.mira.MiraPluginListActivity</td>
+</tr>
+<tr>
+<td>Mira</td>
+<td>com.bytedance.mira.MiraErrorBackupActivity</td>
+</tr>
+<tr>
+<td>Mira</td>
+<td>com.bytedance.mira.stub.RedirectActivity</td>
+</tr>
+<tr>
+<td>Mira</td>
+<td>com.bytedance.mira.stub.PluginLoaderActivity</td>
+</tr>
+<tr>
+<td>Mira</td>
+<td>com.bytedance.mira.stub.p[0-9]*.StubTranslucentActivity</td>
+</tr>
+<tr>
+<td>Mira</td>
+<td>com.bytedance.mira.stub.p[0-9]<em>.StubStandardActivity[0-9]</em>$</td>
+</tr>
+<tr>
+<td>Mira</td>
+<td>com.bytedance.mira.stub.p[0-9]<em>.StubSingleTopActivity[0-9]</em>$</td>
+</tr>
+<tr>
+<td>Mira</td>
+<td>com.bytedance.mira.stub.p[0-9]<em>.StubSingleTaskActivity[0-9]</em>$</td>
+</tr>
+<tr>
+<td>Mira</td>
+<td>com.bytedance.mira.stub.p[0-9]<em>.StubSingleInstanceActivity[0-9]</em>$</td>
+</tr>
+<tr>
+<td>Mira</td>
+<td>com.bytedance.mira.stub.RedirectService</td>
+</tr>
+<tr>
+<td>Mira</td>
+<td>com.bytedance.mira.am.KeepAlive</td>
+</tr>
+<tr>
+<td>Mira</td>
+<td>com.bytedance.mira.am.KeepAlive$InnerService</td>
+</tr>
+<tr>
+<td>Mira</td>
+<td>com.bytedance.mira.stub.p[0-9]<em>.StubService[0-9]</em>$</td>
+</tr>
+<tr>
+<td>Mira</td>
+<td>com.bytedance.mira.pm.PluginPackageManagerProvider</td>
+</tr>
+<tr>
+<td>Mira</td>
+<td>com.bytedance.mira.am.PluginActivityManagerProvider</td>
+</tr>
+<tr>
+<td>Mira</td>
+<td>com.bytedance.mira.stub.p0.StubContentProvider</td>
+</tr>
+<tr>
+<td>Mira</td>
+<td>com.bytedance.mira.stub.p1.StubContentProvider</td>
+</tr>
+<tr>
+<td>金融级实人认证 SDK</td>
+<td>libtoyger.so</td>
+</tr>
+<tr>
+<td>Pdfium</td>
+<td>libmodpng.so</td>
+</tr>
+<tr>
+<td>Sonic</td>
+<td>libsonic.so</td>
+</tr>
+<tr>
+<td>智齿客服 SDK</td>
+<td>libsobot.so</td>
+</tr>
+<tr>
+<td>React Native</td>
+<td>libfabricjni.so</td>
+</tr>
+<tr>
+<td>React Native</td>
+<td>libjsi.so</td>
+</tr>
+<tr>
+<td>React Native</td>
+<td>libjsijniprofiler.so</td>
+</tr>
+<tr>
+<td>React Native</td>
+<td>liblogger.so</td>
+</tr>
+<tr>
+<td>React Native</td>
+<td>libmapbufferjni.so</td>
+</tr>
+<tr>
+<td>React Native</td>
+<td>libreact_codegen_rncore.so</td>
+</tr>
+<tr>
+<td>React Native</td>
+<td>libreact_codegen_reactandroidspec</td>
+</tr>
+<tr>
+<td>React Native</td>
+<td>libreact_config.so</td>
+</tr>
+<tr>
+<td>React Native</td>
+<td>libreact_debug.so</td>
+</tr>
+<tr>
+<td>React Native</td>
+<td>libreact_nativemodule_core.so</td>
+</tr>
+<tr>
+<td>React Native</td>
+<td>libreact_render_(.*).so</td>
+</tr>
+<tr>
+<td>React Native</td>
+<td>libreact_utils.so</td>
+</tr>
+<tr>
+<td>React Native</td>
+<td>libreactconfig.so</td>
+</tr>
+<tr>
+<td>React Native App Utils</td>
+<td>libreactnativeutilsjni.so</td>
+</tr>
+<tr>
+<td>React Native</td>
+<td>libreactperfloggerjni.so</td>
+</tr>
+<tr>
+<td>React Native</td>
+<td>libturbomodulejsijni.so</td>
+</tr>
+<tr>
+<td>React Native</td>
+<td>librrc_(.*).so</td>
+</tr>
+<tr>
+<td>旷视 SDK</td>
+<td>libMegviiIDCardQuality(.*).so</td>
+</tr>
+<tr>
+<td>旷视 SDK</td>
+<td>liblivenessdetection(.*).so</td>
+</tr>
+<tr>
+<td>旷视 SDK</td>
+<td>libbankcard(.*).so</td>
+</tr>
+<tr>
+<td>Matrix</td>
+<td>libtrace-canary.so</td>
+</tr>
+<tr>
+<td>Hyperscan</td>
+<td>libhs.so</td>
+</tr>
+<tr>
+<td>阿里云号码认证 SDK</td>
+<td>libalicomphonenumberauthsdk_core.so</td>
+</tr>
+<tr>
+<td>KOOM</td>
+<td>libkwai-android-base.so</td>
+</tr>
+<tr>
+<td>个推</td>
+<td>com.igexin.download.DownloadService</td>
+</tr>
+<tr>
+<td>TensorFlow Lite</td>
+<td>libtensorflowlite_flex_jni.so</td>
+</tr>
+<tr>
+<td>TensorFlow Lite</td>
+<td>libtensorflowLite.so</td>
+</tr>
+<tr>
+<td>Brotli</td>
+<td>libbrotli.so</td>
+</tr>
+<tr>
+<td>React Native Reanimated</td>
+<td>libreanimated.so</td>
+</tr>
+<tr>
+<td>ZAndrolua</td>
+<td>liblposix.so</td>
+</tr>
+<tr>
+<td>realm</td>
+<td>librealmc.so</td>
+</tr>
+<tr>
+<td>ZXing</td>
+<td>libzxing.so</td>
+</tr>
+<tr>
+<td>极光认证 SDK</td>
+<td>libgtcore.so</td>
+</tr>
+<tr>
+<td>美洽客服 SDK</td>
+<td>com.meiqia.core.MeiQiaService</td>
+</tr>
+<tr>
+<td>LibAVIF</td>
+<td>libavif_android.so</td>
+</tr>
+<tr>
+<td>人脸核身 SDK</td>
+<td>libYTPoseDetect.so</td>
+</tr>
+<tr>
+<td>人脸核身 SDK</td>
+<td>libYTAGReflectLiveCheck.so</td>
+</tr>
+<tr>
+<td>人脸核身 SDK</td>
+<td>libYTFaceAlignment.so</td>
+</tr>
+<tr>
+<td>人脸核身 SDK</td>
+<td>libYTLipReader.so</td>
+</tr>
+<tr>
+<td>人脸核身 SDK</td>
+<td>libYTFaceReflect.so</td>
+</tr>
+<tr>
+<td>人脸核身 SDK</td>
+<td>libYTFaceTracker.so</td>
+</tr>
+<tr>
+<td>人脸核身 SDK</td>
+<td>libYTFaceDetector.so</td>
+</tr>
+<tr>
+<td>人脸核身 SDK</td>
+<td>libYTFaceTrackPro2.so</td>
+</tr>
+<tr>
+<td>一键登录 SDK</td>
+<td>com.mobile.auth.gatewayauth.LoginAuthActivity</td>
+</tr>
+<tr>
+<td>一键登录 SDK</td>
+<td>com.mobile.auth.gatewayauth.PrivacyDialogActivity</td>
+</tr>
+<tr>
+<td>一键登录 SDK</td>
+<td>com.mobile.auth.gatewayauth.activity.AuthWebVeiwActivity</td>
+</tr>
+<tr>
+<td>人脸核身 SDK</td>
+<td>com.tencent.cloud.huiyansdkface.facelight.ui.FaceGuideActivity</td>
+</tr>
+<tr>
+<td>人脸核身 SDK</td>
+<td>com.tencent.cloud.huiyansdkface.facelight.ui.FaceProtocalActivity</td>
+</tr>
+<tr>
+<td>人脸核身 SDK</td>
+<td>com.tencent.cloud.huiyansdkface.facelight.ui.FaceVerifyActivity</td>
+</tr>
+<tr>
+<td>Google AdMob</td>
+<td>com.google.android.gms.ads.OutOfContextTestingActivity</td>
+</tr>
+<tr>
+<td>KOOM</td>
+<td>com.kwai.koom.javaoom.monitor.analysis.HeapAnalysisService</td>
+</tr>
+<tr>
+<td>HONOR Push(TPNS Proxy)</td>
+<td>com.tencent.android.tpush.honor.HonorMessageService</td>
+</tr>
+<tr>
+<td>阿里聚安全</td>
+<td>libsgmainso.version.so</td>
+</tr>
+<tr>
+<td>阿里聚安全</td>
+<td>libsgsecuritybodyso.version.so</td>
+</tr>
+<tr>
+<td>百度人脸识别</td>
+<td>com.baidu.liantian.LiantianActivity</td>
+</tr>
+<tr>
+<td>个推</td>
+<td>com.igexin.sdk.GetuiActivity</td>
+</tr>
+<tr>
+<td>个推</td>
+<td>com.igexin.sdk.MActivity</td>
+</tr>
+<tr>
+<td>Instabug</td>
+<td>com.instabug.bug.view.reporting.ReportingContainerActivity</td>
+</tr>
+<tr>
+<td>Instabug</td>
+<td>com.instabug.chat.ui.ChatActivity</td>
+</tr>
+<tr>
+<td>Instabug</td>
+<td>com.instabug.featuresrequest.ui.FeaturesRequestActivity</td>
+</tr>
+<tr>
+<td>Instabug</td>
+<td>com.instabug.library.internal.video.RequestPermissionActivity</td>
+</tr>
+<tr>
+<td>Instabug</td>
+<td>com.instabug.library.invocation.invocationdialog.InstabugDialogActivity</td>
+</tr>
+<tr>
+<td>Instabug</td>
+<td>com.instabug.library.ui.onboarding.OnboardingActivity</td>
+</tr>
+<tr>
+<td>Instabug</td>
+<td>com.instabug.survey.announcements.ui.activity.AnnouncementActivity</td>
+</tr>
+<tr>
+<td>Instabug</td>
+<td>com.instabug.survey.ui.SurveyActivity</td>
+</tr>
+<tr>
+<td>融云 IM SDK</td>
+<td>io.rong.push.notification.RongBridgeActivity</td>
+</tr>
+<tr>
+<td>Wwise</td>
+<td>libAkSoundEngine.so</td>
+</tr>
+<tr>
+<td>Bugly</td>
+<td>libBugly-yaq.so</td>
+</tr>
+<tr>
+<td>游戏语音 GVoice</td>
+<td>libGVoice.so</td>
+</tr>
+<tr>
+<td>HiAI Foundation</td>
+<td>libai_fmk_dnnacl.so</td>
+</tr>
+<tr>
+<td>百度应用加固</td>
+<td>libbaiduprotect_sec_jni.so</td>
+</tr>
+<tr>
+<td>HiAI Foundation</td>
+<td>libcpucl.so</td>
+</tr>
+<tr>
+<td>HiAI Foundation</td>
+<td>libhiai.so</td>
+</tr>
+<tr>
+<td>HiAI Foundation</td>
+<td>libhiai_c_def.so</td>
+</tr>
+<tr>
+<td>HiAI Foundation</td>
+<td>libhiai_debugger.so</td>
+</tr>
+<tr>
+<td>HiAI Foundation</td>
+<td>libhiai_hcl_model_runtime.so</td>
+</tr>
+<tr>
+<td>HiAI Foundation</td>
+<td>libhiai_ir.so</td>
+</tr>
+<tr>
+<td>HiAI Foundation</td>
+<td>libhiai_ir_build.so</td>
+</tr>
+<tr>
+<td>HiAI Foundation</td>
+<td>libhiai_ir_build_aipp.so</td>
+</tr>
+<tr>
+<td>HiAI Foundation</td>
+<td>libhiai_ir_infershape.so</td>
+</tr>
+<tr>
+<td>HiAI Foundation</td>
+<td>libhiai_model_compatible.so</td>
+</tr>
+<tr>
+<td>环信 IM</td>
+<td>libhyphenate_av.so</td>
+</tr>
+<tr>
+<td>Instabug</td>
+<td>libibg-native.so</td>
+</tr>
+<tr>
+<td>爱加密</td>
+<td>libijm-emulator.so</td>
+</tr>
+<tr>
+<td>爱加密</td>
+<td>libijmDataEncryption.so</td>
+</tr>
+<tr>
+<td>爱加密</td>
+<td>libijmDataEncryption_arm64.so</td>
+</tr>
+<tr>
+<td>爱加密</td>
+<td>libijmDataEncryption_x86.so</td>
+</tr>
+<tr>
+<td>爱加密</td>
+<td>libijmDataEncryption_x86_64.so</td>
+</tr>
+<tr>
+<td>360 加固</td>
+<td>libjiagu_vip.so</td>
+</tr>
+<tr>
+<td>360 加固</td>
+<td>libjiagu_vip_x64.so</td>
+</tr>
+<tr>
+<td>HiAI Foundation</td>
+<td>libmodelcrypto.so</td>
+</tr>
+<tr>
+<td>网易易盾</td>
+<td>libnesec_x86.so</td>
+</tr>
+<tr>
+<td>Mozilla NSS</td>
+<td>libnss3.so</td>
+</tr>
+<tr>
+<td>Rust</td>
+<td>librust.so</td>
+</tr>
+<tr>
+<td>Tun2Socks</td>
+<td>libtun2socks.so</td>
+</tr>
+<tr>
+<td>百度人脸识别</td>
+<td>com.baidu.liantian.LiantianProvider</td>
+</tr>
+<tr>
+<td>Instabug</td>
+<td>com.instabug.apm.contentprovider.APMContentProvider</td>
+</tr>
+<tr>
+<td>Instabug</td>
+<td>com.instabug.crash.CrashContentProvider</td>
+</tr>
+<tr>
+<td>Instabug</td>
+<td>com.instabug.library.internal.contentprovider.InstabugContentProvider</td>
+</tr>
+<tr>
+<td>融云 IM SDK</td>
+<td>io.rong.imlib.chatroom.base.ChatRoomContentProvider</td>
+</tr>
+<tr>
+<td>融云 IM SDK</td>
+<td>io.rong.imlib.cs.base.CustomServiceContentProvider</td>
+</tr>
+<tr>
+<td>融云 IM SDK</td>
+<td>io.rong.imlib.discussion.base.DiscussionContentProvider</td>
+</tr>
+<tr>
+<td>融云 IM SDK</td>
+<td>io.rong.imlib.location.base.LocationContentProvider</td>
+</tr>
+<tr>
+<td>融云 IM SDK</td>
+<td>io.rong.imlib.publicservice.base.PublicServiceContentProvider</td>
+</tr>
+<tr>
+<td>百度人脸识别</td>
+<td>com.baidu.liantian.LiantianReceiver</td>
+</tr>
+<tr>
+<td>DataFinder</td>
+<td>com.bytedance.mapplog.collector.Collector</td>
+</tr>
+<tr>
+<td>融云 IM SDK</td>
+<td>io.rong.imlib.ConnectChangeReceiver</td>
+</tr>
+<tr>
+<td>融云 IM SDK</td>
+<td>io.rong.imlib.HeartbeatReceiver</td>
+</tr>
+<tr>
+<td>融云 IM SDK</td>
+<td>io.rong.push.rongpush.PushReceiver</td>
+</tr>
+<tr>
+<td>百度人脸识别</td>
+<td>com.baidu.liantian.LiantianService</td>
+</tr>
+<tr>
+<td>个推</td>
+<td>com.igexin.assist.control.stp.StpService</td>
+</tr>
+<tr>
+<td>个推</td>
+<td>com.igexin.sdk.GTIntentService</td>
+</tr>
+<tr>
+<td>个推</td>
+<td>com.igexin.sdk.HonorPushMessageService</td>
+</tr>
+<tr>
+<td>Instabug</td>
+<td>com.instabug.library.internal.video.ScreenRecordingService</td>
+</tr>
+<tr>
+<td>Instabug</td>
+<td>com.instabug.library.screenshot.ScreenshotCaptureService</td>
+</tr>
+<tr>
+<td>Instabug</td>
+<td>com.instabug.terminations.TerminationsDetectorService</td>
+</tr>
+<tr>
+<td>融云 IM SDK</td>
+<td>io.rong.imlib.ipc.RongService</td>
+</tr>
+<tr>
+<td>融云 IM SDK</td>
+<td>io.rong.push.rongpush.PushService</td>
+</tr>
+<tr>
+<td>GMP Push SDK</td>
+<td>com.bytedance.push.notification.PassThoughActivity</td>
+</tr>
+<tr>
+<td>GMP Push SDK</td>
+<td>com.bytedance.push.notification.PushActivity</td>
+</tr>
+<tr>
+<td>GMP Push SDK</td>
+<td>com.ss.android.message.sswo.SswoActivity</td>
+</tr>
+<tr>
+<td>友盟推送</td>
+<td>com.umeng.message.component.UmengNotificationClickActivity</td>
+</tr>
+<tr>
+<td>Breakpad</td>
+<td>libbreakpad_client.so</td>
+</tr>
+<tr>
+<td>Gio</td>
+<td>libgio.so</td>
+</tr>
+<tr>
+<td>Isar Database</td>
+<td>libisar.so</td>
+</tr>
+<tr>
+<td>MindSpore Lite</td>
+<td>libmindspore-lite.so</td>
+</tr>
+<tr>
+<td>LibMpv</td>
+<td>libmpv.so</td>
+</tr>
+<tr>
+<td>NativeAudio</td>
+<td>libnativeaudioe7.so</td>
+</tr>
+<tr>
+<td>Paddle Lite</td>
+<td>libpaddle_lite_jni.so</td>
+</tr>
+<tr>
+<td>React Native Skia</td>
+<td>librnskia.so</td>
+</tr>
+<tr>
+<td>ShadowHook</td>
+<td>libshadowhook.so</td>
+</tr>
+<tr>
+<td>TagLib</td>
+<td>libtag.so</td>
+</tr>
+<tr>
+<td>Pangle SDK</td>
+<td>libzeus_direct_dex.so</td>
+</tr>
+<tr>
+<td>GMP Push SDK</td>
+<td>com.bytedance.push.settings.storage.PushProvider</td>
+</tr>
+<tr>
+<td>Pangle SDK</td>
+<td>com.bytedance.sdk.openadsdk.TTFileProvider</td>
+</tr>
+<tr>
+<td>Pangle SDK</td>
+<td>com.bytedance.sdk.openadsdk.multipro.TTMultiProvider</td>
+</tr>
+<tr>
+<td>GMP Push SDK</td>
+<td>com.ss.android.push.PushFileProvider</td>
+</tr>
+<tr>
+<td>GMP Push SDK</td>
+<td>com.ss.android.pushmanager.setting.PushMultiProcessSharedProvider</td>
+</tr>
+<tr>
+<td>友盟推送</td>
+<td>com.umeng.message.component.UmengMessageProvider</td>
+</tr>
+<tr>
+<td>Jetpack Tracing</td>
+<td>androidx.tracing.perfetto.TracingReceiver</td>
+</tr>
+<tr>
+<td>Facebook SDK</td>
+<td>com.facebook.AuthenticationTokenManager$CurrentAuthenticationTokenChangedBroadcastReceiver</td>
+</tr>
+<tr>
+<td>Meizu Push(GMP Proxy)</td>
+<td>com.meizu.message.MzMessageReceiver</td>
+</tr>
+<tr>
+<td>GMP Push SDK</td>
+<td>com.ss.android.message.MessageReceiver</td>
+</tr>
+<tr>
+<td>GMP Push SDK</td>
+<td>com.ss.android.message.sswo.SswoReceiver</td>
+</tr>
+<tr>
+<td>GMP Push SDK</td>
+<td>com.ss.android.push.DefaultReceiver</td>
+</tr>
+<tr>
+<td>GMP Push SDK</td>
+<td>com.ss.android.push.daemon.PushReceiver</td>
+</tr>
+<tr>
+<td>vivo Push(GMP Proxy)</td>
+<td>com.vivo.VivoPushMessageReceiver</td>
+</tr>
+<tr>
+<td>MiPush(GMP Proxy)</td>
+<td>com.xiaomi.push.service.receivers.MIPushMessageHandler</td>
+</tr>
+<tr>
+<td>阿里移动推送(GMP Proxy)</td>
+<td>com.alibaba.sdk.android.push.CloudPushIntentService</td>
+</tr>
+<tr>
+<td>阿里移动推送(GMP Proxy)</td>
+<td>com.alibaba.sdk.android.push.PushIntentService</td>
+</tr>
+<tr>
+<td>GMP Push SDK</td>
+<td>com.bytedance.push.alive.ForegroundService</td>
+</tr>
+<tr>
+<td>HUAWEI Push(GMP Proxy)</td>
+<td>com.huawei.MessageService</td>
+</tr>
+<tr>
+<td>GMP Push SDK</td>
+<td>com.ss.android.message.NotifyIntentService</td>
+</tr>
+<tr>
+<td>GMP Push SDK</td>
+<td>com.ss.android.message.NotifyService</td>
+</tr>
+<tr>
+<td>GMP Push SDK</td>
+<td>com.ss.android.message.PushJobService</td>
+</tr>
+<tr>
+<td>GMP Push SDK</td>
+<td>com.ss.android.message.log.LogService</td>
+</tr>
+<tr>
+<td>GMP Push SDK</td>
+<td>com.ss.android.newmedia.redbadge.RedBadgePushProcessService</td>
+</tr>
+<tr>
+<td>GMP Push SDK</td>
+<td>com.ss.android.newmedia.redbadge.RedbadgeHandler</td>
+</tr>
+<tr>
+<td>GMP Push SDK</td>
+<td>com.ss.android.push.DefaultService</td>
+</tr>
+<tr>
+<td>GMP Push SDK</td>
+<td>com.ss.android.push.daemon.PushProcessService</td>
+</tr>
+<tr>
+<td>GMP Push SDK</td>
+<td>com.ss.android.push.daemon.PushService</td>
+</tr>
+<tr>
+<td>友盟推送(GMP Proxy)</td>
+<td>com.umeng.UmengMessageHandler</td>
+</tr>
+<tr>
+<td>友盟推送</td>
+<td>com.umeng.message.component.UmengIntentService</td>
+</tr>
+<tr>
+<td>友盟推送</td>
+<td>com.umeng.message.component.UmengMessageHandlerService</td>
+</tr>
+<tr>
+<td>友盟推送</td>
+<td>com.umeng.message.component.UmengMessageReceiverService</td>
+</tr>
+<tr>
+<td>阿里云号码认证 SDK</td>
+<td>libauth_number_product-(.*).so</td>
+</tr>
+</tbody></table>
+
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>sdk指纹汇总</div>
+      <div>http://example.com/2025/01/06/sdk指纹汇总/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>John Doe</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2025年1月6日</div>
+        </div>
+      
+      
+      
+        <div class="license-meta-item">
+          <div>许可协议</div>
+          <div>
+            
+              
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                    <i class="iconfont icon-cc-by"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2025/01/06/AIGC%E5%AE%89%E5%85%A8%E8%B0%83%E7%A0%94/" title="AIGC安全调研">
+                        <span class="hidden-mobile">AIGC安全调研</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>目录</span>
+  </p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+    </div>
+  
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.4/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.20.1/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/5.0.0/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
+</body>
+</html>
