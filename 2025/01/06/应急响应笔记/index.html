@@ -1,0 +1,1073 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+
+  <link rel="apple-touch-icon" sizes="76x76" href="https://avatars.githubusercontent.com/u/193379203?s=400&amp;u=0b52982067f8b5c236021fc6ebd137770c8942d9&amp;v=4">
+  <link rel="icon" href="https://avatars.githubusercontent.com/u/193379203?s=400&amp;u=0b52982067f8b5c236021fc6ebd137770c8942d9&amp;v=4">
+  
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="John Doe">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="LInux应急响应一.查看用户信息1.查询可疑用户常用命令1234567891011121314151617cat &#x2F;etc&#x2F;passwd# 查看用户信息文件cat &#x2F;etc&#x2F;shadow# 查看影子文件awk -F: &#x27;$3&#x3D;&#x3D;0&#123;print $1&#125;&#x27; &#x2F;etc&#x2F;passwdcat &#x2F;etc&#x2F;passwd | grep x:0# 查看系统是否还存在其他的特">
+<meta property="og:type" content="article">
+<meta property="og:title" content="应急响应笔记">
+<meta property="og:url" content="http://example.com/2025/01/06/%E5%BA%94%E6%80%A5%E5%93%8D%E5%BA%94%E7%AC%94%E8%AE%B0/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="LInux应急响应一.查看用户信息1.查询可疑用户常用命令1234567891011121314151617cat &#x2F;etc&#x2F;passwd# 查看用户信息文件cat &#x2F;etc&#x2F;shadow# 查看影子文件awk -F: &#x27;$3&#x3D;&#x3D;0&#123;print $1&#125;&#x27; &#x2F;etc&#x2F;passwdcat &#x2F;etc&#x2F;passwd | grep x:0# 查看系统是否还存在其他的特">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://hsmyzj-1322074094.cos.ap-beijing.myqcloud.com/202501061646697.png">
+<meta property="og:image" content="https://hsmyzj-1322074094.cos.ap-beijing.myqcloud.com/202501061646702.png">
+<meta property="og:image" content="https://hsmyzj-1322074094.cos.ap-beijing.myqcloud.com/202501061646709.png">
+<meta property="og:image" content="https://hsmyzj-1322074094.cos.ap-beijing.myqcloud.com/202501061646703.png">
+<meta property="og:image" content="https://hsmyzj-1322074094.cos.ap-beijing.myqcloud.com/202501061646706.png">
+<meta property="og:image" content="https://hsmyzj-1322074094.cos.ap-beijing.myqcloud.com/202501061646723.png">
+<meta property="og:image" content="https://hsmyzj-1322074094.cos.ap-beijing.myqcloud.com/202501061646983.png">
+<meta property="og:image" content="https://hsmyzj-1322074094.cos.ap-beijing.myqcloud.com/202501061646009.png">
+<meta property="og:image" content="https://hsmyzj-1322074094.cos.ap-beijing.myqcloud.com/202501061646025.png">
+<meta property="og:image" content="https://hsmyzj-1322074094.cos.ap-beijing.myqcloud.com/202501061646050.png">
+<meta property="og:image" content="https://hsmyzj-1322074094.cos.ap-beijing.myqcloud.com/202501061646109.png">
+<meta property="og:image" content="https://hsmyzj-1322074094.cos.ap-beijing.myqcloud.com/202501061646138.png">
+<meta property="og:image" content="https://hsmyzj-1322074094.cos.ap-beijing.myqcloud.com/202501061646284.png">
+<meta property="og:image" content="https://hsmyzj-1322074094.cos.ap-beijing.myqcloud.com/202501061646385.png">
+<meta property="og:image" content="https://hsmyzj-1322074094.cos.ap-beijing.myqcloud.com/202501061646407.png">
+<meta property="og:image" content="https://hsmyzj-1322074094.cos.ap-beijing.myqcloud.com/202501061646428.png">
+<meta property="og:image" content="https://hsmyzj-1322074094.cos.ap-beijing.myqcloud.com/202501061646462.png">
+<meta property="og:image" content="http://example.com/%E5%BA%94%E6%80%A5%E5%93%8D%E5%BA%94%E7%AC%94%E8%AE%B0.assets/1704820398676-cbf7ce2f-063f-4c1d-a8ba-23c2fb44497f.png">
+<meta property="article:published_time" content="2025-01-06T08:46:31.000Z">
+<meta property="article:modified_time" content="2025-01-06T08:46:40.023Z">
+<meta property="article:author" content="John Doe">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://hsmyzj-1322074094.cos.ap-beijing.myqcloud.com/202501061646697.png">
+  
+  
+  
+  <title>应急响应笔记 - Hexo</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1749284_5i9bdhy70f8.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1736178_k526ubmyhba.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+  
+
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"example.com","root":"/","version":"1.9.8","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false},"umami":{"src":null,"website_id":null,"domains":null,"start_time":"2024-01-01T00:00:00.000Z","token":null,"api_server":null}},"search_path":"/local-search.xml","include_content_in_search":true};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+
+  
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 70vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>SLL779</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/" target="_self">
+                <i class="iconfont icon-home-fill"></i>
+                <span>首页</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/" target="_self">
+                <i class="iconfont icon-archive-fill"></i>
+                <span>归档</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/" target="_self">
+                <i class="iconfont icon-category-fill"></i>
+                <span>分类</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/" target="_self">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>标签</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/" target="_self">
+                <i class="iconfont icon-user-fill"></i>
+                <span>关于</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
+              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('/img/default.png') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle" data-typed-text="应急响应笔记"></span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2025-01-06 16:46" pubdate>
+          2025年1月6日 下午
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          7.8k 字
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          66 分钟
+        
+      </span>
+    
+
+    
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <h1 id="seo-header">应急响应笔记</h1>
+            
+            
+              <div class="markdown-body">
+                
+                <h1 id="LInux应急响应"><a href="#LInux应急响应" class="headerlink" title="LInux应急响应"></a><strong>LInux应急响应</strong></h1><h2 id="一-查看用户信息"><a href="#一-查看用户信息" class="headerlink" title="一.查看用户信息"></a><strong>一.查看用户信息</strong></h2><h3 id="1-查询可疑用户常用命令"><a href="#1-查询可疑用户常用命令" class="headerlink" title="1.查询可疑用户常用命令"></a><strong>1.查询可疑用户常用命令</strong></h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><code class="hljs plain">cat /etc/passwd<br># 查看用户信息文件<br>cat /etc/shadow<br># 查看影子文件<br>awk -F: &#x27;$3==0&#123;print $1&#125;&#x27; /etc/passwd<br>cat /etc/passwd | grep x:0<br># 查看系统是否还存在其他的特权账户，uid为0，默认系统只存在root一个特权账户<br>w                   查看目前登入系统的用户，以及他们正在执行的程序。<br>lastb               查看用户错误的登录信息<br>lastlog             查看所有用户最后的登录信息<br>last                查看用户最近登录信息<br>who                 查看当前用户登录系统信息<br>awk -F: &#x27;length($2)==0 &#123;print $1&#125;&#x27; /etc/shadow<br>uptime               查看现在的时间、系统开机时长、目前多少用户登录。<br>stat /etc/passwd            查看密码文件上一次修改的时间，如果最近被修改过，那就可能存在问题<br>cat /etc/passwd | grep -v nologin             查看除了不可登录以外的用户都有哪些，有没有新增的<br>cat /etc/passwd | grep /bin/bash             查看能用bash shell登录的用户<br></code></pre></td></tr></table></figure>
+
+<h3 id="2-删除用户"><a href="#2-删除用户" class="headerlink" title="2. 删除用户"></a>2. <strong>删除用户</strong></h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs plain">usermod -L user    禁用帐号，帐号无法登录，/etc/shadow 第二栏为 ! 开头userdel user       删除 user 用户<br>userdel -r user    将删除 user 用户，并且将 /home 目录下的 user 目录一并删除<br></code></pre></td></tr></table></figure>
+
+<h2 id="二-历史命令"><a href="#二-历史命令" class="headerlink" title="二.历史命令"></a><strong>二.历史命令</strong></h2><h3 id="1-查看历史命令"><a href="#1-查看历史命令" class="headerlink" title="1. 查看历史命令"></a>1. <strong>查看历史命令</strong></h3><h4 id="1-1root用户历史命令"><a href="#1-1root用户历史命令" class="headerlink" title="1.1root用户历史命令"></a><strong>1.1root用户历史命令</strong></h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs plain">history<br></code></pre></td></tr></table></figure>
+
+<p><img src="https://hsmyzj-1322074094.cos.ap-beijing.myqcloud.com/202501061646697.png" srcset="/img/loading.gif" lazyload alt="img"></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs plain">cat .bash_history &gt;&gt;history.txt  //保存历史命令至history.txt<br></code></pre></td></tr></table></figure>
+
+<h4 id="1-2普通用户历史命令"><a href="#1-2普通用户历史命令" class="headerlink" title="1.2普通用户历史命令"></a><strong>1.2普通用户历史命令</strong></h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><code class="hljs plain">打开 /home 各帐号目录下的 .bash_history，查看普通帐号执行的历史命令。<br>为历史的命令增加登录的 IP 地址、执行命令时间等信息：<br>1）保存1万条命令<br>sed -i &#x27;s/^HISTSIZE=1000/HISTSIZE=10000/g&#x27; /etc/profile<br>2）在/etc/profile的文件尾部添加如下行数配置信息：<br>######jiagu history xianshi#########<br>USER_IP=`who -u am i 2&gt;/dev/null | awk &#x27;&#123;print $NF&#125;&#x27; | sed -e &#x27;s/[()]//g&#x27;`<br>if [ &quot;$USER_IP&quot; = &quot;&quot; ]<br>then<br>USER_IP=`hostname`<br>fi<br>export HISTTIMEFORMAT=&quot;%F %T $USER_IP `whoami` &quot;<br>shopt -s histappend<br>export PROMPT_COMMAND=&quot;history -a&quot;<br>######### jiagu history xianshi ##########<br>3）source /etc/profile 让配置生效<br>生成效果： 1  2018-07-10 19:45:39 192.168.204.1 root source /etc/profile<br></code></pre></td></tr></table></figure>
+
+<h4 id="1-3-历史操作命令的清除：history-c"><a href="#1-3-历史操作命令的清除：history-c" class="headerlink" title="1.3 历史操作命令的清除：history -c"></a><strong>1.3 历史操作命令的清除：history -c</strong></h4><p>但此命令并不会清除保存在文件中的记录，因此需要手动删除 .bash_profile 文件中的记录。</p>
+<h4 id="1-4入侵排查"><a href="#1-4入侵排查" class="headerlink" title="1.4入侵排查"></a><strong>1.4入侵排查</strong></h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs plain">进入用户目录下，导出历史命令。<br>cat .bash_history &gt;&gt; history.txt<br></code></pre></td></tr></table></figure>
+
+<h3 id="2-端口"><a href="#2-端口" class="headerlink" title="2. 端口"></a>2. <strong>端口</strong></h3><h4 id="2-1查看端口开放和链接情况"><a href="#2-1查看端口开放和链接情况" class="headerlink" title="2.1查看端口开放和链接情况"></a><strong>2.1查看端口开放和链接情况</strong></h4><p>使用 netstat 网络连接命令，分析可疑端口、IP、PID</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs plain">netstat -pantu<br></code></pre></td></tr></table></figure>
+
+<p><img src="https://hsmyzj-1322074094.cos.ap-beijing.myqcloud.com/202501061646702.png" srcset="/img/loading.gif" lazyload alt="img"></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs plain">netstat -antlp | more<br><br>查看下 pid 所对应的进程文件路径，<br>运行 ls -l /proc/$PID/exe 或 file /proc/$PID/exe（$PID 为对应的 pid 号）<br></code></pre></td></tr></table></figure>
+
+<h3 id="3-进程"><a href="#3-进程" class="headerlink" title="3. 进程"></a>3. <strong>进程</strong></h3><h4 id="3-1-查看进程"><a href="#3-1-查看进程" class="headerlink" title="3.1. 查看进程"></a>3.1. <strong>查看进程</strong></h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs plain">ps -aux<br></code></pre></td></tr></table></figure>
+
+<p><img src="https://hsmyzj-1322074094.cos.ap-beijing.myqcloud.com/202501061646709.png" srcset="/img/loading.gif" lazyload alt="img"></p>
+<ol>
+<li>查看关联进程</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs plain">ps -aux | grep pid<br></code></pre></td></tr></table></figure>
+
+<ol start="2">
+<li>查看cpu占用率前十的进程</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs plain">ps aux --sort=pcpu | head -10<br></code></pre></td></tr></table></figure>
+
+<h3 id="4-自启动项"><a href="#4-自启动项" class="headerlink" title="4. 自启动项"></a>4. <strong>自启动项</strong></h3><h4 id="4-1-查看开机启动项"><a href="#4-1-查看开机启动项" class="headerlink" title="4.1. 查看开机启动项"></a>4.1. <strong>查看开机启动项</strong></h4><p><strong>基本使用：</strong></p>
+<p>系统运行级别示意图：</p>
+<table>
+<thead>
+<tr>
+<th><strong>运行级别</strong></th>
+<th><strong>含义</strong></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>0</td>
+<td>关机</td>
+</tr>
+<tr>
+<td>1</td>
+<td>单用户模式，可以想象为windows的安全模式，主要用于系统修复</td>
+</tr>
+<tr>
+<td>2</td>
+<td>不完全的命令行模式，不含NFS服务</td>
+</tr>
+<tr>
+<td>3</td>
+<td>完全的命令行模式，就是标准字符界面</td>
+</tr>
+<tr>
+<td>4</td>
+<td>系统保留</td>
+</tr>
+<tr>
+<td>5</td>
+<td>图形模式</td>
+</tr>
+<tr>
+<td>6</td>
+<td>重启动</td>
+</tr>
+</tbody></table>
+<p>查看运行级别命令 runlevel</p>
+<p>系统默认允许级别</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs plain">vi  /etc/inittab<br>id=3：initdefault  #系统开机后直接进入哪个运行级别<br></code></pre></td></tr></table></figure>
+
+<h4 id="4-2开机启动配置文件"><a href="#4-2开机启动配置文件" class="headerlink" title="4.2开机启动配置文件"></a><strong>4.2开机启动配置文件</strong></h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs plain">/etc/rc.local<br>/etc/rc.d/rc[0~6].d<br></code></pre></td></tr></table></figure>
+
+<p>例子：当我们需要开机启动自己的脚本时，只需要将可执行脚本丢在 &#x2F;etc&#x2F;init.d 目录下，然后在 &#x2F;etc&#x2F;rc.d&#x2F;rc*.d 文件中建立软链接即可。</p>
+<p>注：此中的 * 代表 0,1,2,3,4,5,6 这七个等级</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs plain">root@localhost ~]# ln -s /etc/init.d/sshd /etc/rc.d/rc3.d/S100ssh<br></code></pre></td></tr></table></figure>
+
+<p>此处sshd是具体服务的脚本文件，S100ssh是其软链接，S开头代表加载时自启动；如果是K开头的脚本文件，代表运行级别加载时需要关闭的。</p>
+<h4 id="4-3入侵排查："><a href="#4-3入侵排查：" class="headerlink" title="4.3入侵排查："></a><strong>4.3入侵排查：</strong></h4><p>启动项文件：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs plain">more /etc/rc.local<br>/etc/rc.d/rc[0~6].d<br>ls -l /etc/rc.d/rc3.d/<br></code></pre></td></tr></table></figure>
+
+<h3 id="5-定时任务"><a href="#5-定时任务" class="headerlink" title="5. 定时任务"></a>5. <strong>定时任务</strong></h3><h4 id="5-1利用-crontab-创建计划任务"><a href="#5-1利用-crontab-创建计划任务" class="headerlink" title="5.1利用 crontab 创建计划任务"></a><strong>5.1利用 crontab 创建计划任务</strong></h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><code class="hljs plain">crontab -l   列出某个用户cron服务的详细内容(查看定时任务)<br><br>crontab -u root -l     查看指定用户的定时任务<br><br>cat /etc/passwd |awk -F &quot;:&quot; &#x27;&#123;print $1&#125;&#x27; | xargs -i crontab -u &#123;&#125; -l     查看所有人的计划任务<br><br>Tips：默认编写的crontab文件会保存在 (/var/spool/cron/用户名 例如: /var/spool/cron/root<br><br>crontab -r   删除每个用户cront任务(谨慎：删除所有的计划任务)<br><br>crontab -e   使用编辑器编辑当前的crontab文件 <br><br>如：*/1 * * * * echo &quot;hello world&quot; &gt;&gt; /tmp/test.txt 每分钟写入文件<br></code></pre></td></tr></table></figure>
+
+<h4 id="5-2利用-anacron-命令实现异步定时任务调度"><a href="#5-2利用-anacron-命令实现异步定时任务调度" class="headerlink" title="5.2利用 anacron 命令实现异步定时任务调度"></a><strong>5.2利用 anacron 命令实现异步定时任务调度</strong></h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs plain">每天运行 /home/backup.sh 脚本：<br>vi /etc/anacrontab <br>@daily    10    example.daily   /bin/bash /home/backup.sh<br>当机器在 backup.sh 期望被运行时是关机的，anacron会在机器开机十分钟之后运行它，而不用再等待 7天。<br></code></pre></td></tr></table></figure>
+
+<h4 id="5-3入侵排查"><a href="#5-3入侵排查" class="headerlink" title="5.3入侵排查"></a><strong>5.3入侵排查</strong></h4><p>重点关注以下目录中是否存在恶意脚本</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs plain">/var/spool/cron/* <br>/etc/crontab<br>/etc/cron.d/*<br>/etc/cron.daily/* <br>/etc/cron.hourly/* <br>/etc/cron.monthly/*<br>/etc/cron.weekly/<br>/etc/anacrontab<br>/var/spool/anacron/*<br></code></pre></td></tr></table></figure>
+
+<p>小技巧：</p>
+<p>more &#x2F;etc&#x2F;cron.daily&#x2F;*  查看目录下所有文件</p>
+<h3 id="6-检查服务"><a href="#6-检查服务" class="headerlink" title="6. 检查服务"></a>6. <strong>检查服务</strong></h3><h4 id="6-1查询已安装的服务"><a href="#6-1查询已安装的服务" class="headerlink" title="6.1查询已安装的服务"></a><strong>6.1查询已安装的服务</strong></h4><p>RPM 包安装的服务</p>
+<h4 id=""><a href="#" class="headerlink" title=""></a></h4><p>6.2 源码包安装的服务</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs plain">chkconfig  --list  查看服务自启动状态，可以看到所有的RPM包安装的服务<br>ps aux | grep crond 查看当前服务<br><br>系统在3与5级别下的启动项 <br>中文环境<br>chkconfig --list | grep &quot;3:启用\|5:启用&quot;<br>英文环境<br>chkconfig --list | grep &quot;3:on\|5:on&quot;<br></code></pre></td></tr></table></figure>
+
+<h4 id="-1"><a href="#-1" class="headerlink" title=""></a></h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs plain">查看服务安装位置 ，一般是在/user/local/<br>service httpd start<br>搜索/etc/rc.d/init.d/  查看是否存在<br></code></pre></td></tr></table></figure>
+
+<h3 id="7-host文件"><a href="#7-host文件" class="headerlink" title="7. host文件"></a>7. <strong>host文件</strong></h3><h4 id="7-1-查看host是否被修改"><a href="#7-1-查看host是否被修改" class="headerlink" title="7.1. 查看host是否被修改"></a>7.1. <strong>查看host是否被修改</strong></h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs plain">cat /etc/hosts<br></code></pre></td></tr></table></figure>
+
+<p><img src="https://hsmyzj-1322074094.cos.ap-beijing.myqcloud.com/202501061646703.png" srcset="/img/loading.gif" lazyload alt="img"></p>
+<h3 id="8-日志"><a href="#8-日志" class="headerlink" title="8. 日志"></a>8. <strong>日志</strong></h3><p>日志默认存放位置：&#x2F;var&#x2F;log&#x2F;</p>
+<p>查看日志配置情况：more &#x2F;etc&#x2F;rsyslog.conf</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs plain">日志文件	说明<br>/var/log/cron	记录了系统定时任务相关的日志<br>/var/log/cups	记录打印信息的日志<br>/var/log/dmesg	记录了系统在开机时内核自检的信息，也可以使用dmesg命令直接查看内核自检信息<br>/var/log/mailog	记录邮件信息<br>/var/log/message	记录系统重要信息的日志。这个日志文件中会记录Linux系统的绝大多数重要信息，如果系统出现问题时，首先要检查的就应该是这个日志文件<br>/var/log/btmp	记录错误登录日志，这个文件是二进制文件，不能直接vi查看，而要使用lastb命令查看<br>/var/log/lastlog	记录系统中所有用户最后一次登录时间的日志，这个文件是二进制文件，不能直接vi，而要使用lastlog命令查看<br>/var/log/wtmp	永久记录所有用户的登录、注销信息，同时记录系统的启动、重启、关机事件。同样这个文件也是一个二进制文件，不能直接vi，而需要使用last命令来查看<br>/var/log/utmp	记录当前已经登录的用户信息，这个文件会随着用户的登录和注销不断变化，只记录当前登录用户的信息。同样这个文件不能直接vi，而要使用w,who,users等命令来查询<br>/var/log/secure	记录验证和授权方面的信息，只要涉及账号和密码的程序都会记录，比如SSH登录，su切换用户，sudo授权，甚至添加用户和修改用户密码都会记录在这个日志文件中<br></code></pre></td></tr></table></figure>
+
+<h4 id="8-1-定位有多少IP在爆破主机的root帐号"><a href="#8-1-定位有多少IP在爆破主机的root帐号" class="headerlink" title="8.1. 定位有多少IP在爆破主机的root帐号"></a>8.1. <strong>定位有多少IP在爆破主机的root帐号</strong></h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs plain">grep &quot;Failed password for root&quot; /var/log/secure | awk &#x27;&#123;print $11&#125;&#x27; | sort | uniq -c | sort -nr | more<br></code></pre></td></tr></table></figure>
+
+<h4 id="8-2-定位有哪些IP在爆破"><a href="#8-2-定位有哪些IP在爆破" class="headerlink" title="8.2. 定位有哪些IP在爆破"></a>8.2. <strong>定位有哪些IP在爆破</strong></h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs plain">grep &quot;Failed password&quot; /var/log/secure|grep -E -o &quot;(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?).(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?).(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?).(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)&quot;|uniq -c<br></code></pre></td></tr></table></figure>
+
+<h4 id="8-3-爆破用户名字典是什么"><a href="#8-3-爆破用户名字典是什么" class="headerlink" title="8.3. 爆破用户名字典是什么"></a>8.3. <strong>爆破用户名字典是什么</strong></h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs plain">grep &quot;Failed password&quot; /var/log/secure|perl -e &#x27;while($_=&lt;&gt;)&#123; /for(.*?) from/; print &quot;$1\n&quot;;&#125;&#x27;|uniq -c|sort -nr<br></code></pre></td></tr></table></figure>
+
+<h4 id="8-4-登录成功的IP有哪些"><a href="#8-4-登录成功的IP有哪些" class="headerlink" title="8.4. 登录成功的IP有哪些"></a>8.4. <strong>登录成功的IP有哪些</strong></h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs plain">grep &quot;Accepted &quot; /var/log/secure | awk &#x27;&#123;print $11&#125;&#x27; | sort | uniq -c | sort -nr | more<br></code></pre></td></tr></table></figure>
+
+<h4 id="8-5-登录成功的日期、用户名、IP"><a href="#8-5-登录成功的日期、用户名、IP" class="headerlink" title="8.5. 登录成功的日期、用户名、IP"></a>8.5. <strong>登录成功的日期、用户名、IP</strong></h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs plain">grep &quot;Accepted &quot; /var/log/secure | awk &#x27;&#123;print $1,$2,$3,$9,$11&#125;&#x27;<br>#查询ssh登录记录<br>more /var/log/secure<br><br>#安装软件的日志-&gt; Centos<br>/var/log/yum.log<br><br>#安装软件的日志-&gt; Ubuntu<br>/var/log/apt/<br></code></pre></td></tr></table></figure>
+
+<h4 id="8-6日志样例"><a href="#8-6日志样例" class="headerlink" title="8.6日志样例"></a><strong>8.6日志样例</strong></h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><code class="hljs plain">1.增加一个用户kali日志：<br>Jul 10 00:12:15 localhost useradd[2382]: new group: name=kali, GID=1001<br>Jul 10 00:12:15 localhost useradd[2382]: new user: name=kali, UID=1001, GID=1001, home=/home/kali<br>, shell=/bin/bash<br>Jul 10 00:12:58 localhost passwd: pam_unix(passwd:chauthtok): password changed for kali<br>#grep &quot;useradd&quot; /var/log/secure <br><br>2.删除用户kali日志：<br>Jul 10 00:14:17 localhost userdel[2393]: delete user &#x27;kali&#x27;<br>Jul 10 00:14:17 localhost userdel[2393]: removed group &#x27;kali&#x27; owned by &#x27;kali&#x27;<br>Jul 10 00:14:17 localhost userdel[2393]: removed shadow group &#x27;kali&#x27; owned by &#x27;kali&#x27;<br># grep &quot;userdel&quot; /var/log/secure<br><br>3.su切换用户：<br>Jul 10 00:38:13 localhost su: pam_unix(su-l:session): session opened for user good by root(uid=0)<br><br>4.sudo授权执行:<br>sudo -l<br>Jul 10 00:43:09 localhost sudo:    good : TTY=pts/4 ; PWD=/home/good ; USER=root ; COMMAND=/sbin/shutdown -r now<br></code></pre></td></tr></table></figure>
+
+<h4 id="8-7软件安装卸载日志"><a href="#8-7软件安装卸载日志" class="headerlink" title="8.7软件安装卸载日志"></a><strong>8.7软件安装卸载日志</strong></h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs plain">yum install gcc<br><br>[root@bogon ~]# more /var/log/yum.log<br><br>Jul 10 00:18:23 Updated: cpp-4.8.5-28.el7_5.1.x86_64<br>Jul 10 00:18:24 Updated: libgcc-4.8.5-28.el7_5.1.x86_64<br>Jul 10 00:18:24 Updated: libgomp-4.8.5-28.el7_5.1.x86_64<br>Jul 10 00:18:28 Updated: gcc-4.8.5-28.el7_5.1.x86_64<br>Jul 10 00:18:28 Updated: libgcc-4.8.5-28.el7_5.1.i686<br></code></pre></td></tr></table></figure>
+
+<h3 id="9-命令修改状态"><a href="#9-命令修改状态" class="headerlink" title="9. 命令修改状态"></a>9. <strong>命令修改状态</strong></h3><h4 id="9-1-查看命名修改时间，防止被替换"><a href="#9-1-查看命名修改时间，防止被替换" class="headerlink" title="9.1. 查看命名修改时间，防止被替换"></a>9.1. <strong>查看命名修改时间，防止被替换</strong></h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs plain">stat /bin/netstat<br></code></pre></td></tr></table></figure>
+
+<p><img src="https://hsmyzj-1322074094.cos.ap-beijing.myqcloud.com/202501061646706.png" srcset="/img/loading.gif" lazyload alt="img"></p>
+<h2 id="三-文件"><a href="#三-文件" class="headerlink" title="三.文件"></a><strong>三.文件</strong></h2><h4 id="1-敏感目录查询"><a href="#1-敏感目录查询" class="headerlink" title="1.敏感目录查询"></a><strong>1.敏感目录查询</strong></h4><p>&#x2F;tmp, &#x2F;var&#x2F;tmp, &#x2F;dev&#x2F;shm，所有用户都可读，可写，可执行</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs plain">[root@server120 ~]# ls -ald /tmp/<br>drwxrwxrwt. 10 root root 4096 9月 20 09:41 /tmp/<br>[root@server120 ~]# ls -ald /var/tmp/<br>drwxrwxrwt. 2 root root 4096 9月 18 16:57 /var/tmp/<br>[root@server120 ~]# ls -ald /dev/shm<br>drwxrwxrwt. 3 root root 60 9月 1 10:23 /dev/shm<br></code></pre></td></tr></table></figure>
+
+<h4 id="2-时间点查询"><a href="#2-时间点查询" class="headerlink" title="2.时间点查询"></a><strong>2.时间点查询</strong></h4><p>通过列出攻击日期内变动的文件，发现相关的恶意文件。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs plain">find / -ctime 0 -name &quot;*sh&quot;     //查询一天内新增sh的文件<br>stat xxx.sh     //查询文件的时间信息<br></code></pre></td></tr></table></figure>
+
+<h4 id="3-隐藏文件查询"><a href="#3-隐藏文件查询" class="headerlink" title="3. 隐藏文件查询"></a>3. <strong>隐藏文件查询</strong></h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs plain">ls -ar |grep &quot;^\.&quot;      //列出当前目录下所有隐藏文件和隐藏文件夹。<br></code></pre></td></tr></table></figure>
+
+<h4 id="4-特殊权限文件排查"><a href="#4-特殊权限文件排查" class="headerlink" title="4.特殊权限文件排查"></a><strong>4.特殊权限文件排查</strong></h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs plain">find  /tmp -perm 777  <br>find  . *.txt -perm 777<br></code></pre></td></tr></table></figure>
+
+<h4 id="5-Webshell查找"><a href="#5-Webshell查找" class="headerlink" title="5. Webshell查找"></a>5. <strong>Webshell查找</strong></h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs plain">find /var/www/ -name &quot;*.php&quot;| xargs egrep<br></code></pre></td></tr></table></figure>
+
+<h4 id="6-系统文件排查"><a href="#6-系统文件排查" class="headerlink" title="6. 系统文件排查"></a>6. <strong>系统文件排查</strong></h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs plain">ls -alt /bin     查看命令目录下相关系统命令的修改时间<br>rpm -Va     查看发生过变化的软件包<br>ls -alh /bin    查看相关文件的大小，如果明显偏大，则文件可能被替换<br>Linux后门检测：（chkrootkit和rkhunter均需要下载安装）<br>chkrootkit 用来检测rootkit是否被安装到当前系统中<br>chkrootkit -q |grep INFECTED   --- 检测并筛选出存在infected内容<br><br>rkhunter进行命令Binary检测，包括MD5校验、rootkit检测、本机敏感目录检测、系统配置检测、服务及套件异常检测、第三方应用版本检测等。<br><br>rkhunter --check<br></code></pre></td></tr></table></figure>
+
+<h4 id="7-排查SUID程序"><a href="#7-排查SUID程序" class="headerlink" title="7.排查SUID程序"></a><strong>7.排查SUID程序</strong></h4><p>对于一些设置了SUID权限的程序进行排查，可以使用find命令,</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs plain">find / -type f -perm -04000 -ls -uid 0 2&gt;/dev/null<br></code></pre></td></tr></table></figure>
+
+<h4 id="8-入侵排查"><a href="#8-入侵排查" class="headerlink" title="8. 入侵排查"></a>8. <strong>入侵排查</strong></h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs plain">1、查看敏感目录，如/tmp目录下的文件，同时注意隐藏文件夹，以“..”为名的文件夹具有隐藏属性<br><br>2、得到发现WEBSHELL、远控木马的创建时间，如何找出同一时间范围内创建的文件？<br><br> 可以使用find命令来查找，如 find /opt -iname &quot;*&quot; -atime 1 -type f 找出 /opt 下一天前访问过的文件<br><br>3、针对可疑文件可以使用 stat 进行创建修改时间。<br></code></pre></td></tr></table></figure>
+
+<p>常用命令</p>
+<p>find、grep 、egrep、awk、sed</p>
+<h5 id="1-grep显示前后几行信息"><a href="#1-grep显示前后几行信息" class="headerlink" title="1.grep显示前后几行信息:"></a><strong>1.grep显示前后几行信息:</strong></h5><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs plain">标准unix/linux下的grep通过下面參数控制上下文：<br> 	grep -C 5 foo file 显示file文件里匹配foo字串那行以及上下5行<br> 	grep -B 5 foo file 显示foo及前5行<br> 	grep -A 5 foo file 显示foo及后5行<br> 	查看grep版本号的方法是<br> 	grep -V<br></code></pre></td></tr></table></figure>
+
+<h5 id="2-grep-查找含有某字符串的所有文件"><a href="#2-grep-查找含有某字符串的所有文件" class="headerlink" title="2.grep 查找含有某字符串的所有文件"></a><strong>2.grep 查找含有某字符串的所有文件</strong></h5><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs plain">grep -rn &quot;hello,world!&quot; <br>	* : 表示当前目录所有文件，也可以是某个文件名<br>	-r 是递归查找<br>	-n 是显示行号<br>	-R 查找所有文件包含子目录<br>	-i 忽略大小写<br></code></pre></td></tr></table></figure>
+
+<h5 id="3-如何显示一个文件的某几行："><a href="#3-如何显示一个文件的某几行：" class="headerlink" title="3.如何显示一个文件的某几行："></a><strong>3.如何显示一个文件的某几行：</strong></h5><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs plain">cat input_file | tail -n +1000 | head -n 2000<br>	#从第1000行开始，显示2000行。即显示1000~2999行<br></code></pre></td></tr></table></figure>
+
+<h5 id="4-find-etc-name-init"><a href="#4-find-etc-name-init" class="headerlink" title="4.find &#x2F;etc -name init"></a><strong>4.find &#x2F;etc -name init</strong></h5><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs plain">//在目录/etc中查找文件init<br></code></pre></td></tr></table></figure>
+
+<h5 id="5-只是显示-etc-passwd的账户"><a href="#5-只是显示-etc-passwd的账户" class="headerlink" title="5.只是显示&#x2F;etc&#x2F;passwd的账户"></a><strong>5.只是显示&#x2F;etc&#x2F;passwd的账户</strong></h5><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs plain">`cat /etc/passwd |awk  -F &#x27;:&#x27;  &#x27;&#123;print $1&#125;&#x27;`  <br>//awk -F指定域分隔符为&#x27;:&#x27;，将记录按指定的域分隔符划分域，填充域， $0则表示所有域,$1表示第一个域, $n表示第n个域。<br></code></pre></td></tr></table></figure>
+
+<h2 id="四-工具"><a href="#四-工具" class="headerlink" title="四.工具"></a><strong>四.工具</strong></h2><h3 id="1-Rootkit查杀"><a href="#1-Rootkit查杀" class="headerlink" title="1. Rootkit查杀"></a>1. <strong>Rootkit查杀</strong></h3><p>chkrootkit</p>
+<p>网址：<a target="_blank" rel="noopener" href="http://www.chkrootkit.org/">http://www.chkrootkit.org</a></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs plain">使用方法：<br>wget ftp://ftp.pangeia.com.br/pub/seg/pac/chkrootkit.tar.gz<br>tar zxvf chkrootkit.tar.gz<br>cd chkrootkit-0.52<br>make sense<br>#编译完成没有报错的话执行检查<br>./chkrootkit<br></code></pre></td></tr></table></figure>
+
+<p>rkhunter</p>
+<p>网址：<a target="_blank" rel="noopener" href="http://rkhunter.sourceforge.net/">The Rootkit Hunter project</a></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs plain">使用方法：<br>Wget https://nchc.dl.sourceforge.net/project/rkhunter/rkhunter/1.4.4/rkhunter-1.4.4.tar.gz<br>tar -zxvf rkhunter-1.4.4.tar.gz<br>cd rkhunter-1.4.4<br>./installer.sh --install<br>rkhunter -c<br></code></pre></td></tr></table></figure>
+
+<h3 id="2-病毒查杀"><a href="#2-病毒查杀" class="headerlink" title="2. 病毒查杀"></a>2. <strong>病毒查杀</strong></h3><p>Clamav</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><code class="hljs plain">1、安装 zlib：<br>wget http://nchc.dl.sourceforge.net/project/libpng/zlib/1.2.7/zlib-1.2.7.tar.gz <br>tar -zxvf  zlib-1.2.7.tar.gz<br>cd zlib-1.2.7<br>#安装一下gcc编译环境： yum install gcc<br>CFLAGS=&quot;-O3 -fPIC&quot; ./configure --prefix= /usr/local/zlib/<br>make &amp;&amp; make install<br><br>2、添加用户组 clamav 和组成员 clamav：<br>groupadd clamav<br>useradd -g clamav -s /bin/false -c &quot;Clam AntiVirus&quot; clamav<br><br>3、安装 Clamav<br>tar –zxvf clamav-0.97.6.tar.gz<br>cd clamav-0.97.6<br>./configure --prefix=/opt/clamav --disable-clamav -with-zlib=/usr/local/zlib<br>make<br>make install<br><br>4、配置 Clamav<br>mkdir /opt/clamav/logs<br>mkdir /opt/clamav/updata<br>touch /opt/clamav/logs/freshclam.log<br>touch /opt/clamav/logs/clamd.log<br>cd /opt/clamav/logs<br>chown clamav:clamav clamd.log<br>chown clamav:clamav freshclam.log<br><br>5、ClamAV 使用：<br> /opt/clamav/bin/freshclam 升级病毒库<br>./clamscan –h 查看相应的帮助信息<br>./clamscan -r /home  扫描所有用户的主目录就使用<br>./clamscan -r --bell -i /bin  扫描bin目录并且显示有问题的文件的扫描结果<br></code></pre></td></tr></table></figure>
+
+<p>安装方式二：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><code class="hljs plain">#安装<br>yum install -y clamav<br>#更新病毒库<br>freshclam<br>#扫描方法<br>clamscan -r /etc --max-dir-recursion=5 -l /root/etcclamav.log<br>clamscan -r /bin --max-dir-recursion=5 -l /root/binclamav.log<br>clamscan -r /usr --max-dir-recursion=5 -l /root/usrclamav.log<br>#扫描并杀毒<br>clamscan -r  --remove  /usr/bin/bsd-port<br>clamscan -r  --remove  /usr/bin/<br>clamscan -r --remove  /usr/local/zabbix/sbin<br>#查看日志发现<br>cat /root/usrclamav.log |grep FOUND<br></code></pre></td></tr></table></figure>
+
+<h3 id="3-Webshell查杀"><a href="#3-Webshell查杀" class="headerlink" title="3. Webshell查杀"></a>3. <strong>Webshell查杀</strong></h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs plain">河马 WebShell 查杀：http://www.shellpub.com<br></code></pre></td></tr></table></figure>
+
+<h3 id="4-RPM-check检测"><a href="#4-RPM-check检测" class="headerlink" title="4. RPM check检测"></a>4. <strong>RPM check检测</strong></h3><p>系统完整性可以通过rpm自带的-Va来校验检查所有的rpm软件包，查看哪些命令是否被替换了：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs plain">./rpm -Va &gt; rpm.log<br></code></pre></td></tr></table></figure>
+
+<p>如果一切均校验正常将不会产生任何输出，如果有不一致的地方，就会显示出来，输出格式是8位长字符串，每个字符都用以表示文件与RPM数据库中一种属性的比较结果 ，如果是. (点) 则表示测试通过。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs plain">验证内容中的8个信息的具体内容如下：<br>		S         文件大小是否改变<br>		M         文件的类型或文件的权限（rwx）是否被改变<br>		5         文件MD5校验是否改变（可以看成文件内容是否改变）<br>		D         设备中，从代码是否改变<br>		L         文件路径是否改变<br>		U         文件的属主（所有者）是否改变<br>		G         文件的属组是否改变<br>		T         文件的修改时间是否改变<br></code></pre></td></tr></table></figure>
+
+<p>如果命令被替换了，如果还原回来：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs plain">文件提取还原案例：<br>rpm  -qf /bin/ls  查询 ls 命令属于哪个软件包<br>mv  /bin/ls /tmp  先把 ls 转移到 tmp 目录下，造成 ls 命令丢失的假象<br>rpm2cpio /mnt/cdrom/Packages/coreutils-8.4-19.el6.i686.rpm | cpio -idv ./bin/ls 提取 rpm 包中 ls 命令到当前目录的 /bin/ls 下<br>cp /root/bin/ls  /bin/ 把 ls 命令复制到 /bin/ 目录 修复文件丢失<br></code></pre></td></tr></table></figure>
+
+<h3 id="5-Linux安全检查脚本"><a href="#5-Linux安全检查脚本" class="headerlink" title="5.Linux安全检查脚本"></a><strong>5.Linux安全检查脚本</strong></h3><p>Github 项目地址：</p>
+<p><a target="_blank" rel="noopener" href="https://github.com/grayddq/GScan">GitHub - grayddq&#x2F;GScan: 本程序旨在为安全应急响应人员对Linux主机排查时提供便利，实现主机侧Checklist的自动全面化检测，根据检测结果自动数据聚合，进行黑客攻击路径溯源。</a></p>
+<p><a target="_blank" rel="noopener" href="https://github.com/ppabc/security_check">GitHub - ppabc&#x2F;security_check: LINUX安全检查脚本，支持centos5,centos6,ubuntu</a></p>
+<p><a target="_blank" rel="noopener" href="https://github.com/T0xst/linux">GitHub - T0xst&#x2F;linux: linux安全检查</a></p>
+<h1 id="Windows应急响应"><a href="#Windows应急响应" class="headerlink" title="Windows应急响应"></a><strong>Windows应急响应</strong></h1><h2 id="一-检查系统账号"><a href="#一-检查系统账号" class="headerlink" title="一.检查系统账号"></a><strong>一.检查系统账号</strong></h2><h4 id="1-检查有没有新增用户"><a href="#1-检查有没有新增用户" class="headerlink" title="1.检查有没有新增用户"></a><strong>1.检查有没有新增用户</strong></h4><p>打开计算机管理看有没有可疑用户，命令行net user看有没有可疑用户，有的话就删除。</p>
+<p>$test可隐藏，需要在查看注册表</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs plain">net user    （无法列出$用户）<br>lusrmgr    （无法找到注册表方式建立的用户）<br>HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\ProfileList，HKLM\SAM\Domains\Account\    查注册表最准<br>#查询当前登录系统的会话<br>query user<br><br>#把用户踢出会话<br>logoff ID<br></code></pre></td></tr></table></figure>
+
+<h2 id="二-检查进程网络端口"><a href="#二-检查进程网络端口" class="headerlink" title="二.检查进程网络端口"></a><strong>二.检查进程网络端口</strong></h2><p>检察系统进程，还有自己没有打开的端口，有没有可疑文件，右键属性打开将可疑文件丢到在线病毒检测看报不报毒，报毒了就上报删除。</p>
+<h3 id="1-常用命令"><a href="#1-常用命令" class="headerlink" title="1.常用命令"></a><strong>1.常用命令</strong></h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs plain">1.查看开放的端口：netstat -ano<br>2.重点看状态是 ESTABLISHED 的端口：netstat -ano | findstr &#x27;estab&#x27;<br>3.查看路由：netstat -rn<br>4.查看系统信息：msinfo32，依次点击 软件环境→正在运行任务，可以看到当前的进程<br>5.杀死进程：<br>  taskkill /f /pid 123 /t<br>  taskkill /f /im explorer.exe /t<br>6.显示 进程--PID--服务： tasklist /svc<br>7.防火墙配置：netsh firewall show all<br>8.查找固定端口号 netstat -abno | find &quot;port number&quot; <br>9.查找固定进程PID  tasklist | findstr PID<br></code></pre></td></tr></table></figure>
+
+<h3 id="2-检查网络连接"><a href="#2-检查网络连接" class="headerlink" title="2. 检查网络连接"></a>2. <strong>检查网络连接</strong></h3><p>检查网络监听和连接的端口和应用程序</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs plain">netstat -anob<br></code></pre></td></tr></table></figure>
+
+<p>输出主机上的所有侦听和活动连接，包括 PID 和连接到每个连接的程序的名称。 这也告诉 Netstat返回连接的 IP 地址，而不是试图确定它们的主机名。</p>
+<p>● -a ：显示所有连接和侦听端口。</p>
+<p>● -b ：显示在创建每个连接或侦听端口时涉及的可执行程序。在某些情况下，已知可执行程序承载多个独立的组件，这些情况下，显示创建连接或侦听端口时涉及的组件序列。在此情况下，可执行程序的名称位于底部 [] 中，它调用的组件位于顶部，直至达到 TCP&#x2F;IP。注意，此选项可能很耗时，并且在你没有足够权限时可能失败。</p>
+<p>● -n ：以数字形式显示地址和端口号。</p>
+<p>● -o ：显示拥有的与每个连接关联的进程 ID。</p>
+<p>● -r ：显示路由表。</p>
+<p>结合findstr命令查找特定的端口或程序</p>
+<p><img src="https://hsmyzj-1322074094.cos.ap-beijing.myqcloud.com/202501061646723.png" srcset="/img/loading.gif" lazyload alt="img"></p>
+<p>也可用命令的方式</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs plain">netstat -abno | find &quot;port number&quot;  查找固定端口号<br>tasklist | findstr PID    查找固定进程PID<br></code></pre></td></tr></table></figure>
+
+<p>发现的感觉异常的 IP 地址可以在威胁情报平台上查询，如果是已知的恶意 IP，可以比较快速的确认攻击方式。</p>
+<p>防火墙配置</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs plain">netsh firewall show all<br></code></pre></td></tr></table></figure>
+
+<p>win10自带的网络连接可参考<a target="_blank" rel="noopener" href="https://betanews.com/2018/07/31/all-the-websites-windows-10-connects-to-clean-install/">These are all the websites Windows 10 connects to after a clean install</a></p>
+<h3 id="3-检查进程"><a href="#3-检查进程" class="headerlink" title="3. 检查进程"></a>3. <strong>检查进程</strong></h3><p>进程通常结合网络查看异常，先检查异常的网络连接，再获取由哪个进程生成的网络连接</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs plain">netstat -abno | find &quot;port number&quot;<br><br>tasklist | findstr PID<br></code></pre></td></tr></table></figure>
+
+<p>使用 wmic 命令获取进程信息</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs plain">wmic process | find &quot;Proccess Id&quot; &gt; proc.csv<br><br>Get-WmiObject -Class Win32_Process<br><br>Get-WmiObject -Query  &quot;select * from win32_service where name=&#x27;WinRM&#x27;&quot; -ComputerName Server01, Server02 | Format-List -Property PSComputerName, Name, ExitCode, Name, ProcessID, StartMode, State, Status<br></code></pre></td></tr></table></figure>
+
+<p>PowerShell 的其他关于进程和网络的命令</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs plain">Get-Process<br><br>Get-NetTCPConnection<br>Get-NetTCPConnection -State Established<br><br># 进程跟服务的对应关系<br>tasklist /svc<br></code></pre></td></tr></table></figure>
+
+<p>使用 SysinternalsSuite 的 procexp 可以获取进程比较详细的信息，比如真实路径、加载的 DLL 文件等、CPU 和内存使用情况等。</p>
+<p><img src="https://hsmyzj-1322074094.cos.ap-beijing.myqcloud.com/202501061646983.png" srcset="/img/loading.gif" lazyload alt="img"></p>
+<h3 id="4-检查启动项，计划任务，服务。"><a href="#4-检查启动项，计划任务，服务。" class="headerlink" title="4.检查启动项，计划任务，服务。"></a><strong>4.检查启动项，计划任务，服务。</strong></h3><h4 id="4-1启动项相关"><a href="#4-1启动项相关" class="headerlink" title="4.1启动项相关"></a><strong>4.1启动项相关</strong></h4><p>关于开机启动需要分析的位置：</p>
+<p>● 注册表中的关于开机启动的位置HKLM\Software\Microsoft\Windows\CurrentVersion\Runonce</p>
+<p>○ HKLM\Software\Microsoft\Windows\CurrentVersion\policies\Explorer\Run</p>
+<p>○ HKLM\Software\Microsoft\Windows\CurrentVersion\Run</p>
+<p>○ HKCU\Software\Microsoft\Windows NT\CurrentVersion\Windows\Run</p>
+<p>○ HKCU\Software\Microsoft\Windows\CurrentVersion\Run</p>
+<p>○ HKCU\Software\Microsoft\Windows\CurrentVersion\RunOnce</p>
+<p>○ (ProfilePath)\Start Menu\Programs\Startup</p>
+<p>● 开始菜单，启动项里（C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Startup）</p>
+<p>● 任务管理器，启动选项卡，或者运行 msconfig，查看启动选项卡</p>
+<p>● 运行gpedit.msc在本地组策略编辑器里查看开机运行脚本，包括计算机配置和用户配置的。</p>
+<p><img src="https://hsmyzj-1322074094.cos.ap-beijing.myqcloud.com/202501061646009.png" srcset="/img/loading.gif" lazyload alt="img"></p>
+<p>使用 SysinternalsSuite 工具集的 Autoruns 工具查看开机启动项目</p>
+<p><img src="https://hsmyzj-1322074094.cos.ap-beijing.myqcloud.com/202501061646025.png" srcset="/img/loading.gif" lazyload alt="img"></p>
+<h4 id="4-2查看服务状态"><a href="#4-2查看服务状态" class="headerlink" title="4.2查看服务状态"></a><strong>4.2查看服务状态</strong></h4><p>查看服务：services.msc</p>
+<h4 id="4-3检查计划任务"><a href="#4-3检查计划任务" class="headerlink" title="4.3检查计划任务"></a><strong>4.3检查计划任务</strong></h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs plain">C:\Windows\System32\Tasks\<br>C:\Windows\SysWOW64\Tasks\<br>C:\Windows\tasks\<br>*.job（指文件）<br></code></pre></td></tr></table></figure>
+
+<p>使用命令查看计划任务</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs plain">schtasks<br></code></pre></td></tr></table></figure>
+
+<p>运行<a target="_blank" rel="noopener" href="http://taskschd.msc/">taskschd.msc</a>打开计划任务面板，或者从计算机管理进入，直接查看计划任务。</p>
+<p><img src="https://hsmyzj-1322074094.cos.ap-beijing.myqcloud.com/202501061646050.png" srcset="/img/loading.gif" lazyload alt="img"></p>
+<p>也可以使用 SysinternalsSuite 工具集的 Autoruns 工具查看计划任务。</p>
+<h2 id="三-文件检查"><a href="#三-文件检查" class="headerlink" title="三.文件检查"></a><strong>三.文件检查</strong></h2><p>检查可疑文件的思路，一种是通过可疑进程（CPU 利用率、进程名）关联的文件，一种是按照时间现象关联的文件，文件大小也可以 作为辅助的判断方法，文件的操作可以使用Get-ChildItem命令查看。需要关注的文件位置:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><code class="hljs plain">下载目录<br>回收站文件<br>程序临时文件<br>历史文件记录<br>应用程序打开历史<br>搜索历史<br>快捷方式（LNK）<br>驱动<br>进程 DLL 的关联查询<br>共享文件<br>最近的文件（%UserProfile%\Recent）<br>文件更新<br>已安装文件<br></code></pre></td></tr></table></figure>
+
+<h3 id="1-temp临时文件"><a href="#1-temp临时文件" class="headerlink" title="1.temp临时文件"></a><strong>1.temp临时文件</strong></h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs plain">cmd %temp%打开临时文件<br><br>打开文件查看是否有PE文件（exe，dll，sys），或者是否有较大的tmp文件。<br><br>tem文件为临时文件，临时文件在对应的目录下是具有可读可写可访问等权限的，一些恶意代码非常喜欢利用tmp文件。<br><br>不清楚丢沙箱分析。<br></code></pre></td></tr></table></figure>
+
+<h3 id="2-浏览器回收站记录排查"><a href="#2-浏览器回收站记录排查" class="headerlink" title="2.浏览器回收站记录排查"></a><strong>2.浏览器回收站记录排查</strong></h3><p>有可能黑客为了扩大对服务器的控制会让服务器访问他设置的病毒网址，先看有没有可疑的浏览器记录，在看有可疑的下载记录，前面两种容易被删除，之后再看不容易删除的cookie有没有可疑网站的cookie。</p>
+<p>还有可能会把东西删掉，但是忘记删回收站。</p>
+<h3 id="3-最近打开文件"><a href="#3-最近打开文件" class="headerlink" title="3.最近打开文件"></a><strong>3.最近打开文件</strong></h3><p>cmd输入%UserProfile%\Recent</p>
+<h3 id="4-修改时间在创建时间之前的文件"><a href="#4-修改时间在创建时间之前的文件" class="headerlink" title="4.修改时间在创建时间之前的文件"></a><strong>4.修改时间在创建时间之前的文件</strong></h3><h3 id="5-文件在线扫描网站"><a href="#5-文件在线扫描网站" class="headerlink" title="5. 文件在线扫描网站"></a>5. <strong>文件在线扫描网站</strong></h3><p><a target="_blank" rel="noopener" href="https://www.virscan.org/">VirScan - 多引擎文件在线检测平台</a></p>
+<p><a target="_blank" rel="noopener" href="https://habo.qq.com/">腾讯哈勃分析系统</a></p>
+<p><a target="_blank" rel="noopener" href="https://virusscan.jotti.org/">Jotti’s malware scan</a></p>
+<p><a target="_blank" rel="noopener" href="https://virusscan.jotti.org/">Jotti’s malware scan</a></p>
+<h2 id="四-日志分析"><a href="#四-日志分析" class="headerlink" title="四.日志分析"></a><strong>四.日志分析</strong></h2><h3 id="1-日志目录"><a href="#1-日志目录" class="headerlink" title="1. 日志目录"></a>1. <strong>日志目录</strong></h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><code class="hljs plain">Windows 2000 / Server2003 / Windows XP 的日志目录<br>\%SystemRoot%\System32\Config\*.evt<br><br>Windows Vista / 7 / 10 / Server2008 的日志目录<br>\%SystemRoot%\System32\winevt\Logs\*.evtx<br><br>系统日志（System.evtx）：驱动程序、系统组件和应用软件的崩溃以及数据丢失错误等<br>默认位置： %SystemRoot%\System32\Winevt\Logs\System.evtx<br><br>应用程序日志（Application.evtx）：记录程序运行方面的事件<br>默认位置：%SystemRoot%\System32\Winevt\Logs\Application.evtx<br><br>安全日志（Security.evtx）：登录日志、对象访问日志、进程追踪日志、特权使用、帐号管理、策略变更、系统事件。安全日志也是调查取证中最常用到的日志。默认设置下，安全性日志是关闭的，管理员可以使用组策略来启动安全性日志，或者在注册表中设置审核策略，以便当安全性日志满后使系统停止响应<br>默认位置：%SystemRoot%\System32\Winevt\Logs\Security.evtx<br></code></pre></td></tr></table></figure>
+
+<h3 id="2-常见事件ID"><a href="#2-常见事件ID" class="headerlink" title="2. 常见事件ID"></a>2. <strong>常见事件ID</strong></h3><table>
+<thead>
+<tr>
+<th><strong>Event ID(2000&#x2F;XP&#x2F;2003)</strong></th>
+<th><strong>Event ID(Vista&#x2F;7&#x2F;8&#x2F;2008&#x2F;2012)</strong></th>
+<th><strong>描述</strong></th>
+<th><strong>日志名称</strong></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>528</td>
+<td>4624</td>
+<td>成功登录</td>
+<td>Security</td>
+</tr>
+<tr>
+<td>529</td>
+<td>4625</td>
+<td>失败登录</td>
+<td>Security</td>
+</tr>
+<tr>
+<td>680</td>
+<td>4776</td>
+<td>成功&#x2F;失败的账户认证</td>
+<td>Security</td>
+</tr>
+<tr>
+<td>624</td>
+<td>4720</td>
+<td>创建用户</td>
+<td>Security</td>
+</tr>
+<tr>
+<td>636</td>
+<td>4732</td>
+<td>添加用户到启用安全性的本地组中</td>
+<td>Security</td>
+</tr>
+<tr>
+<td>632</td>
+<td>4728</td>
+<td>添加用户到启用安全性的全局组中</td>
+<td>Security</td>
+</tr>
+<tr>
+<td>2934</td>
+<td>7030</td>
+<td>服务创建错误</td>
+<td>System</td>
+</tr>
+<tr>
+<td>2944</td>
+<td>7040</td>
+<td>IPSEC服务服务的启动类型已从禁用更改为自动启动</td>
+<td>System</td>
+</tr>
+<tr>
+<td>2949</td>
+<td>7045</td>
+<td>服务创建</td>
+<td></td>
+</tr>
+</tbody></table>
+<table>
+<thead>
+<tr>
+<th><strong>登录类型</strong></th>
+<th><strong>登录类型</strong></th>
+<th><strong>描述</strong></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>2</td>
+<td>Interactive</td>
+<td>用户登录到本机</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Network</td>
+<td>用户或计算手机从网络登录到本机，如果网络共享，或使用 net use 访问网络共享，net view 查看网络共享</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Batch</td>
+<td>批处理登录类型，无需用户干预</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Service</td>
+<td>服务控制管理器登录</td>
+</tr>
+<tr>
+<td>7</td>
+<td>Unlock</td>
+<td>用户解锁主机</td>
+</tr>
+<tr>
+<td>8</td>
+<td>NetworkCleartext</td>
+<td>用户从网络登录到此计算机，用户密码用非哈希的形式传递</td>
+</tr>
+<tr>
+<td>9</td>
+<td>NewCredentials</td>
+<td>进程或线程克隆了其当前令牌，但为出站连接指定了新凭据</td>
+</tr>
+<tr>
+<td>10</td>
+<td>Remotelnteractive</td>
+<td>使用终端服务或远程桌面连接登录</td>
+</tr>
+<tr>
+<td>11</td>
+<td>Cachedlnteractive</td>
+<td>用户使用本地存储在计算机上的凭据登录到计算机（域控制器可能无法验证凭据），如主机不能连接域控，以前使用域账户登录过这台主机，再登录就会产生这样日志</td>
+</tr>
+<tr>
+<td>12</td>
+<td>CachedRemotelnteractive</td>
+<td>与 Remotelnteractive 相同，内部用于审计目的</td>
+</tr>
+<tr>
+<td>13</td>
+<td>CachedUnlock</td>
+<td>登录尝试解锁</td>
+</tr>
+</tbody></table>
+<p><img src="https://hsmyzj-1322074094.cos.ap-beijing.myqcloud.com/202501061646109.png" srcset="/img/loading.gif" lazyload alt="img"></p>
+<p>查看 PowerShell 的日志</p>
+<p>Microsoft-&gt;Windows-&gt;PowerShell-&gt;OPtions</p>
+<h3 id="3-远程登录事件"><a href="#3-远程登录事件" class="headerlink" title="3.远程登录事件"></a><strong>3.远程登录事件</strong></h3><p>攻击者可能造成的远程登录事件</p>
+<p><strong>RDP</strong></p>
+<p>攻击者使用 RDP 远程登录受害者计算机，源主机和目的主机都会生成相应事件。重要的事件 ID（安全日志，Security.evtx）</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs plain">4624：账户成功登录<br>4648：使用明文凭证尝试登录<br>4778：重新连接到一台 Windows 主机的会话<br>4779：断开到一台 Windows 主机的会话<br></code></pre></td></tr></table></figure>
+
+<p>远程连接日志（应用程序和服务日志-&gt;Microsoft-&gt;Windows-&gt;-TerminalServices-&gt;RemoteConnectionManager-&gt;Operational），重要事件 ID 和含义：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs plain">1149：用户认证成功<br>21：远程桌面服务：会话登录成功<br>24：远程桌面服务：会话已断开连接<br>25：远程桌面服务：会话重新连接成功<br></code></pre></td></tr></table></figure>
+
+<p>远程连接日志关注 RemoteInteractive（10） 和CachedRemoteInteractive（12）表明使用了 RDP ，因为这些登录类型专用于RDP使用。</p>
+<h3 id="4-计划任务和-AT"><a href="#4-计划任务和-AT" class="headerlink" title="4.计划任务和 AT"></a><strong>4.计划任务和 AT</strong></h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><code class="hljs plain">关注的事件 ID4624：账户成功登录<br>计划任务事件 Microsoft-Windows-TaskScheduler/Operational.evtx，计划任务 ID 含义：<br>100：任务已开始<br>102：任务完成<br>106：已注册任务（关注点）<br>107：在调度程序上触发任务<br>110：用户触发的任务<br>129：创建任务流程（推出）<br>140：任务已更新<br>141：任务已删除<br>200：运行计划任务<br>325：启动请求排队<br>统一后台进程管理器（UBPM）<br>服务控制管理器 - 管理 Windows 服务<br>任务计划程序 - 管理 Windows 任务<br>Windows Management Instrumentation - 管理 WMI 供应商<br>DCOM Server Process Launcher - 管理进程外 COM 应用程序<br></code></pre></td></tr></table></figure>
+
+<h3 id="5-PSExec"><a href="#5-PSExec" class="headerlink" title="5.PSExec"></a><strong>5.PSExec</strong></h3><p>PSExec是系统管理员的远程命令执行工具，包含在“Sysinternals Suite”工具中，但它通常也用于针对性攻击的横向移动。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><code class="hljs plain">PsExec的典型行为在具有网络登录（类型3）的远程计算机上将 PsExec 服务执行文件（默认值：PSEXESVC.exe）复制到％SystemRoot％。<br>如果使用-c选项，则通过 $Admin 共享将文件复制到 ％SystemRoot％ 执行命令。<br>注册服务（默认值：PSEXESVC），并启动服务以在远程计算机上执行该命令。<br>停止服务（默认值：PSEXESVC），并在执行后删除远程计算机上的服务。<br>PSExec选项的重要选项：<br>-r更改复制的文件名和远程计算机的服务名称<br>（默认值：％SystemRoot％\ PSEXESVC.exe和PSEXESVC）-s由SYSTEM帐户执行。<br>-C将程序复制到远程计算机<br>被复制到Admin$（％SystemRoot％）<br>-u使用特定凭据登录到远程计算机<br>生成登录类型2和登录类型3 的事件<br>可以从System.evtx中查找事件 ID 7045 发现 PSExec，相关的事件 ID<br>Security.evtx4624：帐户已成功登录<br>Ssystem.evtx7045：系统中安装了服务<br></code></pre></td></tr></table></figure>
+
+<p>PsExec在执行命令时在远程主机上创建服务，默认服务名称为PSEXESVC，配合检测系统 7045 事件可以确定。</p>
+<p>如果使用-r参数更改了默认的服务名称，通过以下特征可以检测 PSExec 的执行：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs plain">PSExec服务执行文件（默认值：PSEXESVC.exe）被复制到远程计算机上的“％SystemRoot％”目录中<br>服务名称与没有“.exe”扩展名的执行名称相同<br>服务以“用户模式”执行，而不是“内核模式”<br>“LocalSystem”帐户用于服务帐户<br>实际帐户用于执行服务执行文件，而不是“SYSTEM”<br></code></pre></td></tr></table></figure>
+
+<h3 id="6-PowerShell-日志操作"><a href="#6-PowerShell-日志操作" class="headerlink" title="6. PowerShell 日志操作"></a><strong>6. PowerShell 日志操作</strong></h3><p>使用Get-WinEvent</p>
+<p>Get-WinEvent**@{<strong>logname</strong>&#x3D;<strong>‘application’</strong>,<strong>‘system’</strong>}**-MaxEvents1</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs plain">Get-WinEvent @&#123;logname=&#x27;application&#x27;,&#x27;system&#x27;&#125; -MaxEvents 1<br></code></pre></td></tr></table></figure>
+
+<p>一些常见日志操作</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><code class="hljs plain"># Get-WinEvent帮助命令<br>get-help Get-WinEvent<br><br># 列出所有事件日志<br>Get-WinEvent -ListLog *<br><br># powershell管理员权限下获取安全事件日志<br>Get-WinEvent -FilterHashtable @&#123;LogName=&#x27;Security&#x27;&#125;<br><br># 过滤安全事件ID 4624<br>Get-WinEvent -FilterHashtable @&#123;LogName=&#x27;Security&#x27;;ID=&#x27;4624&#x27;&#125;<br><br># 查询今天的应用和系统日志，显示前2条<br>Get-WinEvent @&#123;logname=&#x27;application&#x27;,&#x27;system&#x27;;starttime=[datetime]::today &#125; -MaxEvents 2<br><br># 根据ID查询事件<br>Get-WinEvent -LogName Microsoft-Windows-PowerShell/Operational | Where-Object &#123;$_.ID -eq &quot;4100&quot; -or $_.ID -eq &quot;4104&quot;&#125;<br><br><br># 查询指定时间内的事件<br>$StartTime=Get-Date  -Year  2017  -Month  1  -Day  1  -Hour  15  -Minute  30<br>$EndTime=Get-Date  -Year  2017  -Month  2  -Day  15  -Hour  20  -Minute  00<br><br>Get-WinEvent -FilterHashtable @&#123;LogName=&#x27;System&#x27;;StartTime=$StartTime;EndTime=$EndTime&#125;<br></code></pre></td></tr></table></figure>
+
+<p><img src="https://hsmyzj-1322074094.cos.ap-beijing.myqcloud.com/202501061646138.png" srcset="/img/loading.gif" lazyload alt="img"></p>
+<p>Get-EventLog 的使用可以参考：<a target="_blank" rel="noopener" href="https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.management/get-eventlog?view=powershell-5.1">Get-EventLog (Microsoft.PowerShell.Management) - PowerShell | Microsoft Learn</a></p>
+<h2 id="五-常用命令"><a href="#五-常用命令" class="headerlink" title="五.常用命令"></a><strong>五.常用命令</strong></h2><h3 id="1-net相关"><a href="#1-net相关" class="headerlink" title="1. net相关"></a>1. <strong>net相关</strong></h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><code class="hljs plain">查看域中当前的主机列表：<br>net view /domain<br><br>查看当前域中的用户<br>net user /domain<br><br>增加一个本地用户<br>net user username password /add<br><br>将新增的用户加到本地管理员组<br>net localgroup &quot;Administrators&quot; username /add<br><br>查看域中的密码策略<br>net accounts /domain<br><br>查看本地组<br>net localgroup &quot;Group&quot;<br><br>查看域中的组信息<br>net group /domain<br><br>查看域中指定组的成员<br>net group &quot;Domain group&quot; /domain<br><br>查看当前机器所在的域名<br>net config workstation<br><br>查看当前服务器所在的域名<br>net config server<br></code></pre></td></tr></table></figure>
+
+<h3 id="2-系统显示相关"><a href="#2-系统显示相关" class="headerlink" title="2. 系统显示相关"></a>2. <strong>系统显示相关</strong></h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><code class="hljs plain">显示系统信息<br>systeminfo<br><br>查看远程主机的系统信息<br>systeminfo /S ip /U domain\user /P Pwd<br><br>显示进程和服务信息<br>tasklist /svc<br><br>显示所有进程以及DLL信息<br>tasklist /m<br><br>显示进程和所有者<br>tasklist /v<br><br>查看远程主机的进程列表<br>tasklist /S ip /v<br><br>显示具体的服务信息（包括二进制路径和运行使用）<br>sc qc Spooler<br></code></pre></td></tr></table></figure>
+
+<h3 id="3-网络信息"><a href="#3-网络信息" class="headerlink" title="3. 网络信息"></a>3. <strong>网络信息</strong></h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><code class="hljs plain">打印路由表<br>route print<br><br>保存当前主机上的所有WiFi信息<br>netsh wlan export profile folder=. key=clear<br><br>设置当前配置禁用防火墙<br>netsh advfirewall set currentprofile state off<br><br>设置端口转发<br>netsh interface portproxy add v4tov4 listenport=3000 listenaddress=l.l.l.l connectport=4000 connectaddress=2.2.2.2<br><br>启用远程访问<br>reg add &quot;HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Terminal Server&quot; /v fDenyTSConnections /t REG_DWORD /d 0 /f<br><br>启用远程协助<br>reg add &quot;HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Terminal Server&quot; /v fAllowToGetHelp /t REG_DWORD /d 1 /f<br><br>修改远程访问端口<br>reg add &quot;HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Terminal Server\WinStations\RDP-Tcp&quot; /v PortNumber /t REG_DWORD /d 12345 /f<br></code></pre></td></tr></table></figure>
+
+<h2 id="六-常用工具"><a href="#六-常用工具" class="headerlink" title="六.常用工具"></a><strong>六.常用工具</strong></h2><h3 id="1-autoruns"><a href="#1-autoruns" class="headerlink" title="1.autoruns"></a><strong>1.autoruns</strong></h3><p>可以方便的查看自启动、计划任务和运行服务，通过关联右键菜单可以获取更详细的内容。</p>
+<p><img src="https://hsmyzj-1322074094.cos.ap-beijing.myqcloud.com/202501061646284.png" srcset="/img/loading.gif" lazyload alt="img"></p>
+<h3 id="2-procexp"><a href="#2-procexp" class="headerlink" title="2.procexp"></a><strong>2.procexp</strong></h3><p>查看进程的工具。</p>
+<p><img src="https://hsmyzj-1322074094.cos.ap-beijing.myqcloud.com/202501061646385.png" srcset="/img/loading.gif" lazyload alt="img"></p>
+<p><img src="https://hsmyzj-1322074094.cos.ap-beijing.myqcloud.com/202501061646407.png" srcset="/img/loading.gif" lazyload alt="img"></p>
+<h3 id="3-ADExplorer"><a href="#3-ADExplorer" class="headerlink" title="3.ADExplorer"></a><strong>3.ADExplorer</strong></h3><p>Active Directory Explorer（AD Explorer）是一种高级Active Directory（AD）查看器和编辑器。 您可以使用AD Explorer轻松导航AD数据库，定义收藏位置，查看对象属性和属性，而无需打开对话框，编辑权限，查看对象的架构，以及执行可以保存和重新执行的复杂搜索。</p>
+<p>AD Explorer还包括保存AD数据库快照以进行脱机查看和比较的功能。 加载已保存的快照时，您可以像实时数据库一样导航和浏览它。 如果您有两个AD数据库快照，则可以使用AD Explorer的比较功能查看它们之间更改的对象，属性和安全权限。</p>
+<p><img src="https://hsmyzj-1322074094.cos.ap-beijing.myqcloud.com/202501061646428.png" srcset="/img/loading.gif" lazyload alt="img"></p>
+<h3 id="4-TCPView"><a href="#4-TCPView" class="headerlink" title="4.TCPView"></a><strong>4.TCPView</strong></h3><p>查看网络连接情况</p>
+<p><img src="https://hsmyzj-1322074094.cos.ap-beijing.myqcloud.com/202501061646462.png" srcset="/img/loading.gif" lazyload alt="img"></p>
+<h3 id="5-PSExec-1"><a href="#5-PSExec-1" class="headerlink" title="5.PSExec"></a><strong>5.PSExec</strong></h3><p>像Telnet这样的实用程序和Symantec的PC Anywhere等远程控制程序允许您在远程系统上执行程序，但是设置起来很麻烦，并且要求您在要访问的远程系统上安装客户端软件。 PsExec是一种轻量级的 telne t替代品，可让您在其他系统上执行进程，完成控制台应用程序的完全交互，而无需手动安装客户端软件。 PsExec最强大的用途包括在远程系统上启动交互式命令提示和IpConfig等远程启用工具，否则它们无法显示有关远程系统的信息。</p>
+<p>使用可以参考：<a target="_blank" rel="noopener" href="https://www.itprotoday.com/management-mobility/psexec">PsExec | ITPro Today: IT News, How-Tos, Trends, Case Studies, Career Tips, More</a></p>
+<h3 id="6-LogonSessions"><a href="#6-LogonSessions" class="headerlink" title="6.LogonSessions"></a><strong>6.LogonSessions</strong></h3><p>列出了当前活动的登录会话，如果指定-p选项，则列出每个会话中运行的进程。</p>
+<p><img src="/%E5%BA%94%E6%80%A5%E5%93%8D%E5%BA%94%E7%AC%94%E8%AE%B0.assets/1704820398676-cbf7ce2f-063f-4c1d-a8ba-23c2fb44497f.png" srcset="/img/loading.gif" lazyload alt="img"></p>
+
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>应急响应笔记</div>
+      <div>http://example.com/2025/01/06/应急响应笔记/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>John Doe</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2025年1月6日</div>
+        </div>
+      
+      
+      
+        <div class="license-meta-item">
+          <div>许可协议</div>
+          <div>
+            
+              
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                    <i class="iconfont icon-cc-by"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2025/01/06/%E6%95%B0%E6%8D%AE%E5%BA%93%E6%8F%90%E6%9D%83/" title="数据库提权">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">数据库提权</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2025/01/06/sdk%E6%8C%87%E7%BA%B9%E6%B1%87%E6%80%BB/" title="sdk指纹汇总">
+                        <span class="hidden-mobile">sdk指纹汇总</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>目录</span>
+  </p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+    </div>
+  
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.4/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.20.1/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/5.0.0/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
+</body>
+</html>
